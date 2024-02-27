@@ -20,22 +20,16 @@ if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){
 		($_POST['Visi'] == "") OR
 		($_POST['Motto'] == "")
 	){
-
-
 		echo "<script>alert('Harap Isi Field Yang Di Butuhkan Dengan Benar')</script>";
-
 		$cek_required = "Gagal";
 	}else{
 		$cek_required = "Sukses";
 	}
 }
-#-----------------------------------------------------------------------------------
-
 
 #-----------------------------------------------------------------------------------
 #FUNGSI EDIT DATA (READ)
 $result = $a_tambah_baca_update_hapus->baca_data_id("tb_tentang_kami","Id_Tentang_Kami","1");
-
 if($result['Status'] == "Sukses"){
 	$edit = $result['Hasil'];
 }
@@ -44,18 +38,11 @@ else{
 }
 
 #-----------------------------------------------------------------------------------
-
-
-#-----------------------------------------------------------------------------------
 #FUNGSI UPDATE DATA (UPDATE)
-if(isset($_POST['submit_update']))
-{
-	if($cek_required == "Sukses")
-	{	
-		if(isset($edit)){
-		$form_field = array("Visi","Misi","Motto","Deskripsi_1","Deskripsi_2","Waktu_Simpan_Data","Status");
-
-		$form_value = array("$_POST[Visi]","$_POST[Misi]","$_POST[Motto]","$_POST[Deskripsi_1]","$_POST[Deskripsi_2]","$Waktu_Sekarang","Aktif");
+if(isset($_POST['submit_update'])){
+	if($cek_required == "Sukses"){	
+		$form_field = array("Visi","Misi","Motto","Deskripsi_Tambahan","Waktu_Simpan_Data","Status");
+		$form_value = array("$_POST[Visi]","$_POST[Misi]","$_POST[Motto]","$_POST[Deskripsi_Tambahan]","$Waktu_Sekarang","Aktif");
 
 		$form_field_where = array("Id_Tentang_Kami");
 		$form_criteria_where = array("=");
@@ -63,14 +50,6 @@ if(isset($_POST['submit_update']))
 		$form_connector_where = array("");
 
 		$result = $a_tambah_baca_update_hapus->update_data("tb_tentang_kami",$form_field,$form_value,$form_field_where,$form_criteria_where,$form_value_where,$form_connector_where);
-		
-		}else{
-			$form_field = array("Id_Tentang_Kami","Visi","Misi","Motto","Deskripsi_1","Deskripsi_2","Waktu_Simpan_Data","Status");
-
-			$form_value = array("1","$_POST[Visi]","$_POST[Misi]","$_POST[Motto]","$_POST[Deskripsi_1]","$_POST[Deskripsi_2]","$Waktu_Sekarang","Aktif");
-
-			$result = $a_tambah_baca_update_hapus->tambah_data("tb_tentang_kami",$form_field,$form_value);
-		}
 
 		if($result['Status'] == "Sukses"){
 
@@ -145,16 +124,9 @@ if(isset($_POST['submit_update']))
 												</div>
 
 												<div class="form-group row">
-													<label class="col-lg-2 control-label">Deskripsi 1</label>
+													<label class="col-lg-2 control-label">Informasi Tambahan</label>
 													<div class="col-lg-10">
-														<textarea class="form-control" rows="5" name="Deskripsi_1"><?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Deskripsi_1']; }else{echo $edit['Deskripsi_1'];} ?></textarea>
-													</div>
-												</div>
-
-												<div class="form-group row">
-													<label class="col-lg-2 control-label">Deskripsi 2</label>
-													<div class="col-lg-10">
-														<textarea class="form-control" rows="5" name="Deskripsi_2"><?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Deskripsi_2']; }else{echo $edit['Deskripsi_2'];} ?></textarea>
+														<textarea class="form-control" rows="5" name="Deskripsi_Tambahan"><?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Deskripsi_Tambahan']; }else{echo $edit['Deskripsi_Tambahan'];} ?></textarea>
 													</div>
 												</div>
 											</fieldset>

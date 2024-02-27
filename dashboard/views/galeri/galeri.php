@@ -44,14 +44,21 @@ if(isset($_POST['submit_simpan'])){
 		$result = $a_tambah_baca_update_hapus->tambah_data("tb_galeri",$form_field,$form_value,"Iya");
 
 		if($result['Status'] == "Sukses"){
-			$Id_Auto_Increment = $result['Id'];
+			
+			$a_result_terbaru = $a_tambah_baca_update_hapus->baca_data_terbaru("tb_galeri","Id_Galeri");
+			if($a_result_terbaru['Status'] == "Sukses"){
+				$Id_Auto_Increment = $a_result_terbaru['Hasil'][0]['Id_Galeri'];
+			}else{
+				$Id_Auto_Increment = 1;
+			}
+
 			//FUNGSI UPLOAD FILE Foto_Galeri
 			if ($_FILES['Foto_Galeri']['size'] <> 0 && $_FILES['Foto_Galeri']['error'] == 0){
 				$post_file_upload = $_FILES['Foto_Galeri'];
 				$path_file_upload = $_FILES['Foto_Galeri']['name'];
 				$ext_file_upload = pathinfo($path_file_upload, PATHINFO_EXTENSION);
 				$nama_file_upload = $a_hash->hash_nama_file($Id_Auto_Increment,"Foto_Galeri")."_".$Id_Auto_Increment."Foto_Galeri";
-				$folder_penyimpanan_file_upload = "../media/galeri/";
+				$folder_penyimpanan_file_upload = "media/galeri/";
 				$tipe_file_yang_diizikan_file_upload = array("png","gif","jpg","jpeg");
 				$maksimum_ukuran_file_upload = 3000000;
 
@@ -119,7 +126,7 @@ if(isset($_POST['submit_update'])){
 				$path_file_upload = $_FILES['Foto_Galeri']['name'];
 				$ext_file_upload = pathinfo($path_file_upload, PATHINFO_EXTENSION);
 				$nama_file_upload = $a_hash->hash_nama_file($Get_Id_Primary,"Foto_Galeri")."_".$Get_Id_Primary."Foto_Galeri";
-				$folder_penyimpanan_file_upload = "../media/galeri/";
+				$folder_penyimpanan_file_upload = "media/galeri/";
 				$tipe_file_yang_diizikan_file_upload = array("png","gif","jpg","jpeg");
 				$maksimum_ukuran_file_upload = 3000000;
 
@@ -207,7 +214,7 @@ if(isset($_GET['hapus_data_permanen'])){
 		$data = $result_data['Hasil'];
 
 		$Foto_Galeri = $data['Foto_Galeri'];
-		$temp_file_location = "../media/galeri/".$Foto_Galeri;
+		$temp_file_location = "media/galeri/".$Foto_Galeri;
 		
 		//Menghapus File Temporari Diatas
 		if(file_exists($temp_file_location)){
@@ -390,44 +397,11 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 												</div>
 											</div>
 
-											<div class="col-md-12" style="display:none;">
-												<div class="form-group row">
-													<label class="col-lg-3 control-label">Jenis</label>
-													<div class="col-lg-9">
-														<input type="text" readonly name="Jenis_Artikel" value="<?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Judul_Galeri']; }elseif(isset($_GET['edit'])){echo $edit['Judul_Galeri'];}else{echo "Galeri"; } ?>" class="form-control">
-													</div>
-												</div>
-											</div>
-
 											<div class="col-md-12">
 												<div class="form-group row">
-													<label class="col-lg-3 control-label">Isi</label>
+													<label class="col-lg-3 control-label">Keterangan</label>
 													<div class="col-lg-9">
 														<textarea id="editor1" class="form-control" rows="10" name="Keterangan"><?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Keterangan']; }elseif(isset($_GET['edit'])){echo $edit['Keterangan'];} ?></textarea>
-													</div>
-												</div>
-											</div>
-
-											<div class="col-md-12">
-												<div class="form-group row">
-													<label class="col-lg-3 control-label">Tag</label>
-													<div class="col-lg-9">
-														<input type="text" data-role="tagsinput" style="width: 100% !important" class="form-control" name="Tag_Artikel" value="<?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Tag_Artikel']; }elseif(isset($_GET['edit'])){echo $edit['Tag_Artikel'];} ?>">
-														<br>
-														<i>Bisa dipilih lebih dari 1, Pisahkan Tag dengan tanda koma</i>
-													</div>
-												</div>
-											</div>
-
-											<div class="col-md-12">
-												<div class="form-group row">
-													<label class="col-lg-3 control-label">Status</label>
-													<div class="col-lg-9">
-														<select required class="form-select" name="Status_Artikel">
-															<option value="<?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Status_Artikel']; }elseif(isset($_GET['edit'])){echo $edit['Status_Artikel'];} ?>"><?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Status_Artikel']; }elseif(isset($_GET['edit'])){echo $edit['Status_Artikel'];} ?></option>
-															<option value="Publikasi">Publikasi</option>
-															<option value="Draf">Draf</option>
-														</select>
 													</div>
 												</div>
 											</div>
@@ -440,7 +414,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 													if (isset($_GET['edit'])) {
 														if($edit['Foto_Galeri'] <> ""){
 														?>
-														<img src="../media/galeri/<?php echo $edit['Foto_Galeri'];?>?time=<?php echo $Waktu_Sekarang?>" style="width: 300px; height: auto">
+														<img src="media/galeri/<?php echo $edit['Foto_Galeri'];?>?time=<?php echo $Waktu_Sekarang?>" style="width: 300px; height: auto">
 														<br><br>
 														<i>Klik choose file jika ingin mengganti gambar</i>
 														<?php
@@ -497,8 +471,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 												<th>No</th>
 												<th>Nama</th>
 												<th>Keterangan</th>
-												<th>Status</th>
-												<th>Foto Artikel</th>
+												<th>Foto</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -529,14 +502,12 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 																<?php echo $data['Judul_Galeri'] ?>
 															</a>
 														</td>
-														<td><?php echo $data['Jenis_Artikel'] ?></td>
-														<td><?php echo $data['Tag_Artikel'] ?></td>
-														<td><?php echo $data['Status_Artikel'] ?></td>
+														<td><?php echo $data['Keterangan'] ?></td>
 														<td>
 															<?php 
 															if($data['Foto_Galeri'] <> ""){
 																?>
-																<img src="../media/galeri/<?php echo $data['Foto_Galeri']?>?time=<?php echo $Waktu_Sekarang?>" style="width: 100px; height: auto">
+																<img src="media/galeri/<?php echo $data['Foto_Galeri']?>?time=<?php echo $Waktu_Sekarang?>" style="width: 100px; height: auto">
 																<?php
 															}
 															?>

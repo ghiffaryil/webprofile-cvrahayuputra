@@ -2,7 +2,7 @@
   <div class="container-full">
     <section class="content">
       <div class="row align-items-end">
-        <div class="col-xl-9 col-12">
+        <div class="col-xl-8 col-12">
           <div class="box bg-primary-light pull-up">
             <div class="box-body p-xl-0">
               <div class="row align-items-center">
@@ -14,11 +14,11 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-12">
+        <div class="col-xl-4 col-12">
           <div class="box bg-transparent no-shadow">
             <div class="box-body p-xl-0 text-center">
               <h3 class="px-30 mb-20">Apakah ada Artikel baru?</h3>
-              <a href="?menu=dashboard_admin_try_out_master&tambah" class="waves-effect waves-light w-p100 btn btn-primary"><i class="fa fa-plus me-15"></i> Buat Artikel </a>
+              <a href="?menu=artikel&tambah" class="waves-effect waves-light w-p100 btn btn-primary"><i class="fa fa-plus me-15"></i> Buat Artikel </a>
             </div>
           </div>
         </div>
@@ -38,37 +38,50 @@
                       </a>
                     </div>
                     <div class="box-body">
-                      <a href="?menu=dashboard_admin_histori_saldo_master" class="box bg-danger bg-hover-danger pull-up">
+                      <a href="?menu=dashboard" class="box bg-danger bg-hover-danger pull-up">
                         <div class="box-body">
                           <div class="d-flex align-items-center">
                             <span class="text-white mdi mdi-credit-card-multiple fs-36"><span class="path1"></span><span class="path2"></span></span>
                             <div class="ms-20">
                               <h4 class="text-white mb-0">0 </h4>
-                              <h5 class="text-white-50 mb-0">Total Uang yang Masuk</h5>
+                              <h5 class="text-white-50 mb-0">Total Pengunjung Situs</h5>
                             </div>
                           </div>
                         </div>
                       </a>
 
-                      <a href="?menu=dashboard_admin_data_siswa" class="box bg-primary bg-hover-primary pull-up">
-                        <div class="box-body">
-                          <div class="d-flex align-items-center">
-                            <span class="text-white mdi mdi-account-convert fs-36"></span>
-                            <div class="ms-20">
-                              <h4 class="text-white mb-0">0 </h4>
-                              <h5 class="text-white-50 mb-0">Total Siswa</h5>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
 
-                      <a href="?menu=dashboard_admin_data_marketing" class="box bg-success bg-hover-success pull-up">
+                      <a href="?menu=kontak" class="box bg-warning bg-hover-warning pull-up">
                         <div class="box-body">
                           <div class="d-flex align-items-center">
                             <span class="text-white mdi mdi-account-multiple-plus fs-36"></span>
                             <div class="ms-20">
                               <h4 class="text-white mb-0">0 </h4>
-                              <h5 class="text-white-50 mb-0">Total Marketing</h5>
+                              <h5 class="text-white-50 mb-0">Total Kontak</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a href="?menu=newsletter" class="box bg-primary bg-hover-primary pull-up">
+                        <div class="box-body">
+                          <div class="d-flex align-items-center">
+                            <span class="text-white mdi mdi-account-convert fs-36"></span>
+                            <div class="ms-20">
+                              <h4 class="text-white mb-0">0 </h4>
+                              <h5 class="text-white-50 mb-0">Total Newsletter</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a href="?menu=testimoni" class="box bg-success bg-hover-success pull-up">
+                        <div class="box-body">
+                          <div class="d-flex align-items-center">
+                            <span class="text-white mdi mdi-account-multiple-plus fs-36"></span>
+                            <div class="ms-20">
+                              <h4 class="text-white mb-0">0 </h4>
+                              <h5 class="text-white-50 mb-0">Total Testimoni</h5>
                             </div>
                           </div>
                         </div>
@@ -80,8 +93,8 @@
                 <div class="col-xl-4 col-lg-4 col-12">
                   <div class="box" style="min-height:550px;">
                     <div class="box-header">
-                      <h4 class="box-title">Top 5 Siswa</h4>
-                      <a class="box-controls pull-right d-md-flex d-none" style="cursor: pointer;" href="?menu=dashboard_admin_data_siswa">
+                      <h4 class="box-title">Last 10 Testimoni</h4>
+                      <a class="box-controls pull-right d-md-flex d-none" style="cursor: pointer;" href="?menu=testimoni">
                         View All
                       </a>
                     </div>
@@ -91,17 +104,43 @@
                           <thead>
                             <tr>
                               <th style="width: 5%;">No</th>
-                              <th style="width: 45%;">Nama Siswa</th>
-                              <th style="width: 55%;">Try Out yang diikuti</th>
+                              <th style="width: 25%;">Nama</th>
+                              <th style="width: 25%;">Instansi</th>
+                              <th style="width: 25%;">Rating</th>
                             </tr>
                           </thead>
+
                           <tbody>
-                            <tr>
-                              <td> xxx </td>
-                              <td> xxx </td>
-                              <td> xxx </td>
-                            </tr>
+                            <?php
+                            $filter_status = "Aktif";
+                            $search_field_where = array("Status");
+                            $search_criteria_where = array("=");
+                            $search_value_where = array("$filter_status");
+                            $search_connector_where = array("ORDER BY Id_Testimoni DESC LIMIT 10");
+                            $nomor = 0;
+
+                            $result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_testimoni", $search_field_where, $search_criteria_where, $search_value_where, $search_connector_where);
+
+                            if ($result['Status'] == "Sukses") {
+                              $data_hasil = $result['Hasil'];
+
+                              foreach ($data_hasil as $data) {
+                                $nomor++; ?>
+                                <tr>
+                                  <td><?php echo $nomor ?></td>
+                                  <td>
+                                    <a href="<?php echo $kehalaman ?>&edit&id=<?php echo $a_hash->encode($data["Id_Testimoni"], $_GET['menu']); ?>">
+                                      <?php echo $data['Nama'] ?>
+                                    </a>
+                                  </td>
+                                  <td><?php echo $data['Instansi'] ?></td>
+                                  <td><?php echo $data['Rating'] ?></td>
+
+                                </tr>
+                              <?php } ?>
+                            <?php } ?>
                           </tbody>
+
                         </table>
                       </div>
                     </div>
@@ -111,28 +150,52 @@
                 <div class="col-xl-4 col-lg-4 col-12">
                   <div class="box" style="min-height:550px;">
                     <div class="box-header">
-                      <h4 class="box-title">Top 5 Referal</h4>
-                      <a class="box-controls pull-right d-md-flex d-none" style="cursor: pointer;" href="?menu=dashboard_admin_data_marketing">
+                      <h4 class="box-title">Last 5 Kontak</h4>
+                      <a class="box-controls pull-right d-md-flex d-none" style="cursor: pointer;" href="?menu=kontak">
                         View All
                       </a>
                     </div>
+
                     <div class="box-body">
                       <div class="table-responsive">
                         <table class="table table-borderless table-hover">
                           <thead>
                             <tr>
-                              <th>No</th>
-                              <th>Nama Marketing</th>
-                              <th>Jumlah Siswa</th>
+                              <th style="width: 5%;">No</th>
+                              <th style="width: 25%;">Nama</th>
+                              <th style="width: 65%;">Tanggal</th>
                             </tr>
                           </thead>
+
                           <tbody>
-                            <tr>
-                              <td>xxx</td>
-                              <td>xxx</td>
-                              <td>xxx</td>
-                            </tr>
+                            <?php
+                            $filter_status = "Aktif";
+                            $search_field_where = array("Status");
+                            $search_criteria_where = array("=");
+                            $search_value_where = array("$filter_status");
+                            $search_connector_where = array("ORDER BY Id_Kontak DESC LIMIT 10");
+                            $nomor = 0;
+
+                            $result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_kontak", $search_field_where, $search_criteria_where, $search_value_where, $search_connector_where);
+
+                            if ($result['Status'] == "Sukses") {
+                              $data_hasil = $result['Hasil'];
+
+                              foreach ($data_hasil as $data) {
+                                $nomor++; ?>
+                                <tr>
+                                  <td><?php echo $nomor ?></td>
+                                  <td>
+                                    <a href="<?php echo $kehalaman ?>&edit&id=<?php echo $a_hash->encode($data["Id_Kontak"], $_GET['menu']); ?>">
+                                      <?php echo $data['Nama'] ?>
+                                    </a>
+                                  </td>
+                                  <td><?php echo tanggal_dan_waktu_24_jam_indonesia($data['Waktu_Simpan_Data']) ?></td>
+                                </tr>
+                              <?php } ?>
+                            <?php } ?>
                           </tbody>
+
                         </table>
                       </div>
                     </div>

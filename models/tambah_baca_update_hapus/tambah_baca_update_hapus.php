@@ -156,6 +156,7 @@ class a_tambah_baca_update_hapus extends a_database{
 		
 		#SQL
 		$sql = "SELECT $Primary_Key FROM $Nama_Table ORDER BY $Primary_Key DESC LIMIT 1";
+		// echo $sql;
 
 		#FUNGSI
 		$query = $this->koneksi->query($sql);

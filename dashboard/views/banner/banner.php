@@ -34,19 +34,26 @@ if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){
 if(isset($_POST['submit_simpan'])){
 	if($cek_required == "Sukses"){
 
-		$form_field = array("Id_Banner","Judul","Deskripsi","Link","Kategori","Waktu_Simpan_Data","Status");
-		$form_value = array(NULL,"$_POST[Judul]","$_POST[Deskripsi]","$_POST[Link]","$_POST[Kategori]","$Waktu_Sekarang","Aktif");
+		$form_field = array("Judul","Deskripsi","Link","Kategori","Waktu_Simpan_Data","Status");
+		$form_value = array("$_POST[Judul]","$_POST[Deskripsi]","$_POST[Link]","$_POST[Kategori]","$Waktu_Sekarang","Aktif");
 		$result = $a_tambah_baca_update_hapus->tambah_data("tb_banner",$form_field,$form_value);
 
 		if($result['Status'] == "Sukses"){
-			$Id_Auto_Increment = $result['Id'];
+
+			$a_result_terbaru = $a_tambah_baca_update_hapus->baca_data_terbaru("tb_banner","Id_Banner");
+			if($a_result_terbaru['Status'] == "Sukses"){
+				$Id_Auto_Increment = $a_result_terbaru['Hasil'][0]['Id_Banner'];
+			}else{
+				$Id_Auto_Increment = 1;
+			}
+
 			//FUNGSI UPLOAD FILE Foto_Banner
 			if ($_FILES['Foto_Banner']['size'] <> 0 && $_FILES['Foto_Banner']['error'] == 0){
 				$post_file_upload = $_FILES['Foto_Banner'];
 				$path_file_upload = $_FILES['Foto_Banner']['name'];
 				$ext_file_upload = pathinfo($path_file_upload, PATHINFO_EXTENSION);
 				$nama_file_upload = $a_hash->hash_nama_file($Id_Auto_Increment,"_Foto_Banner")."_".$Id_Auto_Increment."_Foto_Banner";
-				$folder_penyimpanan_file_upload = "../media/banner/";
+				$folder_penyimpanan_file_upload = "media/banner/";
 				$tipe_file_yang_diizikan_file_upload = array("png","gif","jpg","jpeg");
 				$maksimum_ukuran_file_upload = 3000000;
 
@@ -117,7 +124,7 @@ if(isset($_POST['submit_update']))
 				$path_file_upload = $_FILES['Foto_Banner']['name'];
 				$ext_file_upload = pathinfo($path_file_upload, PATHINFO_EXTENSION);
 				$nama_file_upload = $a_hash->hash_nama_file($Get_Id_Primary,"_Foto_Banner")."_".$Get_Id_Primary."_Foto_Banner";
-				$folder_penyimpanan_file_upload = "../media/banner/";
+				$folder_penyimpanan_file_upload = "media/banner/";
 				$tipe_file_yang_diizikan_file_upload = array("png","gif","jpg","jpeg");
 				$maksimum_ukuran_file_upload = 3000000;
 
@@ -205,7 +212,7 @@ if(isset($_GET['hapus_data_permanen'])){
 		$data = $result_data['Hasil'];
 
 		$Foto_Banner = $data['Foto_Banner'];
-		$temp_file_location = "../media/banner/".$Foto_Banner;
+		$temp_file_location = "media/banner/".$Foto_Banner;
 		
 		//Menghapus File Temporari Diatas
 		if(file_exists($temp_file_location)){
@@ -422,7 +429,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 															 if ($edit['Foto_Banner']=="") {
 															echo "Tidak Ada Gambar";
 														}else{ ?>
-															<img src="../media/banner/<?php echo $edit['Foto_Banner']?>?time=<?php echo $Waktu_Sekarang?>" style="width: auto; height: 400px;">
+															<img src="media/banner/<?php echo $edit['Foto_Banner']?>?time=<?php echo $Waktu_Sekarang?>" style="width: auto; height: 400px;">
 															<br><br>
 														<?php }
 														} ?>
@@ -523,7 +530,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 																<?php 
 																if($data['Foto_Banner'] <> ""){
 																?>
-																<img src="../media/banner/<?php echo $data['Foto_Banner']?>?time=<?php echo $Waktu_Sekarang?>" style="width: 100px; height: auto">
+																<img src="media/banner/<?php echo $data['Foto_Banner']?>?time=<?php echo $Waktu_Sekarang?>" style="width: 100px; height: auto">
 																<?php
 																}
 																?>

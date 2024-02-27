@@ -50,7 +50,7 @@
 
 					<li class="treeview">
 						<a href="#">
-							<i class="icon-Globe"><span class="path1"></span><span class="path2"></span></i>
+							<i class="icon-Settings"><span class="path1"></span><span class="path2"></span></i>
 							<span>Pengaturan</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-right pull-right"></i>
@@ -58,19 +58,6 @@
 						</a>
 						<ul class="treeview-menu">
 							<li><a href="?menu=setting_website"><i class="mdi mdi-pencil-box"><span class="path1"></span><span class="path2"></span></i>Pengaturan Website</a></li>
-						</ul>
-					</li>
-
-					<li class="treeview">
-						<a href="#">
-							<i class="mdi mdi-camera-burst"><span class="path1"></span><span class="path2"></span></i>
-							<span>Banner</span>
-							<span class="pull-right-container">
-								<i class="fa fa-angle-right pull-right"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							<li><a href="?menu=banner"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Banner</a></li>
 						</ul>
 					</li>
 
@@ -91,7 +78,7 @@
 					<li class="treeview">
 						<a href="#">
 							<i class="mdi mdi-comment-question-outline"><span class="path1"></span><span class="path2"></span></i>
-							<span>Faq</span>
+							<span>FAQ</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-right pull-right"></i>
 							</span>
@@ -101,22 +88,23 @@
 						</ul>
 					</li>
 
+					<li class="header">Data Tambahan</li>
 					<li class="treeview">
 						<a href="#">
-							<i class="mdi mdi-thumb-up"><span class="path1"></span><span class="path2"></span></i>
-							<span>Testimoni</span>
+							<i class="mdi mdi-camera-burst"><span class="path1"></span><span class="path2"></span></i>
+							<span>Slideshow</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-right pull-right"></i>
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="?menu=testimoni"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Testimoni</a></li>
+							<li><a href="?menu=banner"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Banner</a></li>
 						</ul>
 					</li>
 
 					<li class="treeview">
 						<a href="#">
-							<i class="mdi mdi-newspaper"><span class="path1"></span><span class="path2"></span></i>
+							<i class="mdi mdi-image"><span class="path1"></span><span class="path2"></span></i>
 							<span>Galeri</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-right pull-right"></i>
@@ -137,6 +125,33 @@
 						</a>
 						<ul class="treeview-menu">
 							<li><a href="?menu=artikel"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Artikel</a></li>
+						</ul>
+					</li>
+
+					<li class="header">Feedback User</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="mdi mdi-star"><span class="path1"></span><span class="path2"></span></i>
+							<span>Testimoni</span>
+							<span class="pull-right-container">
+								<i class="fa fa-angle-right pull-right"></i>
+							</span>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="?menu=testimoni"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Testimoni</a></li>
+						</ul>
+					</li>
+
+					<li class="treeview">
+						<a href="#">
+							<i class="mdi mdi-phone"><span class="path1"></span><span class="path2"></span></i>
+							<span>Kontak</span>
+							<span class="pull-right-container">
+								<i class="fa fa-angle-right pull-right"></i>
+							</span>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="?menu=kontak"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Kontak</a></li>
 						</ul>
 					</li>
 

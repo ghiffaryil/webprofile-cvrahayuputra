@@ -45,14 +45,21 @@ if(isset($_POST['submit_simpan'])){
 		$result = $a_tambah_baca_update_hapus->tambah_data("tb_testimoni",$form_field,$form_value);
 
 		if($result['Status'] == "Sukses"){
-			$Id_Auto_Increment = $result['Id'];
+			
+			$a_result_terbaru = $a_tambah_baca_update_hapus->baca_data_terbaru("tb_testimoni","Id_Testimoni");
+			if($a_result_terbaru['Status'] == "Sukses"){
+				$Id_Auto_Increment = $a_result_terbaru['Hasil'][0]['Id_Testimoni'];
+			}else{
+				$Id_Auto_Increment = 1;
+			}
+
 			//FUNGSI UPLOAD FILE Foto
 			if ($_FILES['Foto']['size'] <> 0 && $_FILES['Foto']['error'] == 0){
 				$post_file_upload = $_FILES['Foto'];
 				$path_file_upload = $_FILES['Foto']['name'];
 				$ext_file_upload = pathinfo($path_file_upload, PATHINFO_EXTENSION);
 				$nama_file_upload = $a_hash->hash_nama_file($Id_Auto_Increment,"_Foto")."_".$Id_Auto_Increment."_Foto";
-				$folder_penyimpanan_file_upload = "../media/testimoni/";
+				$folder_penyimpanan_file_upload = "media/testimoni/";
 				$tipe_file_yang_diizikan_file_upload = array("png","gif","jpg","jpeg");
 				$maksimum_ukuran_file_upload = 3000000;
 
@@ -122,7 +129,7 @@ if(isset($_POST['submit_update']))
 				$path_file_upload = $_FILES['Foto']['name'];
 				$ext_file_upload = pathinfo($path_file_upload, PATHINFO_EXTENSION);
 				$nama_file_upload = $a_hash->hash_nama_file($Get_Id_Primary,"_Foto")."_".$Get_Id_Primary."_Foto";
-				$folder_penyimpanan_file_upload = "../media/testimoni/";
+				$folder_penyimpanan_file_upload = "media/testimoni/";
 				$tipe_file_yang_diizikan_file_upload = array("png","gif","jpg","jpeg");
 				$maksimum_ukuran_file_upload = 3000000;
 
@@ -210,7 +217,7 @@ if(isset($_GET['hapus_data_permanen'])){
 		$data = $result_data['Hasil'];
 
 		$Foto = $data['Foto'];
-		$temp_file_location = "../media/testimoni/".$Foto;
+		$temp_file_location = "media/testimoni/".$Foto;
 		
 		//Menghapus File Temporari Diatas
 		if(file_exists($temp_file_location)){
@@ -436,7 +443,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 													if (isset($_GET['edit'])) {
 														if($edit['Foto'] <> ""){
 															?>
-															<img src="../media/testimoni/<?php echo $edit['Foto']  ?>" style="width: 150px; height: auto">
+															<img src="media/testimoni/<?php echo $edit['Foto']  ?>" style="width: 150px; height: auto">
 															<br><br>
 															<i>Klik choose file jika ingin mengganti gambar</i>
 															<?php
@@ -506,16 +513,10 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 											}
 
 											$search_field_where = array("Status");
-
 											$search_criteria_where = array("=");
-
 											$search_value_where = array("$filter_status");
-
 											$search_connector_where = array("");
-
-
 											$nomor = 0;
-
 
 											$result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_testimoni",$search_field_where,$search_criteria_where,$search_value_where,$search_connector_where);
 
@@ -537,7 +538,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 															<?php 
 															if($data['Foto'] <> ""){
 																?>
-																<img src="../media/testimoni/<?php echo $data['Foto']?>" style="width: 100px; height: auto">
+																<img src="media/testimoni/<?php echo $data['Foto']?>" style="width: 100px; height: auto">
 																<?php
 															}
 															?>
