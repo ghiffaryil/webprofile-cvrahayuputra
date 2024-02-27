@@ -1,0 +1,1 @@
+{"result":{"text":"a circled dot b equals left parenthesis a plus b right parenthesis b plus 2"},"status":"ok"}

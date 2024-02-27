@@ -1,0 +1,1 @@
+{"result":{"text":"Q equals begin display style 90 over 7 end style equals 12 begin display style 6 over 7 end style"},"status":"ok"}

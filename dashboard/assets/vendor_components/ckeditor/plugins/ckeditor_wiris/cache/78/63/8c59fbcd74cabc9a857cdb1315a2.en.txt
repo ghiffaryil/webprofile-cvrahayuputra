@@ -1,0 +1,1 @@
+{"result":{"text":"F equals X plus X over 2 plus X over 3 plus X over 4 equals fraction numerator 25 X over denominator 12 end fraction"},"status":"ok"}

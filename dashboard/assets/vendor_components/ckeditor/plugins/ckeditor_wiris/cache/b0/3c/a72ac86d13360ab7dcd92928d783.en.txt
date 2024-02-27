@@ -1,0 +1,1 @@
+{"result":{"text":"limit as x rightwards arrow 2 of fraction numerator square root of 4 x plus 1 end root minus square root of x plus 7 end root over denominator left parenthesis x minus 2 right parenthesis left parenthesis square root of x plus 2 end root plus 2 right parenthesis end fraction"},"status":"ok"}

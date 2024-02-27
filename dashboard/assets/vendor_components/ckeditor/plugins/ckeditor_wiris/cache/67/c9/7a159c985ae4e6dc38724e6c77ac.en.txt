@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator 2 x plus 1 over denominator x minus 1 end fraction comma space space space space x not equal to 1"},"status":"ok"}

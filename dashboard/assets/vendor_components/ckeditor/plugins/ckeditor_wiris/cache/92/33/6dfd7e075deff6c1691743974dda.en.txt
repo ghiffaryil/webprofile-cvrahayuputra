@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator negative 7 over denominator square root of 286 end fraction"},"status":"ok"}

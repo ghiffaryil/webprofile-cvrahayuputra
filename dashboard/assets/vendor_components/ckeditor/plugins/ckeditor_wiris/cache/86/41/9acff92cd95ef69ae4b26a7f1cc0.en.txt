@@ -1,0 +1,1 @@
+{"result":{"text":"a equals begin display style 3 over 5 end style cross times 1 equals begin display style 3 over 5 end style"},"status":"ok"}

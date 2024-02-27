@@ -1,0 +1,1 @@
+{"result":{"text":"y space equals space b x squared comma space 0 less or equal than x less or equal than t"},"status":"ok"}

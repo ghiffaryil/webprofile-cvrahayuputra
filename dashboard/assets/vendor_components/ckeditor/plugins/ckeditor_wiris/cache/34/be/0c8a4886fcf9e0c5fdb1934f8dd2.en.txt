@@ -1,0 +1,1 @@
+{"result":{"text":"f not stretchy left parenthesis x not stretchy right parenthesis equals begin display style fraction numerator left parenthesis x minus a right parenthesis to the power of 2 end exponent over denominator 2 x end fraction end style"},"status":"ok"}

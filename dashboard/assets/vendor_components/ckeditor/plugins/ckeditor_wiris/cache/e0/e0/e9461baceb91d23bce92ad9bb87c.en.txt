@@ -1,0 +1,1 @@
+{"result":{"text":"vertical line A times B vertical line equals vertical line A vertical line times vertical line B vertical line"},"status":"ok"}

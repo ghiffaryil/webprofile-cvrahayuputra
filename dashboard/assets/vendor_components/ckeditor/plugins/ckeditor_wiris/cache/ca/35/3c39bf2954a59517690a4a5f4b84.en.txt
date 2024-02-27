@@ -1,0 +1,1 @@
+{"result":{"text":"integral subscript 1 superscript 36 fraction numerator 3 over denominator square root of x space open parentheses 3 plus square root of x close parentheses to the power of begin display style 3 over 2 end style end exponent end fraction space d x"},"status":"ok"}

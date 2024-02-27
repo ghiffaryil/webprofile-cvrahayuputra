@@ -1,0 +1,1 @@
+{"result":{"text":"m. g. space x. sin theta space equals m. g. mu subscript k. space S\nx space equals space fraction numerator mu subscript k over denominator S i n theta end fraction. space S space equals fraction numerator 0 comma 5 space. space 1 comma 2 space over denominator 0 comma 5 end fraction space equals space 1 comma 2"},"status":"ok"}

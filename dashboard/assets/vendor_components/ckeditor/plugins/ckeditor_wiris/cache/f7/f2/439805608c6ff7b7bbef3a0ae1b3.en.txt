@@ -1,0 +1,1 @@
+{"result":{"text":"integral from 0 to 2 of f not stretchy left parenthesis x not stretchy right parenthesis text end text d x equals midline horizontal ellipsis"},"status":"ok"}

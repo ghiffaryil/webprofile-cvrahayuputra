@@ -1,0 +1,1 @@
+{"result":{"text":"b equals 12 a equals 12 not stretchy left parenthesis negative 1 not stretchy right parenthesis equals negative 12"},"status":"ok"}

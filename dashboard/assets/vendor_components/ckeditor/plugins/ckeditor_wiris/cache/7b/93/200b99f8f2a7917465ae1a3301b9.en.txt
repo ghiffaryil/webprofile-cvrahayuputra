@@ -1,0 +1,1 @@
+{"result":{"text":"a minus b equals negative 1 minus not stretchy left parenthesis negative 12 not stretchy right parenthesis equals 11"},"status":"ok"}

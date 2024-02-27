@@ -1,0 +1,1 @@
+{"result":{"text":"1 over C subscript B D end subscript equals fraction numerator 1 over denominator 2 C end fraction plus fraction numerator 1 over denominator 3 C end fraction rightwards arrow C subscript B D end subscript equals fraction numerator 6 C over denominator 5 end fraction rightwards arrow V subscript B D end subscript equals ?"},"status":"ok"}

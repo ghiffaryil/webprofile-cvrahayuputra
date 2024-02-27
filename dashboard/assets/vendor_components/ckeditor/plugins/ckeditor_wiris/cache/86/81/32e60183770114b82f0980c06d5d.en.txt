@@ -1,0 +1,1 @@
+{"result":{"text":"A B space equals space b open parentheses negative 1 close parentheses squared space equals space b\nC D space equals space b open parentheses 1 close parentheses squared space equals space b"},"status":"ok"}

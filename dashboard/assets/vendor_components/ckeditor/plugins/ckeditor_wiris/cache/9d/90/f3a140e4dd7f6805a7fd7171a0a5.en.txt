@@ -1,0 +1,1 @@
+{"result":{"text":"E G equals square root of E F squared plus F G squared end root\nequals square root of 8 squared plus 6 squared end root equals square root of 64 plus 36 end root equals square root of 100 equals 10"},"status":"ok"}

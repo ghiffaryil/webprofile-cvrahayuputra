@@ -1,0 +1,1 @@
+{"result":{"text":"limit as x rightwards arrow 3 of fraction numerator p x minus 5 over denominator 4 x minus 10 end fraction equals q rightwards arrow 3 p minus 5 equals 2 q"},"status":"ok"}

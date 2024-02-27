@@ -1,0 +1,1 @@
+{"result":{"text":"not stretchy left parenthesis E not stretchy right parenthesis text end text a to the power of 6 end exponent b to the power of 6 end exponent"},"status":"ok"}

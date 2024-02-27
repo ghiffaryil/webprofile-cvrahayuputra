@@ -1,0 +1,1 @@
+{"result":{"text":"P H equals square root of 9 squared plus left parenthesis 6 square root of 2 right parenthesis squared end root equals 3 square root of 17"},"status":"ok"}

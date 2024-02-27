@@ -1,0 +1,1 @@
+{"result":{"text":"equals space 0 comma 02 space cross times space 6 comma 0 cross times 10 to the power of 23 space equals space 1 comma 2 cross times 10 to the power of 22"},"status":"ok"}

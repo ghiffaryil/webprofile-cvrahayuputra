@@ -1,0 +1,1 @@
+{"result":{"text":"sigma equals 5 comma 67 x 10 to the power of negative 8 end exponent"},"status":"ok"}

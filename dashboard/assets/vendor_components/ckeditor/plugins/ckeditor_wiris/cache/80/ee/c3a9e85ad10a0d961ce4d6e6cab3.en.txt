@@ -1,0 +1,1 @@
+{"result":{"text":"s i n left parenthesis A minus B right parenthesis equals s i n text end text A text end text c o s text end text B minus s i n text end text B text end text c o s text end text A"},"status":"ok"}

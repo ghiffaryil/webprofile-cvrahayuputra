@@ -1,0 +1,1 @@
+{"result":{"text":"a with rightwards arrow on top times d with rightwards arrow on top equals 0"},"status":"ok"}

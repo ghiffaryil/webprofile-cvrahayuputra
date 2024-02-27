@@ -1,0 +1,1 @@
+{"result":{"text":"f apostrophe left parenthesis 1 right parenthesis space equals 2"},"status":"ok"}

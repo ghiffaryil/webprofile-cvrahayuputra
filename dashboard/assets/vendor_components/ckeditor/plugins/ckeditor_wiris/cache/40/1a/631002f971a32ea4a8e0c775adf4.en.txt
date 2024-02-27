@@ -1,0 +1,1 @@
+{"result":{"text":"p q equals 2 p plus 7"},"status":"ok"}

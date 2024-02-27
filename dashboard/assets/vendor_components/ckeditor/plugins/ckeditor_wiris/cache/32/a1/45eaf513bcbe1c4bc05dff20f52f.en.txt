@@ -1,0 +1,1 @@
+{"result":{"text":"not stretchy left parenthesis 1 not stretchy right parenthesis text end text x to the power of 2 end exponent minus 2 x y plus y to the power of 2 end exponent equals 4 not stretchy left parenthesis x minus y not stretchy right parenthesis"},"status":"ok"}

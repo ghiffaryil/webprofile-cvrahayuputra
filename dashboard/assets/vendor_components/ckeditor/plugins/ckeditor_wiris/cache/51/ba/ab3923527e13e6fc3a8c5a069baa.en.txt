@@ -1,0 +1,1 @@
+{"result":{"text":"Q equals 2 plus 1 comma 9 equals 3 comma 9"},"status":"ok"}

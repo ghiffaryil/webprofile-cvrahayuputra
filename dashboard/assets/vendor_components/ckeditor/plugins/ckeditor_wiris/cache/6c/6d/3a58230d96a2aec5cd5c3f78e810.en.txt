@@ -1,0 +1,1 @@
+{"result":{"text":"v space equals square root of fraction numerator 2 g h over denominator 1 plus K end fraction end root"},"status":"ok"}

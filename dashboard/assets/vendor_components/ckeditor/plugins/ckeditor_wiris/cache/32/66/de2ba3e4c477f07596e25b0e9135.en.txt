@@ -1,0 +1,1 @@
+{"result":{"text":"3 over 4 plus 300 cross times square root of 3 divided by open parentheses 400 cubed close parentheses cross times 200 bevelled 3 over 3 equals"},"status":"ok"}

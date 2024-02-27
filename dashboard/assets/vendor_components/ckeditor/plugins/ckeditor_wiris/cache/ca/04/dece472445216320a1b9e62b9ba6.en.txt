@@ -1,0 +1,1 @@
+{"result":{"text":"3 p minus 5 equals 2 q"},"status":"ok"}

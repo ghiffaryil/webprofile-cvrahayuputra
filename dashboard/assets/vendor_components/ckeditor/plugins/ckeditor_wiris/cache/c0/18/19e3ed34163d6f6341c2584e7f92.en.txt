@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator 2 straight pi over denominator a end fraction equals straight pi over 3 rightwards double arrow a equals 6"},"status":"ok"}

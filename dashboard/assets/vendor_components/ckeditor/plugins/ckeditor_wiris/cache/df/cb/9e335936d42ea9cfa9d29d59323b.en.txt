@@ -1,0 +1,1 @@
+{"result":{"text":"a with rightwards arrow on top times d with rightwards arrow on top equals open parentheses table row 2 row cell negative 2 end cell row cell negative 2 end cell end table close parentheses open parentheses table row 1 row cell negative 1 end cell row 2 end table close parentheses equals 2 plus 2 minus 4 equals 0"},"status":"ok"}

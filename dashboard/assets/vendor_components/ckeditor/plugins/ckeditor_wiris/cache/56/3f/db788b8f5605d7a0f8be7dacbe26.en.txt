@@ -1,0 +1,1 @@
+{"result":{"text":"not stretchy left parenthesis E not stretchy right parenthesis text end text minus begin display style 2 over 5 end style"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"2 circled dot left parenthesis 1 circled dot 3 right parenthesis"},"status":"ok"}

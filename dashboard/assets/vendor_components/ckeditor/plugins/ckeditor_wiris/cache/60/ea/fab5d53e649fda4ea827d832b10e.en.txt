@@ -1,0 +1,1 @@
+{"result":{"text":"equals fraction numerator 2 comma 88 space g over denominator 96 space begin display style bevelled fraction numerator g over denominator m o l end fraction end style end fraction equals 0 comma 03 space m o l"},"status":"ok"}

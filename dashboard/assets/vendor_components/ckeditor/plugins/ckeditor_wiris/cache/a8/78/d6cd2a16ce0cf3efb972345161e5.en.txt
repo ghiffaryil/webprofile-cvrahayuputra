@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator 5 x plus 3 over denominator x plus 5 end fraction comma space space space space x not equal to negative 5"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"sin space open parentheses a minus straight pi close parentheses space plus space cos space open parentheses negative a close parentheses equals"},"status":"ok"}

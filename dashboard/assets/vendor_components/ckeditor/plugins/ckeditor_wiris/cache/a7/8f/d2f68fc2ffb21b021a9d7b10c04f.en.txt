@@ -1,0 +1,1 @@
+{"result":{"text":"d e t left parenthesis 2 A to the power of negative 1 end exponent right parenthesis"},"status":"ok"}

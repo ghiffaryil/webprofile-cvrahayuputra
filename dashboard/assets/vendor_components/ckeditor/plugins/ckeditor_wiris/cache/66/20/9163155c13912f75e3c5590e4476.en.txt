@@ -1,0 +1,1 @@
+{"result":{"text":"x equals midline horizontal ellipsis"},"status":"ok"}

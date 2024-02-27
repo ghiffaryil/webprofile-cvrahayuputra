@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator straight P.5 space straight L over denominator straight P. straight V 2 end fraction space equals space fraction numerator 0 comma 5 space mol. straight R. straight T over denominator 1 space mol. straight R. straight T end fraction space comma space straight V subscript 2 space equals space 10 space straight L"},"status":"ok"}

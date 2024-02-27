@@ -1,0 +1,1 @@
+{"result":{"text":"v subscript r m s end subscript equals square root of fraction numerator 3 P over denominator rho end fraction end root rightwards arrow large v subscript r m s end subscript superscript 2 equals fraction numerator 3 P over denominator rho end fraction"},"status":"ok"}

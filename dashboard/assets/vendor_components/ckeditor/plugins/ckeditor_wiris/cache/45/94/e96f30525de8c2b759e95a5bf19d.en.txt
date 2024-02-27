@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator 2 a minus 4 over denominator 9 end fraction equals 2 space semicolon space a equals 11"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"I A B equals P A cross times P B left parenthesis d A B right parenthesis 2"},"status":"ok"}

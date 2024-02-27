@@ -1,0 +1,1 @@
+{"result":{"text":"s i n text end text A C B equals begin display style 20 over 63 end style"},"status":"ok"}

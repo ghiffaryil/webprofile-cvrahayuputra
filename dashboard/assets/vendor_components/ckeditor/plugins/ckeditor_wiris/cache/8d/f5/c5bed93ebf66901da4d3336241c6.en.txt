@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator r cubed plus r squared plus r over denominator r plus 1 end fraction"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"p squared minus q squared equals 27"},"status":"ok"}

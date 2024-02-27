@@ -1,0 +1,1 @@
+{"result":{"text":"C equals left parenthesis table attributes columnspacing 1em rowspacing 4 pt end attributes row 3 2 row 1 cell negative 5 end cell end table right parenthesis"},"status":"ok"}

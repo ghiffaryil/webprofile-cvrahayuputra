@@ -1,0 +1,1 @@
+{"result":{"text":"P equals 1 plus not stretchy left parenthesis 1 comma 9 not stretchy right parenthesis to the power of 2 end exponent equals 4 comma 61"},"status":"ok"}

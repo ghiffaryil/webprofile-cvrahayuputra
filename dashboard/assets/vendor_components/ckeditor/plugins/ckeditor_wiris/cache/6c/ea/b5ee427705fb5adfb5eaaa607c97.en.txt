@@ -1,0 +1,1 @@
+{"result":{"text":"c o s left parenthesis alpha minus beta right parenthesis equals 1"},"status":"ok"}

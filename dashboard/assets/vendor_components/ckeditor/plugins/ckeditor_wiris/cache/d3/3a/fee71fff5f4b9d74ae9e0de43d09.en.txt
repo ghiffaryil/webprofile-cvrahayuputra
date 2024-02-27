@@ -1,0 +1,1 @@
+{"result":{"text":"straight pi space equals space straight M times straight R times straight T"},"status":"ok"}

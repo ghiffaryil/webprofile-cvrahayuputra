@@ -1,0 +1,1 @@
+{"result":{"text":"not stretchy vertical line k cross times A subscript m cross times m end subscript not stretchy vertical line equals k to the power of m cross times not stretchy vertical line A not stretchy vertical line"},"status":"ok"}

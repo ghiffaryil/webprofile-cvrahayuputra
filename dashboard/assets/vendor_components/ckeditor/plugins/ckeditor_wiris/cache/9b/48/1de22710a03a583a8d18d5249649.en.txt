@@ -1,0 +1,1 @@
+{"result":{"text":"limit as x rightwards arrow infinity of square root of a x squared plus 6 x minus 3 end root minus square root of 4 x squared minus b x plus 5 end root equals 2"},"status":"ok"}

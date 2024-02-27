@@ -1,0 +1,1 @@
+{"result":{"text":"f apostrophe left parenthesis x right parenthesis greater than 0\n3 a x squared minus 2 left parenthesis b plus 3 right parenthesis x minus 24 space greater than 0"},"status":"ok"}

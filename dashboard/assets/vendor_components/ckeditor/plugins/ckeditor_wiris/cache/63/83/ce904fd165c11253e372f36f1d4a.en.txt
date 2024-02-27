@@ -1,0 +1,1 @@
+{"result":{"text":"not stretchy left parenthesis D equals b to the power of 2 end exponent minus 4 a c not stretchy right parenthesis"},"status":"ok"}

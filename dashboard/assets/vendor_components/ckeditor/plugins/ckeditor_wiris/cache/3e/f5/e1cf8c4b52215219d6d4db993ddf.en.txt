@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator 10 cross times 40 space minus space 52 plus 38 over denominator 10 end fraction equals fraction numerator 400 minus 14 over denominator 10 end fraction equals 386 over 10 equals 38 comma 6"},"status":"ok"}

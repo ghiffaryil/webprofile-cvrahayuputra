@@ -1,0 +1,1 @@
+{"result":{"text":"B minus A equals left parenthesis table attributes columnspacing 1em rowspacing 4 pt end attributes row 2 cell negative 1 end cell row 1 0 end table right parenthesis"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"not stretchy left parenthesis 2 comma 0 not stretchy right parenthesis"},"status":"ok"}

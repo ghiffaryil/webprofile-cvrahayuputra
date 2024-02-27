@@ -1,0 +1,1 @@
+{"result":{"text":"fourth root of 3 open parentheses 300 close parentheses"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"v subscript t equals v subscript 0 space sin space theta space minus space g t\n28 equals 60 space times space 0 comma 8 space minus space 10 t\n28 equals 48 space minus space 10 t\n10 t space equals space 20\nt space equals space 2 space s"},"status":"ok"}

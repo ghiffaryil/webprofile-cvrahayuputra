@@ -1,0 +1,1 @@
+{"result":{"text":"x cubed plus y cubed equals left parenthesis x plus y right parenthesis cubed minus 3 x y left parenthesis x plus y right parenthesis equals left parenthesis 4 right parenthesis cubed minus 3 times 3 left parenthesis 4 right parenthesis equals 28"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator 0 comma 8 over denominator 40 end fraction equals 0 comma 02 space m o l space equals space 20 space m m o l"},"status":"ok"}

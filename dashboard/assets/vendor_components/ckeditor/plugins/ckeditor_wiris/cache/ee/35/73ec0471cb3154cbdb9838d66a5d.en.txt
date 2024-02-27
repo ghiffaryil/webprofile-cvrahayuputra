@@ -1,0 +1,1 @@
+{"result":{"text":"integral from a to b of f not stretchy left parenthesis x not stretchy right parenthesis text end text d x equals negative integral from negative a to negative b of f not stretchy left parenthesis negative x not stretchy right parenthesis text end text d x"},"status":"ok"}

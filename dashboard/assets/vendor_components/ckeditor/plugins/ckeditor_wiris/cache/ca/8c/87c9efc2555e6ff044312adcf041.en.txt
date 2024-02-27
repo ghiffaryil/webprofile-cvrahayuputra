@@ -1,0 +1,1 @@
+{"result":{"text":"B D C"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"c o s left parenthesis x minus y right parenthesis equals negative begin display style 1 half end style square root of 3"},"status":"ok"}

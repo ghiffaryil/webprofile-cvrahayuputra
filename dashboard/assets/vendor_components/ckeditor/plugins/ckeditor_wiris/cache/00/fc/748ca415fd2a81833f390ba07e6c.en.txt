@@ -1,0 +1,1 @@
+{"result":{"text":"begin display style pi over 2 end style less than x minus y less than pi"},"status":"ok"}

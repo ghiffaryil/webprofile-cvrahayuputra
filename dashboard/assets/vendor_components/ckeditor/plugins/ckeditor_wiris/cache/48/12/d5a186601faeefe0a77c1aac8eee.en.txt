@@ -1,0 +1,1 @@
+{"result":{"text":"U R equals 6 text end text c m"},"status":"ok"}

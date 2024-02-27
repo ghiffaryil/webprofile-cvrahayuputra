@@ -1,0 +1,1 @@
+{"result":{"text":"cube root of 4 to the power of x plus 1 end exponent end root equals 2 square root of 8 to the power of x end exponent end root"},"status":"ok"}

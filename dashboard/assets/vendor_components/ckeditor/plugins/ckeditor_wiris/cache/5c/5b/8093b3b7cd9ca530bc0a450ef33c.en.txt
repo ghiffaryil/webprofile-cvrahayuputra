@@ -1,0 +1,1 @@
+{"result":{"text":"a to the power of 2 end exponent plus 3 a plus 9 equals midline horizontal ellipsis"},"status":"ok"}

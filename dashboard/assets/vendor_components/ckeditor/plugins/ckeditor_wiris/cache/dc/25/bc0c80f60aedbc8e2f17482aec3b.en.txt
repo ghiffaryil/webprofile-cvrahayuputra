@@ -1,0 +1,1 @@
+{"result":{"text":"4 degree C space 3 subscript 1 superscript 4 space 2 cubed pi space 3 element of 2 space 3 open square brackets 3 close square brackets"},"status":"ok"}

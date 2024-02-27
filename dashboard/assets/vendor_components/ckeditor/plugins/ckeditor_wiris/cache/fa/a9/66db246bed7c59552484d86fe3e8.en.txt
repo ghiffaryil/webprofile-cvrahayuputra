@@ -1,0 +1,1 @@
+{"result":{"text":"begin display style fraction numerator 4 minus a to the power of 2 end exponent over denominator 3 a minus 6 end fraction end style"},"status":"ok"}

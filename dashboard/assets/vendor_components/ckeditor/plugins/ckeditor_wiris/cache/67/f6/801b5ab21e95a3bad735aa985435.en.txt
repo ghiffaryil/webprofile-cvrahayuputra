@@ -1,0 +1,1 @@
+{"result":{"text":"300 5 over 4 space plus space 20 bevelled 3 over 4 plus 50 to the power of 6 minus 5 square root of 5 equals"},"status":"ok"}

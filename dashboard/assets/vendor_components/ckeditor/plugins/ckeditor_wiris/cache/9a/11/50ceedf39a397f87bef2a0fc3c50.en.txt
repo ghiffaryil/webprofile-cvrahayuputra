@@ -1,0 +1,1 @@
+{"result":{"text":"4 y less than x plus 4"},"status":"ok"}

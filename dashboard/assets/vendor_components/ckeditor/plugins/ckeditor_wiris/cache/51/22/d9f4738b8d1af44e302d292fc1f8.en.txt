@@ -1,0 +1,1 @@
+{"result":{"text":"x circled dot y equals x to the power of y end exponent minus y"},"status":"ok"}

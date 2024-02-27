@@ -1,0 +1,1 @@
+{"result":{"text":"5 over 4 cross times bevelled fraction numerator 3 over denominator 2 minus 200 cross times open parentheses 4 cross times 2 square root of 3 close parentheses minus 3 cubed end fraction"},"status":"ok"}

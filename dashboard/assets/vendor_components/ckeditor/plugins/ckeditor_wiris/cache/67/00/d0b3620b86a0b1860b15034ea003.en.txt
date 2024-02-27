@@ -1,0 +1,1 @@
+{"result":{"text":"equals P open parentheses 1 close parentheses plus P open parentheses 2 close parentheses plus P open parentheses 3 close parentheses\nequals 1 fifth plus 1 fourth plus 1 fourth equals 7 over 10"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"s i n to the power of 2 end exponent A plus c o s to the power of 2 end exponent A equals 1"},"status":"ok"}

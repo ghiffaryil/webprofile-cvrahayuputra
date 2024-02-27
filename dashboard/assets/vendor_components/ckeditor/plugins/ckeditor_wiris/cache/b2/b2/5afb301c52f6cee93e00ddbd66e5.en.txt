@@ -1,0 +1,1 @@
+{"result":{"text":"x squared plus y squared space t e r j a d i space s a a t space cos space left parenthesis alpha minus beta right parenthesis equals 1 space t e r b e s a r comma space s e h i n g g a space n i l a i space t e r b e s a r space"},"status":"ok"}

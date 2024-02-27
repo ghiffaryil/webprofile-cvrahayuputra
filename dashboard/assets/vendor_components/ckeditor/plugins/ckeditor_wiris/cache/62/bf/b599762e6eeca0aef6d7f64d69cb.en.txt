@@ -1,0 +1,1 @@
+{"result":{"text":"f left parenthesis x right parenthesis equals a x cubed minus left parenthesis b plus 3 right parenthesis x squared minus 24 x minus 2"},"status":"ok"}

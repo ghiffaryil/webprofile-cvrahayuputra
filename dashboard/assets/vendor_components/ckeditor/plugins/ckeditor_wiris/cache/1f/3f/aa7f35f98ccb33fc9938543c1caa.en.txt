@@ -1,0 +1,1 @@
+{"result":{"text":"y equals a left parenthesis x minus x subscript p end subscript right parenthesis to the power of 2 end exponent plus y subscript p end subscript"},"status":"ok"}

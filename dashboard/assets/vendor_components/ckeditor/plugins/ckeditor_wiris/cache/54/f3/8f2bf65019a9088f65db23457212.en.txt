@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator B Q over denominator A E end fraction equals fraction numerator P B over denominator P A end fraction\n2 over 6 equals fraction numerator P B over denominator P B plus 6 end fraction\nP B equals 3"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"a b equals begin display style c over a end style equals begin display style fraction numerator p plus 13 over denominator 1 end fraction end style equals p plus 13"},"status":"ok"}

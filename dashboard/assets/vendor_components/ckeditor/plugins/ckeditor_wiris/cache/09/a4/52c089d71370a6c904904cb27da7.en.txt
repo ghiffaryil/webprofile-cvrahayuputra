@@ -1,0 +1,1 @@
+{"result":{"text":"S W equals"},"status":"ok"}

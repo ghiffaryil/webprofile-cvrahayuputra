@@ -1,0 +1,1 @@
+{"result":{"text":"N greater than S greater than C"},"status":"ok"}

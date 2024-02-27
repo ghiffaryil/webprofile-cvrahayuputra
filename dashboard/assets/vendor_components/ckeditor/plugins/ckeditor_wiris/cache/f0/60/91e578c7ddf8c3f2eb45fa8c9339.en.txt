@@ -1,0 +1,1 @@
+{"result":{"text":"P space equals Q"},"status":"ok"}

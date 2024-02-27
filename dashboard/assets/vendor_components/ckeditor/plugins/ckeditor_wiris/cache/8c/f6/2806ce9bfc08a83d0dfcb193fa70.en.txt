@@ -1,0 +1,1 @@
+{"result":{"text":"f not stretchy left parenthesis negative x not stretchy right parenthesis equals f not stretchy left parenthesis x not stretchy right parenthesis"},"status":"ok"}

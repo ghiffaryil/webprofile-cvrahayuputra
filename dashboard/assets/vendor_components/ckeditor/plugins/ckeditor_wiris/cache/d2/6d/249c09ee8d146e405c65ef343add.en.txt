@@ -1,0 +1,1 @@
+{"result":{"text":"x to the power of 2 end exponent plus y to the power of 2 end exponent equals 5 plus 4 left parenthesis negative 1 right parenthesis equals 5 minus 4 equals 1"},"status":"ok"}

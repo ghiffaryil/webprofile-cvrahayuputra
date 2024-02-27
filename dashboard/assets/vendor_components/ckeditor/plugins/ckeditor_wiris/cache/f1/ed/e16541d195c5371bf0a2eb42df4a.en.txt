@@ -1,0 +1,1 @@
+{"result":{"text":"f left parenthesis x right parenthesis space equals open vertical bar x minus 2 close vertical bar"},"status":"ok"}

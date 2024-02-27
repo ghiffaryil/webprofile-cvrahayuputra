@@ -1,0 +1,1 @@
+{"result":{"text":"Q T equals"},"status":"ok"}

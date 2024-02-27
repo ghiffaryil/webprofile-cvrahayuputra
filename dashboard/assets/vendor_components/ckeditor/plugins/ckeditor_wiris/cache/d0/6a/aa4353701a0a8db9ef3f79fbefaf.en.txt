@@ -1,0 +1,1 @@
+{"result":{"text":"3 plus square root of x space equals space p space rightwards double arrow space fraction numerator 1 over denominator 2 square root of x end fraction d x space equals space d p space rightwards double arrow space fraction numerator 1 over denominator square root of x end fraction d x space equals space 2 d p"},"status":"ok"}

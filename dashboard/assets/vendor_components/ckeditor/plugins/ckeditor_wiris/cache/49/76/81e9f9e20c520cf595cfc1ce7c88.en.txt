@@ -1,0 +1,1 @@
+{"result":{"text":"d with rightwards arrow on top equals open parentheses 1 comma space minus 1 comma space 2 close parentheses"},"status":"ok"}

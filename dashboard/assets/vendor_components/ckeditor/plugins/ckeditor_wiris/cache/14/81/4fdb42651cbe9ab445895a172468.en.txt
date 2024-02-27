@@ -1,0 +1,1 @@
+{"result":{"text":"equals 2 over 3 open square brackets P open parentheses 1 space a t a u space 2 space a t a u space 3 close parentheses close square brackets equals 2 over 3 open parentheses 7 over 10 close parentheses equals 0 comma 467"},"status":"ok"}

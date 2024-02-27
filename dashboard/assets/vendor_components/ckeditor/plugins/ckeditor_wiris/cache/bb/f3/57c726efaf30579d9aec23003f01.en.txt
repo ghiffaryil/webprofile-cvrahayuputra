@@ -1,0 +1,1 @@
+{"result":{"text":"integral from a to b of f not stretchy left parenthesis x not stretchy right parenthesis text end text d x plus integral from b to c of f not stretchy left parenthesis x not stretchy right parenthesis text end text d x equals integral from a to c of f not stretchy left parenthesis x not stretchy right parenthesis text end text d x"},"status":"ok"}

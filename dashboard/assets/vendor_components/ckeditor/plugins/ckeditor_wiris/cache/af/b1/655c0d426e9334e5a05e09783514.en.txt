@@ -1,0 +1,1 @@
+{"result":{"text":"I space equals space 1 half M R squared"},"status":"ok"}

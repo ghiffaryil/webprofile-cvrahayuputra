@@ -1,0 +1,1 @@
+{"result":{"text":"f to the power of prime not stretchy left parenthesis a to the power of 2 end exponent not stretchy right parenthesis equals 0"},"status":"ok"}

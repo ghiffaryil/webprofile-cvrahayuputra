@@ -1,0 +1,1 @@
+{"result":{"text":"P open parentheses 2 close parentheses equals 0\nrightwards double arrow 2 to the power of 4 plus 2 times 2 cubed minus 9 times 2 squared minus 2 times 2 plus k equals 0\nrightwards double arrow 16 plus 16 minus 36 minus 4 plus k equals 0\nrightwards double arrow negative 8 plus k equals 0\nrightwards double arrow k equals 8"},"status":"ok"}

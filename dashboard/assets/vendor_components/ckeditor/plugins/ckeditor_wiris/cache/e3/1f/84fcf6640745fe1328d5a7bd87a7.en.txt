@@ -1,0 +1,1 @@
+{"result":{"text":"table attributes columnalign right left right left right left right left right left right left columnspacing 0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em end attributes row cell fraction numerator a minus 2 over denominator 3 end fraction end cell end table"},"status":"ok"}

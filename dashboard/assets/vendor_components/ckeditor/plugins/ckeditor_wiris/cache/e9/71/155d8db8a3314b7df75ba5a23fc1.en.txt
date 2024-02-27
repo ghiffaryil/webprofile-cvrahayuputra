@@ -1,0 +1,1 @@
+{"result":{"text":"v subscript 0 equals 60 space m divided by s\nv subscript t equals 28 space m divided by s\ntheta equals 53 to the power of 0\ng equals 10 space m divided by s squared"},"status":"ok"}

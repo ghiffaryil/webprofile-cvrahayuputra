@@ -1,0 +1,1 @@
+{"result":{"text":"x equals U subscript 3 minus U subscript 6 equals a r squared minus a r to the power of 5\ny equals U subscript 2 minus U subscript 4 equals a r minus a r cubed"},"status":"ok"}

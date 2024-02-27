@@ -1,0 +1,1 @@
+{"result":{"text":"left parenthesis p plus q right parenthesis squared less than left parenthesis p minus q right parenthesis squared space p squared plus q squared plus 2 p q less than p squared plus q squared minus 2 p q\n4 p q less than 0\np q less than 0 rightwards arrow p q space left parenthesis t i d a k space p o s i t i f right parenthesis"},"status":"ok"}

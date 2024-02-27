@@ -1,0 +1,1 @@
+{"result":{"text":"open parentheses g ring operator f close parentheses left parenthesis x right parenthesis equals fraction numerator x over denominator x minus 2 end fraction comma space space x not equal to 2"},"status":"ok"}

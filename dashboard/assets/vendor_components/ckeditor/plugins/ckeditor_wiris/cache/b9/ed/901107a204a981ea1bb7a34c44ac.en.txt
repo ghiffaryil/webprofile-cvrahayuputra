@@ -1,0 +1,1 @@
+{"result":{"text":"0 less than y less than begin display style pi over 2 end style"},"status":"ok"}

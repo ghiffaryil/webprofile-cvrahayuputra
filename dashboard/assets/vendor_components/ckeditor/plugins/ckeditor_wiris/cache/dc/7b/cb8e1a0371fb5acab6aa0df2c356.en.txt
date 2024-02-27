@@ -1,0 +1,1 @@
+{"result":{"text":"p squared q squared greater than 0\nleft parenthesis p q right parenthesis squared greater than 0 p q less than 0 space text atau  end text p q greater than 0\np q space t i d a k space p o s i t i f space a t a u space p q space p o s i t i f"},"status":"ok"}

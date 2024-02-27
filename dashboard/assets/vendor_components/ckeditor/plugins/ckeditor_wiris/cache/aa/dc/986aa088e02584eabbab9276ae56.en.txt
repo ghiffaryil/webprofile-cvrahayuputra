@@ -1,0 +1,1 @@
+{"result":{"text":"x less than negative 1 space text atau  end text x greater than 5 over 3"},"status":"ok"}

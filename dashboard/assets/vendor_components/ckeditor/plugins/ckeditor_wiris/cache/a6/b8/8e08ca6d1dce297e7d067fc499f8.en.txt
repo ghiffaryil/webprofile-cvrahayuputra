@@ -1,0 +1,1 @@
+{"result":{"text":"y equals 0 rightwards arrow m equals 0\nf apostrophe left parenthesis negative 1 right parenthesis equals 0\nminus 2 p minus q equals 0"},"status":"ok"}

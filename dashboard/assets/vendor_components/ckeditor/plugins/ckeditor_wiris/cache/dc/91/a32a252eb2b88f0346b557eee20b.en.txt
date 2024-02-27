@@ -1,0 +1,1 @@
+{"result":{"text":"i percent sign space"},"status":"ok"}

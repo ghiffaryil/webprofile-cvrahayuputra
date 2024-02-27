@@ -1,0 +1,1 @@
+{"result":{"text":"82 equals fraction numerator 80 x plus 85 y over denominator x plus y end fraction\n82 x plus 82 y equals 80 x plus 85 y\nx over y equals 3 over 2\n"},"status":"ok"}

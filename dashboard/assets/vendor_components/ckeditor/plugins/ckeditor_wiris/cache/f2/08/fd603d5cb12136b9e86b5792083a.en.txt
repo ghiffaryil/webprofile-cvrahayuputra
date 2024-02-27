@@ -1,0 +1,1 @@
+{"result":{"text":"A equals left curly bracket not stretchy left parenthesis 1 comma a not stretchy right parenthesis comma not stretchy left parenthesis 2 comma b not stretchy right parenthesis comma not stretchy left parenthesis 3 comma c not stretchy right parenthesis right curly bracket"},"status":"ok"}

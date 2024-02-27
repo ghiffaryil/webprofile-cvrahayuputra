@@ -1,0 +1,1 @@
+{"result":{"text":"E subscript 1 equals k q subscript 1 over r squared subscript 1 equals k fraction numerator left parenthesis 25 m C right parenthesis over denominator 5 squared end fraction"},"status":"ok"}

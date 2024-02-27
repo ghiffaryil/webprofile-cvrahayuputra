@@ -1,0 +1,1 @@
+{"result":{"text":"P open parentheses 1 close parentheses equals 1 to the power of 4 plus 2 times 1 cubed minus 9 times 1 squared minus 2 times 1 plus 8\nequals 1 plus 2 minus 9 minus 2 plus 8\nequals 0"},"status":"ok"}

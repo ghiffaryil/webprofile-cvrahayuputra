@@ -1,0 +1,1 @@
+{"result":{"text":"P equals 5 a equals 5 left parenthesis begin display style 3 over 5 end style right parenthesis equals 3"},"status":"ok"}

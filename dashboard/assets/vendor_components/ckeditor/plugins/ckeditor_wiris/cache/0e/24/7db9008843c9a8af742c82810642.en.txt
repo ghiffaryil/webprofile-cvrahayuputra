@@ -1,0 +1,1 @@
+{"result":{"text":"triangle A B C equals 10"},"status":"ok"}

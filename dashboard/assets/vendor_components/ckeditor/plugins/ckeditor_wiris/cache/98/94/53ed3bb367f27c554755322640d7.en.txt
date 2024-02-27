@@ -1,0 +1,1 @@
+{"result":{"text":"not stretchy left parenthesis D not stretchy right parenthesis text end text begin display style fraction numerator negative a minus 2 over denominator 3 end fraction end style"},"status":"ok"}

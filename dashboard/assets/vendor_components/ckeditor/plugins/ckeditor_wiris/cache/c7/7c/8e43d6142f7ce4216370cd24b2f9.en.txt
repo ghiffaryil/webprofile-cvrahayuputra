@@ -1,0 +1,1 @@
+{"result":{"text":"equals 40 over 100 cross times space 1 comma 6 space g equals 0 comma 64 space g"},"status":"ok"}

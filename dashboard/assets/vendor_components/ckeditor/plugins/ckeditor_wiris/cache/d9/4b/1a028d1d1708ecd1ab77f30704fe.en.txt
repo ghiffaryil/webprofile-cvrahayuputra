@@ -1,0 +1,1 @@
+{"result":{"text":"1 over C subscript A C end subscript equals 1 over C plus fraction numerator 1 over denominator 2 C end fraction rightwards arrow C subscript A C end subscript equals fraction numerator 2 C over denominator 3 end fraction rightwards arrow V subscript A C end subscript equals 9 space V\n"},"status":"ok"}

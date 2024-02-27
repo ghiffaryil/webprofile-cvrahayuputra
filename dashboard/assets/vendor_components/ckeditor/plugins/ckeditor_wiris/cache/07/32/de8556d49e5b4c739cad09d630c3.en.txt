@@ -1,0 +1,1 @@
+{"result":{"text":"a equals fraction numerator g sin theta over denominator 1 plus K end fraction"},"status":"ok"}

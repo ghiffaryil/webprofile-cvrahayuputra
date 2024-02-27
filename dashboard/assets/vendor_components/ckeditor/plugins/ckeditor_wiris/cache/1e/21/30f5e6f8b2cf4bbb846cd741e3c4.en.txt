@@ -1,0 +1,1 @@
+{"result":{"text":"x cubed plus y cubed equals"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"square root of 14 plus 8 square root of 3 end root equals square root of a minus 1 end root plus square root of b plus 2 end root"},"status":"ok"}

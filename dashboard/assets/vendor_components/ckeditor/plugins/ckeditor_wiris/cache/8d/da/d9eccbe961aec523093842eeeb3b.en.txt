@@ -1,0 +1,1 @@
+{"result":{"text":"R p 100.000 comma 00"},"status":"ok"}

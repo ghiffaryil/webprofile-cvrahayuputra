@@ -1,0 +1,1 @@
+{"result":{"text":"x to the power of 3 end exponent plus x equals midline horizontal ellipsis"},"status":"ok"}

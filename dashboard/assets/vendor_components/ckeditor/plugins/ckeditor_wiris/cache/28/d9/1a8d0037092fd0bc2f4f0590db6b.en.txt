@@ -1,0 +1,1 @@
+{"result":{"text":"x to the power of 2 end exponent plus y to the power of 2 end exponent"},"status":"ok"}

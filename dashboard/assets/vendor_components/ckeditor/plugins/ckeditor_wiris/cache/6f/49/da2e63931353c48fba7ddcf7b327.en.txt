@@ -1,0 +1,1 @@
+{"result":{"text":"c with rightwards arrow on top equals open parentheses 2 z comma space 3 x comma space minus y close parentheses"},"status":"ok"}

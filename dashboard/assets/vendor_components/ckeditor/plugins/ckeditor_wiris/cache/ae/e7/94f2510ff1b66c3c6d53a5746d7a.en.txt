@@ -1,0 +1,1 @@
+{"result":{"text":"1 half F subscript 0 times increment t equals F subscript B times increment t\nF subscript B equals 1 half F subscript 0 equals 0 comma 5 space F subscript 0"},"status":"ok"}

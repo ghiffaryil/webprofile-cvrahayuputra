@@ -1,0 +1,1 @@
+{"result":{"text":"not stretchy left parenthesis negative 2 not stretchy right parenthesis plus not stretchy left parenthesis negative 2 not stretchy right parenthesis equals negative 4"},"status":"ok"}

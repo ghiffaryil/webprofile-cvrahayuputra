@@ -1,0 +1,1 @@
+{"result":{"text":"k fraction numerator left parenthesis 25 space m C right parenthesis over denominator 5 squared end fraction equals k q subscript 2 over 2 squared rightwards arrow q subscript 2 equals negative 4 space m C"},"status":"ok"}

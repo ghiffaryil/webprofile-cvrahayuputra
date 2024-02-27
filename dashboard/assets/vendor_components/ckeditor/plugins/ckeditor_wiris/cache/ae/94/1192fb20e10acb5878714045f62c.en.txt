@@ -1,0 +1,1 @@
+{"result":{"text":"c o s left parenthesis 2 A right parenthesis equals c o s to the power of 2 end exponent A minus s i n to the power of 2 end exponent A"},"status":"ok"}

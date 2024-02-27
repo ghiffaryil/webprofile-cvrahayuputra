@@ -1,0 +1,1 @@
+{"result":{"text":"m subscript e s end subscript equals 2 space k g\nm subscript l equals 2 space minus space 0 comma 95 space equals space 1 comma 05 space k g\nQ equals 400 space k J space equals space 400000 space J\nincrement t equals 10 to the power of o C\nL equals 340 space k J divided by k g equals 340000 space J divided by k g"},"status":"ok"}

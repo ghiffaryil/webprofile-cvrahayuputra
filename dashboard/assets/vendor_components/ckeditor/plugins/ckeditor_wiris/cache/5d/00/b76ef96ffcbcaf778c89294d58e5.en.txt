@@ -1,0 +1,1 @@
+{"result":{"text":"a subscript t o t a l end subscript equals negative a minus g equals negative open parentheses g plus a close parentheses"},"status":"ok"}

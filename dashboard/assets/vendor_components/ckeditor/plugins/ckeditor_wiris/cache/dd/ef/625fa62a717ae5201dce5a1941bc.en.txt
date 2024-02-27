@@ -1,0 +1,1 @@
+{"result":{"text":"vertical line A to the power of n end exponent vertical line equals vertical line A vertical line to the power of n end exponent"},"status":"ok"}

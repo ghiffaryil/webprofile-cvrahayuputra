@@ -1,0 +1,1 @@
+{"result":{"text":"left square bracket A B C right square bracket equals 10"},"status":"ok"}

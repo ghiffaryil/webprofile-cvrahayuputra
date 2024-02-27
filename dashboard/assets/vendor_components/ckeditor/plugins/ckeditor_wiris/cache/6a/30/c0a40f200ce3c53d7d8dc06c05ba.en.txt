@@ -1,0 +1,1 @@
+{"result":{"text":"5 fraction numerator 5 over denominator 3 square root of 4 end fraction space 2 square root of 3 space 42 subscript 3 end root space divided by space greater or equal than space less or equal than subset of"},"status":"ok"}

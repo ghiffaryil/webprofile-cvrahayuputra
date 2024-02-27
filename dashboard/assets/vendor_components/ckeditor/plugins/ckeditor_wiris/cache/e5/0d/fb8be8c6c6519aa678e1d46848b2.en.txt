@@ -1,0 +1,1 @@
+{"result":{"text":"P left parenthesis x right parenthesis equals x to the power of 4 plus 2 x cubed minus 9 x squared minus 2 x plus k"},"status":"ok"}

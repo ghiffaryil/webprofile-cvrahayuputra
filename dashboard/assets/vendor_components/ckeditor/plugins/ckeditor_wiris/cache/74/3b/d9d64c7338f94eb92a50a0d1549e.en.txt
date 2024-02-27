@@ -1,0 +1,1 @@
+{"result":{"text":"M subscript t end subscript equals M subscript o end subscript left parenthesis 1 plus i right parenthesis to the power of n end exponent"},"status":"ok"}

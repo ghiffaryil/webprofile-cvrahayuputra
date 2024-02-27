@@ -1,0 +1,1 @@
+{"result":{"text":"Q subscript p e m a n a s space end subscript equals Q subscript p e l e b u r a n end subscript\nI squared R left parenthesis 3 space m e n i t right parenthesis space equals space left parenthesis x right parenthesis left parenthesis 80 space k a l divided by g r right parenthesis\n"},"status":"ok"}

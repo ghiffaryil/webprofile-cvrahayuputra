@@ -1,0 +1,1 @@
+{"result":{"text":"stack C u left parenthesis N O subscript 3 right parenthesis subscript 2 space rightwards arrow space with 0 comma 03 space m o l below stack C u to the power of 2 plus end exponent with 0 comma 03 space m o l below plus stack 2 N O subscript 3 to the power of minus with 0 comma 06 space m o l below"},"status":"ok"}

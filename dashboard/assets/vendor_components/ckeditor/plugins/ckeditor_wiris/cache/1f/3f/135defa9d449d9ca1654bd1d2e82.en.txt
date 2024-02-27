@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator 240.000 over denominator 4 end fraction"},"status":"ok"}

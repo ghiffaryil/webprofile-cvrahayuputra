@@ -1,0 +1,1 @@
+{"result":{"text":"cos squared x equals square root of 3 space sin space x"},"status":"ok"}

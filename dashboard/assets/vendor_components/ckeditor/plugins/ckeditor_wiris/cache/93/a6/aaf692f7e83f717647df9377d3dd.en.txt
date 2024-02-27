@@ -1,0 +1,1 @@
+{"result":{"text":"A open parentheses x subscript 0 close parentheses space colon space A open parentheses 1 close parentheses space equals space 1 space colon space 8"},"status":"ok"}

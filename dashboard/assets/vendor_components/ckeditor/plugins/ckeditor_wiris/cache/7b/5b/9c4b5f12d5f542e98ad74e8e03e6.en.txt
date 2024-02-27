@@ -1,0 +1,1 @@
+{"result":{"text":"square root of 3 to the power of 8 x to the power of 5 end exponent end exponent end root equals begin display style 1 over 81 end style"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"not stretchy left parenthesis 2 not stretchy right parenthesis text end text 2 x equals 2 y minus 6"},"status":"ok"}

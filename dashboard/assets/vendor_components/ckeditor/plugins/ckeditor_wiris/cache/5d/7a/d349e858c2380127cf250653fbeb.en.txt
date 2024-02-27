@@ -1,0 +1,1 @@
+{"result":{"text":"sin space open parentheses fraction numerator 2 a plus straight pi over denominator 2 end fraction close parentheses equals 3 over 5"},"status":"ok"}

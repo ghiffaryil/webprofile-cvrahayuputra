@@ -1,0 +1,1 @@
+{"result":{"text":"integral from negative 4 to 4 of f not stretchy left parenthesis x not stretchy right parenthesis text end text d x equals 16"},"status":"ok"}

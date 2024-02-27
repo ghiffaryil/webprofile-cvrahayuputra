@@ -1,0 +1,1 @@
+{"result":{"text":"straight angle C B D equals straight angle C B D"},"status":"ok"}

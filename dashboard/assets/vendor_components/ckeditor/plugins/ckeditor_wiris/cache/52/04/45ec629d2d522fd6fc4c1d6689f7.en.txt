@@ -1,0 +1,1 @@
+{"result":{"text":"F equals m fraction numerator d V over denominator d t end fraction"},"status":"ok"}

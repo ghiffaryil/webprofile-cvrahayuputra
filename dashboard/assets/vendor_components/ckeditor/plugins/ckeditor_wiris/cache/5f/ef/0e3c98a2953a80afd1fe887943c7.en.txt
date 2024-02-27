@@ -1,0 +1,1 @@
+{"result":{"text":"c o s text end text x plus c o s text end text y equals midline horizontal ellipsis"},"status":"ok"}

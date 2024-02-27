@@ -1,0 +1,1 @@
+{"result":{"text":"36 plus 36 equals 72 text end text c m to the power of 2 end exponent"},"status":"ok"}

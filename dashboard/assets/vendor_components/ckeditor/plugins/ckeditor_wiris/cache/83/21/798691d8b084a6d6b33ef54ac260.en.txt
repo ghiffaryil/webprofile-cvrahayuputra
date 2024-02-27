@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator A open parentheses x subscript 0 close parentheses over denominator A open parentheses 1 close parentheses end fraction space equals space 1 over 8"},"status":"ok"}

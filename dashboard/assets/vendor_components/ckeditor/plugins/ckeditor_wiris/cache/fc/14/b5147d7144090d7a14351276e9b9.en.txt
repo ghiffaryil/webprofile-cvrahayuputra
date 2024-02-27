@@ -1,0 +1,1 @@
+{"result":{"text":"F subscript C A end subscript equals k fraction numerator q subscript A q subscript C over denominator r squared subscript C A end subscript end fraction equals 9 m N\nF subscript C B end subscript equals k fraction numerator q subscript C q subscript B over denominator r squared subscript C B end subscript end fraction equals 9 m N"},"status":"ok"}

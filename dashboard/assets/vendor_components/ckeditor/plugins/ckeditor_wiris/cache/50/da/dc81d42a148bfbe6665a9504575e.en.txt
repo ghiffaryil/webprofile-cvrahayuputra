@@ -1,0 +1,1 @@
+{"result":{"text":"vertical line A to the power of negative 1 end exponent vertical line equals begin display style fraction numerator 1 over denominator vertical line A vertical line end fraction end style"},"status":"ok"}

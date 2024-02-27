@@ -1,0 +1,1 @@
+{"result":{"text":"f left parenthesis x right parenthesis equals negative x cubed plus x squared plus 5 x plus 3"},"status":"ok"}

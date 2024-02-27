@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator A over denominator square root of 2 end fraction space space"},"status":"ok"}

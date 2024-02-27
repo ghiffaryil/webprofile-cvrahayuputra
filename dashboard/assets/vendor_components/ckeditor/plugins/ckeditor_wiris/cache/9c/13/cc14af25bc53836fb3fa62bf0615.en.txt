@@ -1,0 +1,1 @@
+{"result":{"text":"P G equals square root of P C squared plus C G squared end root\nequals square root of open parentheses 2 square root of 13 close parentheses squared plus 6 squared end root equals square root of 52 plus 36 end root equals square root of 88 equals 2 square root of 22"},"status":"ok"}

@@ -1,0 +1,1 @@
+{"result":{"text":"begin display style fraction numerator square root of b c end root over denominator square root of a to the power of 4 end exponent times b to the power of 5 end exponent end root end fraction end style equals a b"},"status":"ok"}
