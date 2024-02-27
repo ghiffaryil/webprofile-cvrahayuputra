@@ -16,29 +16,27 @@
 	<!-- Header Navbar -->
 	<nav class="navbar navbar-static-top">
 		
-		<!-- Sidebar toggle button-->
 		<div class="navbar-custom-menu l-side">
 			<ul class="nav navbar-nav">	
-				<!-- User Account-->
-				<?php if($cek_login_Login_Sebagai=="Admin"){ ?>
+				
 					<li class="user user-menu">
-						<a href="?menu=dashboard_admin_try_out_master" class="waves-effect waves-light dropdown-toggle" title="User">
+						<a href="?menu=dashboard" class="waves-effect waves-light dropdown-toggle" title="User">
 							<i class="fa fa-pencil"><span class="path1"></span><span class="path2"></span></i>
 						</a>
 					</li>
 
 					<li class="user user-menu">
-						<a href="?menu=dashboard_admin_produk_diamond" class="waves-effect waves-light dropdown-toggle" title="User">
+						<a href="?menu=dashboard" class="waves-effect waves-light dropdown-toggle" title="User">
 							<i class="fa fa-diamond"><span class="path1"></span><span class="path2"></span></i>
 						</a>
 					</li>
 
 					<li class="user user-menu">
-						<a href="?menu=dashboard_admin_bank_soal" class="waves-effect waves-light dropdown-toggle" title="User">
+						<a href="?menu=dashboard" class="waves-effect waves-light dropdown-toggle" title="User">
 							<i class="fa fa-book"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
 						</a>
 					</li>
-				<?php } ?>
+				
 			</ul>
 		</div>
 		

@@ -9,7 +9,9 @@
 			</li>
 		</ul>
 	</div>
-	&copy; 2021 <a href="" class="">Tryout Mandiri</a>. All Rights Reserved.
+	<div style="text-align: right !important;">
+		&copy; 2023 <a href="" class="">CV. Rahayu Putra</a>. All Rights Reserved.
+	</div>
 </footer>
 
 <!-- Vendor JS -->

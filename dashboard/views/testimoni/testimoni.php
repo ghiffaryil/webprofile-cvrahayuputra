@@ -38,10 +38,8 @@ if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){
 if(isset($_POST['submit_simpan'])){
 	if($cek_required == "Sukses"){
 
-		$form_field = array("Id_Testimoni","Nama","Instansi","Testimoni","Rating","Waktu_Simpan_Data","Status");
-
-		$form_value = array(NULL,"$_POST[Nama]","$_POST[Instansi]","$_POST[Testimoni]","$_POST[Rating]","$Waktu_Sekarang","Aktif");
-
+		$form_field = array("Nama","Instansi","Testimoni","Rating","Waktu_Simpan_Data","Status");
+		$form_value = array("$_POST[Nama]","$_POST[Instansi]","$_POST[Testimoni]","$_POST[Rating]","$Waktu_Sekarang","Aktif");
 		$result = $a_tambah_baca_update_hapus->tambah_data("tb_testimoni",$form_field,$form_value);
 
 		if($result['Status'] == "Sukses"){
@@ -517,6 +515,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 											$search_value_where = array("$filter_status");
 											$search_connector_where = array("");
 											$nomor = 0;
+
 
 											$result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_testimoni",$search_field_where,$search_criteria_where,$search_value_where,$search_connector_where);
 
