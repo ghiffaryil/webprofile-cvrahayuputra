@@ -1,4 +1,4 @@
 <?php 
 //CLASS INTI//
-require_once("../config/function/master.php");
+require_once("../app/config/function/master.php");
 ?>
