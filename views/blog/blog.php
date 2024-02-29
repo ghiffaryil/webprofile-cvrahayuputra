@@ -1,489 +1,110 @@
-<!-- Page-title -->
-<section class="page-title-section" style="background-image: url(assets/img/slider/slide-1.png); background-repeat: no-repeat; background-size: cover; ">
-	<div class="container">
+<section class="page-title-section" style="position: relative; background-image: url(assets/img/slider/construction-site-silhouettes.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
+	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
-			<h1 style="color:black">Blog</h1>
+			<h1>Artikel</h1>
 		</div>
-
 		<ol class="breadcrumb">
-			<li ><a href="#" style="color:black">Home</a></li>
-			<li style="color:black" class="active">Blog</li>
+			<li><a href="#">Home</a></li>
+			<li class="active">Artikel</li>
 		</ol>
 	</div>
 </section><!--/.page-title-section -->
-<!-- HEADER -->
 
 <!-- blog-section -->
-<section class="blog-section section-padding">
+<section class="blog-section">
 	<!-- container -->
-	<div class="container">
+	<div class="container" style="padding: 50px 0">
 		<!-- row -->
 		<div class="row">
 			<!-- posts-container -->
-			<div class="posts-container">
-				<div class="col-md-9 col-sm-8">
-					<div class="row">
-						<div class="col-xs-12 py-3">
-							<article class="blog-post-wrapper sticky-post">
-								<div class="figure">
-									<div class="post-thumbnail">
-										<img src="assets/img/blog/blog-1.jpg" class="img-responsive " alt="">
-
-									</div>
-
-								</div>
-								<div class="entry-content">
-
-									<header class="entry-header clearfix">
-
-										<div class="entry-meta">
-											<ul class="list-inline">
-												<li>
-													<div class="posted-date pull-left">
-														<span class="day">23</span>
-														<span class="month">Oct,</span>
-														<span class="year">2015</span>
-													</div>
-												</li>
-												<li>
-													<span class="author">
-														By <a class="url" href="#">Admin</a>
-													</span>
-												</li>
-											</ul>
-										</div><!-- .entry-meta -->
-										<h2 class="entry-title"><a href="blog-single.html" rel="">The fastest shipment service</a></h2>
-
-
-									</header><!-- .entry-header -->
-
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-									<footer class="entry-footer">
-										<a href="blog-single.html" class="btn btn-primary btn-sm readmore">Continue reading<i class="fa fa-long-arrow-right"></i></a>
-									</footer>
-								</div><!-- .entry-content -->
-
-							</article>
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-					<br><br>
-
-
+			<div class="">
+				<div class="col-md-10">
 					<div class="row row-flex row-flex-wrap">
-						<div class="col-md-6 col-sm-12">
-							<article class="blog-post-wrapper">
-								<div class="figure">
-									<div id="blog-post-carousel" class="carousel slide blog-carousel" data-ride="carousel">
 
-										<!-- Wrapper for slides -->
-										<div class="carousel-inner">
-											<div class="item active">
-												<img class="img-responsive" src="assets/img/blog/blog-2.jpg" alt="" />
-											</div>
-											<div class="item">
-												<img class="img-responsive" src="assets/img/blog/blog-3.jpg" alt="" />
+						<?php
+
+						$search_field_where = array("Status");
+						$search_criteria_where = array("=");
+						$search_value_where = array("Aktif");
+						$search_connector_where = array("");
+
+						$nomor = 0;
+
+						$result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_blog_artikel", $search_field_where, $search_criteria_where, $search_value_where, $search_connector_where);
+
+						if ($result['Status'] == "Sukses") {
+							$data_hasil = $result['Hasil'];
+							foreach ($data_hasil as $data) {
+						?>
+								<div class="col-md-6 col-sm-12">
+									<article class="blog-post-wrapper">
+										<div class="figure">
+											<div class="post-thumbnail">
+												<img src="dashboard/media/artikel/<?php echo $data['Foto_Artikel'] ?>" style="height:400px">
 											</div>
 										</div>
-
-										<!-- Controls -->
-										<a class="left carousel-control" href="#blog-post-carousel" data-slide="prev">
-											<i class="fa fa-angle-left"></i>
-										</a>
-
-										<a class="right carousel-control" href="#blog-post-carousel" data-slide="next">
-											<i class="fa fa-angle-right"></i>
-										</a>
-									</div><!-- /.blog-post-carousel-->
-								</div><!-- /.figure -->
-
-								<div class="entry-content">
-									<header class="entry-header clearfix">
-
-										<div class="entry-meta">
-											<ul class="list-inline">
-												<li>
-													<div class="posted-date pull-left">
-														<span class="day">23</span>
-														<span class="month">Oct,</span>
-														<span class="year">2015</span>
-													</div>
-												</li>
-												<li>
-													<span class="author">
-														By <a class="url" href="#">Admin</a>
-													</span>
-												</li>
-											</ul>
-										</div><!-- .entry-meta -->
-										<h2 class="entry-title"><a href="blog-single.html" rel="">Shipping all over the world</a></h2>
+										<div class="entry-content">
+											<header class="entry-header clearfix">
+												<div class="entry-meta">
+													<ul class="list-inline">
+														<li>
+															<div class="posted-date pull-left">
+																<?php echo tanggal_dan_waktu_24_jam_indonesia($data['Waktu_Simpan_Data']) ?>
+															</div>
+														</li>
+													</ul>
+												</div><!-- .entry-meta -->
+												<h3 class="entry-title"><a href="blog-single.html" class="text-muted"><?php echo $data['Judul_Artikel'] ?></a></h3>
 
 
-									</header><!-- .entry-header -->
+											</header><!-- .entry-header -->
 
-									<p>Energistically create long-term high-impact content for goal-oriented infomediaries.
-										Dynamically customize efficient vortals with efficient scenarios.</p>
+											<p><?php echo substr($data['Isi_Artikel'], 0, 100) ?>...</p>
+											<footer class="entry-footer"> <br>
+												<a href="?menu=blog-detail&blog_id=<?php echo $a_hash->encode($data['Id_Blog_Artikel'], $_GET['menu']); ?>" class="btn btn-primary btn-sm">Lihat Detail<i class="fa fa-long-arrow-right"></i></a>
+											</footer>
+										</div><!-- .entry-content -->
 
-									<footer class="entry-footer">
-										<a href="blog-single.html" class="btn btn-primary btn-sm readmore">Continue reading<i class="fa fa-long-arrow-right"></i></a>
-
-									</footer>
-								</div><!-- .entry-content -->
-							</article><!-- /.blog-post-wrapper -->
-						</div><!-- /.col -->
-						<div class="col-md-6 col-sm-12">
-							<article class="blog-post-wrapper">
-								<div class="figure">
-									<div class="post-thumbnail">
-										<img src="assets/img/blog/blog-2.jpg" class="img-responsive " alt="">
-
-									</div>
+									</article><!-- /.blog-post-wrapper -->
 
 								</div>
-								<div class="entry-content">
-
-									<header class="entry-header clearfix">
-
-										<div class="entry-meta">
-											<ul class="list-inline">
-												<li>
-													<div class="posted-date pull-left">
-														<span class="day">23</span>
-														<span class="month">Oct,</span>
-														<span class="year">2015</span>
-													</div>
-												</li>
-												<li>
-													<span class="author">
-														By <a class="url" href="#">Admin</a>
-													</span>
-												</li>
-											</ul>
-										</div><!-- .entry-meta -->
-										<h2 class="entry-title"><a href="blog-single.html" rel="">Synergistically parallel</a></h2>
-
-
-									</header><!-- .entry-header -->
-
-									<p>Energistically create long-term high-impact content for goal-oriented infomediaries. Dynamically customize efficient vortals with efficient scenarios.</p>
-									<footer class="entry-footer">
-										<a href="blog-single.html" class="btn btn-primary btn-sm readmore">Continue reading<i class="fa fa-long-arrow-right"></i></a>
-									</footer>
-								</div><!-- .entry-content -->
-
-							</article><!-- /.blog-post-wrapper -->
-
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-					<div class="row row-flex row-flex-wrap">
-						<div class="col-md-6 col-sm-12">
-							<article class="blog-post-wrapper">
-								<div class="figure">
-									<div class="post-thumbnail">
-										<img src="assets/img/blog/blog-3.jpg" class="img-responsive " alt="">
-									</div>
-
-								</div>
-								<div class="entry-content">
-
-									<header class="entry-header clearfix">
-
-										<div class="entry-meta">
-											<ul class="list-inline">
-												<li>
-													<div class="posted-date pull-left">
-														<span class="day">23</span>
-														<span class="month">Oct,</span>
-														<span class="year">2015</span>
-													</div>
-												</li>
-												<li>
-													<span class="author">
-														By <a class="url" href="#">Admin</a>
-													</span>
-												</li>
-											</ul>
-										</div><!-- .entry-meta -->
-										<h2 class="entry-title"><a href="blog-single.html" rel="">The largest shipping container</a></h2>
-
-
-									</header><!-- .entry-header -->
-
-									<p>Energistically create long-term high-impact content for goal-oriented infomediaries. Dynamically customize efficient vortals with efficient scenarios.</p>
-									<footer class="entry-footer">
-										<a href="blog-single.html" class="btn btn-primary btn-sm readmore">Continue reading<i class="fa fa-long-arrow-right"></i></a>
-									</footer>
-								</div><!-- .entry-content -->
-
-							</article><!-- /.blog-post-wrapper -->
-						</div><!-- /.col -->
-						<div class="col-md-6 col-sm-12">
-							<article class="blog-post-wrapper">
-								<div class="figure">
-									<div class="post-thumbnail">
-										<img src="assets/img/blog/blog-4.jpg" class="img-responsive " alt="">
-
-									</div>
-								</div>
-								<div class="entry-content">
-									<header class="entry-header clearfix">
-
-										<div class="entry-meta">
-											<ul class="list-inline">
-												<li>
-													<div class="posted-date pull-left">
-														<span class="day">23</span>
-														<span class="month">Oct,</span>
-														<span class="year">2015</span>
-													</div>
-												</li>
-												<li>
-													<span class="author">
-														By <a class="url" href="#">Admin</a>
-													</span>
-												</li>
-											</ul>
-										</div><!-- .entry-meta -->
-										<h2 class="entry-title"><a href="blog-single.html" rel="">Most advanced shipping</a></h2>
-
-
-									</header><!-- .entry-header -->
-
-									<p>Energistically create long-term high-impact content for goal-oriented infomediaries. Dynamically customize efficient vortals with efficient scenarios.</p>
-									<footer class="entry-footer">
-										<a href="blog-single.html" class="btn btn-primary btn-sm readmore">Continue reading<i class="fa fa-long-arrow-right"></i></a>
-									</footer>
-								</div><!-- .entry-content -->
-
-							</article><!-- /.blog-post-wrapper -->
-
-						</div><!-- /.col -->
+						<?php
+							}
+						}
+						?>
 					</div><!-- /.row -->
 				</div> <!-- /col-md-8 -->
 
 
-				<div class="col-md-3 col-sm-4">
+				<div class="col-md-2">
 					<div class="sidebar-wrapper">
-
-						<aside class="widget widget_search">
-							<form role="search" method="get" class="search-form">
-								<label>
-									<span class="screen-reader-text">Search for:</span>
-									<input type="search" class="search-field" placeholder="Search" value="" name="s" title="Search for:">
-								</label>
-								<button class="btn btn-primary" type="submit"><span class="fa fa-search"></span></button>
-							</form>
-						</aside>
-
-
-						<aside class=" widget widget_recent_entries">
-							<div class="sidebar-tab">
-								<!-- Nav tabs -->
-								<ul class="nav nav-tabs" role="tablist">
-									<li class="active"><a href="#recent-post" role="tab" data-toggle="tab">Recent Post</a></li>
-									<li><a href="#most-read" role="tab" data-toggle="tab">Most Read</a></li>
-								</ul>
-
-								<!-- Tab panes -->
-								<div class="tab-content">
-									<div class="tab-pane fade in active" id="recent-post">
-
-										<ul class="tab-recent-post">
-											<li>
-
-												<div class="tab-post-thumb">
-													<img class="img-responsive" src="assets/img/blog/blog-3.jpg" alt="Image">
-												</div>
-
-												<div class="tab-post-heading">
-													<h3><a href="#">Seamlessly whiteboard resource maximizing channels via prospective catalysts for change. </a></h3>
-													<div class="entry-meta">
-														<ul class="list-inline">
-															<li>
-																<div class="posted-date pull-left">
-																	<span class="day">23</span>
-																	<span class="month">Oct,</span>
-																	<span class="year">2015</span>
-																</div>
-															</li>
-															<li>
-																<span class="author">
-																	By <a class="url" href="#">Admin</a>
-																</span>
-															</li>
-														</ul>
-													</div><!-- .entry-meta -->
-												</div><!-- /.tab-post-heading -->
-
-											</li>
-											<li>
-												<div class="tab-post-thumb">
-													<img class="img-responsive" src="assets/img/blog/blog-3.jpg" alt="Image">
-												</div>
-
-												<div class="tab-post-heading">
-													<h3><a href="#">Seamlessly whiteboard resource maximizing channels via prospective catalysts for change.</a></h3>
-													<div class="entry-meta">
-														<ul class="list-inline">
-															<li>
-																<div class="posted-date pull-left">
-																	<span class="day">23</span>
-																	<span class="month">Oct,</span>
-																	<span class="year">2015</span>
-																</div>
-															</li>
-															<li>
-																<span class="author">
-																	By <a class="url" href="#">Admin</a>
-																</span>
-															</li>
-														</ul>
-													</div><!-- .entry-meta -->
-												</div><!-- /.tab-post-heading -->
-											</li>
-
-										</ul>
-
-									</div> <!-- /recent post tab -->
-
-									<div class="tab-pane fade" id="most-read">
-										<ul class="tab-most-read">
-											<li>
-												<div class="tab-post-thumb">
-													<img class="img-responsive" src="assets/img/blog/blog-4.jpg" alt="Image">
-												</div>
-
-												<div class="tab-post-heading">
-													<h3><a href="#">Seamlessly whiteboard resource maximizing channels via prospective catalysts for change.</a></h3>
-													<div class="entry-meta">
-														<ul class="list-inline">
-															<li>
-																<div class="posted-date pull-left">
-																	<span class="day">23</span>
-																	<span class="month">Oct,</span>
-																	<span class="year">2015</span>
-																</div>
-															</li>
-															<li>
-																<span class="author">
-																	By <a class="url" href="#">Admin</a>
-																</span>
-															</li>
-														</ul>
-													</div><!-- .entry-meta -->
-												</div><!-- /.tab-post-heading -->
-											</li>
-
-											<li>
-												<div class="tab-post-thumb">
-													<img class="img-responsive" src="assets/img/blog/blog-2.jpg" alt="Image">
-												</div>
-
-												<div class="tab-post-heading">
-													<h3><a href="#">Seamlessly whiteboard resource maximizing channels via prospective catalysts for change.</a></h3>
-													<div class="entry-meta">
-														<ul class="list-inline">
-															<li>
-																<div class="posted-date pull-left">
-																	<span class="day">23</span>
-																	<span class="month">Oct,</span>
-																	<span class="year">2015</span>
-																</div>
-															</li>
-															<li>
-																<span class="author">
-																	By <a class="url" href="#">Admin</a>
-																</span>
-															</li>
-														</ul>
-													</div><!-- .entry-meta -->
-												</div><!-- /.tab-post-heading -->
-											</li>
-
-											<li>
-												<div class="tab-post-thumb">
-													<img class="img-responsive" src="assets/img/blog/blog-2.jpg" alt="Image">
-												</div>
-
-												<div class="tab-post-heading">
-													<h3><a href="#">Seamlessly whiteboard resource maximizing channels via prospective catalysts for change.</a></h3>
-													<div class="entry-meta">
-														<ul class="list-inline">
-															<li>
-																<div class="posted-date pull-left">
-																	<span class="day">23</span>
-																	<span class="month">Oct,</span>
-																	<span class="year">2015</span>
-																</div>
-															</li>
-															<li>
-																<span class="author">
-																	By <a class="url" href="#">Admin</a>
-																</span>
-															</li>
-														</ul>
-													</div><!-- .entry-meta -->
-												</div><!-- /.tab-post-heading -->
-											</li>
-										</ul>
-									</div><!-- /most read tab -->
-								</div>
-
-							</div><!-- /tab-wrap -->
-
-						</aside>
-
-
 						<aside class="widget widget_categories">
-							<h2 class="widget-title">Blog Categories</h2>
-
+							<h2 class="widget-title">Artikel Lainnya</h2>
 							<ul class="widget-arrow-list">
-								<li><a href="#">Inspiration</a></li>
-								<li><a href="#">Life Style</a></li>
-								<li><a href="#">My Events</a></li>
-								<li><a href="#">Travel</a></li>
-								<li><a href="#">Technology</a></li>
-								<li><a href="#">Education</a></li>
-								<li><a href="#">Uncategorized</a></li>
+								<?php
+								$search_field_where = array("Status");
+								$search_criteria_where = array("=");
+								$search_value_where = array("Aktif");
+								$search_connector_where = array("");
+
+								$nomor = 0;
+
+								$result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_blog_artikel", $search_field_where, $search_criteria_where, $search_value_where, $search_connector_where);
+
+								if ($result['Status'] == "Sukses") {
+									$data_hasil = $result['Hasil'];
+
+									foreach ($data_hasil as $data) {
+								?>
+										<li><a href="?menu=blog-detail&blog_id=<?php echo $a_hash->encode($data['Id_Blog_Artikel'], $_GET['menu']); ?>"><?php echo $data['Judul_Artikel'] ?></a></li>
+								<?php
+									}
+								}
+								?>
 							</ul>
 						</aside>
 
-
-						<aside class="widget widget_archive">
-							<h2 class="widget-title"> Archived</h2>
-
-							<ul class="widget-arrow-list">
-								<li><a href="#">August 2014</a>&nbsp;(3)</li>
-								<li><a href="#">January 2014</a>&nbsp;(1)</li>
-								<li><a href="#">March 2012 </a>&nbsp;(5)</li>
-								<li><a href="#">January 2012</a>&nbsp;(3)</li>
-								<li><a href="#">March 2011</a>&nbsp;(2)</li>
-								<li><a href="#">October 2010 </a>&nbsp;(2)</li>
-							</ul>
-						</aside>
-
-
-
-						<aside class="widget tag-cloud">
-							<h2 class="widget-title">Tag Cloud</h2>
-
-							<ul>
-								<li><a href="#">Custom</a></li>
-								<li><a href="#">Graphic</a></li>
-							</ul>
-						</aside>
-
-						<aside class="widget widget_twitter_feed">
-							<h2 class="widget-title"><i class="fa fa-twitter"></i>Twitter Feed</h2>
-							<div id="twitterWidget">
-
-								<div class="twitter-widget"></div>
-							</div>
-						</aside>
-
-						<aside class="widget widget_flicker_photo">
-							<h2 class="widget-title">Flicker Photo</h2>
-							<ul id="photoStream"></ul>
-						</aside>
 					</div>
 
 				</div>

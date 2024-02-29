@@ -1,118 +1,58 @@
-<!-- Page-title -->
-<section class="page-title-section" style="background-image: url(assets/img/slider/slider-4.jpg); background-repeat: no-repeat; background-size: cover; ">
-	<div class="container">
+<section class="page-title-section" style="position: relative; background-image: url(assets/img/slider/construction-site-silhouettes.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
+	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
-			<h1>Our Worldwide Services</h1>
+			<h1>Pelayanan Kami</h1>
 		</div>
-
 		<ol class="breadcrumb">
 			<li><a href="#">Home</a></li>
-			<li class="active">Services</li>
+			<li class="active">Pelayanan Kami</li>
 		</ol>
 	</div>
 </section><!--/.page-title-section -->
 
-
-<!--Service-intro-start -->
-<section class="service-intro-wrap section-padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6">
-				<div class="service-intro-thumb text-center">
-					<img src="assets/img/service-thumb.jpg" alt="service">
-				</div>
-			</div><!--/.col-->
-			<div class="col-sm-6">
-
-				<div class="service-intro-content">
-					<div class="section-heading">
-						<h2 class="section-title">Moving and storage services</h2>
-					</div>
-					<span class="mark">Competently restore adaptive quality vectors with bricks-and-clicks results. Enthusiastically embrace interoperable vortals whereas alternative technologies.</span>
-					<p>Proactively productize principle-centered processes after business portals. Enthusiastically target distributed e-markets whereas 24/365 innovation. Completely mesh prospective strategic theme areas before high standards in materials. Phosfluorescently repurpose high-payoff metrics vis-a-vis tactical portals. Globally customize viral processes for state of the art mindshare.</p>
-
-
-					<div class="row">
-						<div class="col-sm-6">
-							<ul>
-								<li>Completely productize next generation</li>
-								<li>Mind share without timely experiences</li>
-								<li>Completely pontificate</li>
-								<li>Resource levelling</li>
-								<li>Highly potentialities</li>
-							</ul>
-						</div><!-- /.col -->
-
-						<div class="col-sm-6">
-							<ul>
-								<li>Completely productize next generation</li>
-								<li>Mind share without timely experiences</li>
-								<li>Completely pontificate</li>
-								<li>Resource levelling</li>
-								<li>Highly potentialities</li>
-							</ul>
-						</div><!-- /.col -->
-
-					</div><!--/.row-->
-				</div><!--/.service-intro-content-->
-
-			</div><!--/.col-->
-		</div><!--/.row -->
-	</div><!--/.container-->
-
-</section>
-<!--/Service-intro-end -->
-
-
 <!-- Featured-service-start -->
-<section class="featured-service-wrap section-padding">
-	<div class="container">
+<section class="featured-service">
+	<div class="container" style="padding:40px 0">
 		<div class="section-heading">
-			<h2 class="section-title">Featured services</h2>
+			<h2 class="section-title">Pelayanan Kami</h2>
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
-				<div class="featured-service">
-					<div class="featured-service-thumb">
-						<img class="img-responsive" src="assets/img/service/thumb1.jpg" alt="image">
-					</div>
-					<div class="featured-service-content">
-						<h3>Air transportation</h3>
-						<p>Intrinsicly strategize exceptional mindshare vis-a-vis functionalized imperatives.Energistically incentivize innovative convergence through wireless ideas. </p>
-						<a class="btn btn-primary readmore" href="service-single.html">Continue reading<i class="fa fa-long-arrow-right"></i></a>
-					</div>
-				</div>
 
-			</div><!-- /.col -->
+			<?php
+			$search_field_where = array("Status");
+			$search_criteria_where = array("=");
+			$search_value_where = array("Aktif");
+			$search_connector_where = array("ORDER BY Id_Pelayanan ASC");
 
-			<div class="col-sm-4">
-				<div class="featured-service">
-					<div class="featured-service-thumb">
-						<img class="img-responsive" src="assets/img/service/thumb2.jpg" alt="image">
-					</div>
-					<div class="featured-service-content">
-						<h3>Marine transportation</h3>
-						<p>Intrinsicly strategize exceptional mindshare vis-a-vis functionalized imperatives.Energistically incentivize innovative convergence through wireless ideas. </p>
-						<a class="btn btn-primary readmore" href="service-single.html">Continue reading<i class="fa fa-long-arrow-right"></i></a>
-					</div>
-				</div>
+			$result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_pelayanan", $search_field_where, $search_criteria_where, $search_value_where, $search_connector_where);
+			if ($result['Status'] == "Sukses") {
 
-			</div><!-- /.col -->
+				$data_hasil = $result['Hasil'];
+				foreach ($data_hasil as $data_pelayanan) {
+			?>
 
-			<div class="col-sm-4">
-				<div class="featured-service">
-					<div class="featured-service-thumb">
-						<img class="img-responsive" src="assets/img/service/thumb3.jpg" alt="image">
-					</div>
-					<div class="featured-service-content">
-						<h3>Trucking</h3>
-						<p>Intrinsicly strategize exceptional mindshare vis-a-vis functionalized imperatives.Energistically incentivize innovative convergence through wireless ideas. </p>
-						<a class="btn btn-primary readmore" href="service-single.html">Continue reading<i class="fa fa-long-arrow-right"></i></a>
-					</div>
-				</div>
+					<div class="col-sm-4">
+						<div class="featured-service">
+							<div class="featured-service-thumb">
+								<img class="img-responsive" src="dashboard/media/pelayanan/cover/<?php echo $data_pelayanan['Cover_Pelayanan']?>" alt="image" style="height:600px; object-fit:cover">
+							</div>
+							<div class="featured-service-content"><br>
+								<h3><?php echo $data_pelayanan['Judul_Pelayanan']?></h3>
+								<p><?php echo substr($data_pelayanan['Deskripsi'], 0, 100)?></p>
+								<br><a class="btn btn-primary readmore" href="?menu=services-detail&service_id=<?php echo $a_hash->encode($data_pelayanan['Id_Pelayanan'],$_GET['menu'])?>">Lanjutkan<i class="fa fa-long-arrow-right"></i></a>
+							</div>
+						</div>
 
-			</div><!-- /.col -->
+					</div><!-- /.col -->
+
+			<?php
+				}
+			}
+			?>
+
 		</div><!-- /.row -->
+		<br>
 	</div><!-- /.container -->
 
 </section>

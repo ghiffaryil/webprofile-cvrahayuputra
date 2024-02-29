@@ -169,6 +169,19 @@
 						</ul>
 					</li>
 
+					<li class="treeview">
+						<a href="#">
+							<i class="mdi mdi-email"><span class="path1"></span><span class="path2"></span></i>
+							<span>Newsletter</span>
+							<span class="pull-right-container">
+								<i class="fa fa-angle-right pull-right"></i>
+							</span>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="?menu=newsletter"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Newsletter</a></li>
+						</ul>
+					</li>
+
 					<li class="header">Logout</li>
 					<li class="treeview">
 						<a href="#">

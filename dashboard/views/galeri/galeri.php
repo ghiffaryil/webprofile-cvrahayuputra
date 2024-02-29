@@ -407,7 +407,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 											</div>
 
 											<div class="form-group row">
-												<label class="col-lg-3 control-label">Poster</label>
+												<label class="col-lg-3 control-label">Foto</label>
 												<div class="col-lg-9">
 
 													<?php 

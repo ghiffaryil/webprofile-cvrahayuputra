@@ -17,8 +17,14 @@ if (isset($_GET['menu'])) {
         case 'services':
             include "views/services/services.php";
             break;
+        case 'services-detail':
+            include "views/services/services_detail.php";
+            break;
         case 'blog':
             include "views/blog/blog.php";
+            break;
+        case 'blog-detail':
+            include "views/blog/blog_detail.php";
             break;
 
         default:

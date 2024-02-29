@@ -1,51 +1,61 @@
-<!-- Page-title -->
-<section class="page-title-section" style="background-image: url(assets/img/slider/slide-3.jpg); background-repeat: no-repeat; background-size: cover; ">
-	<div class="container">
-		<div class="page-header">
-			<h1 style="color:black">About Us</h1>
-		</div>
+<style>
+	.accordion-item {
+		border-bottom: 2px solid #ccc;
+		/* padding: 15px 0 0 0; */
+	}
 
-		<ol class="breadcrumb">
-		<li ><a href="#" style="color:black">Home</a></li>
-			<li style="color:black" class="active">About Us</li>
-		</ol>
-	</div>
+	.accordion-title {
+		/* background-color: gray; */
+		padding: 15px 15px 25px 15px;
+		font-size: large;
+		cursor: pointer;
+		color:#140707
+	}
+
+	.accordion-content {
+		padding: 15px 5px 25px 15px;
+		display: none;
+		/* background-color: #fff; */
+	}
+
+	.accordion-content p {
+		margin: 0;
+	}
+</style>
+
+<section class="page-title-section" style="position: relative; background-image: url(assets/img/slider/construction-site-silhouettes.jpg); background-repeat: no-repeat; background-position:top-center; background-size:cover">
+    <div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="page-header">
+            <h1>Tentang Kami</h1>
+        </div>
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">Tentang Kami</li>
+        </ol>
+    </div>
 </section><!--/.page-title-section -->
 
 <!--about-us-intro-wrap  -->
-<section class="about-us-intro-wrap section-padding">
+<section class="about-us-intro-wrap">
 	<div class="container">
+		<br><br>
 		<div class="row">
-			<div class="col-sm-5">
+			<div class="col-sm-4">
 				<div class="about-thumb">
-					<img class="img-responsive" src="assets/img/about-thumb.jpg" alt="thumb">
+					<img class="img-responsive" src="dashboard/media/tentang_kami/<?php echo $data_tentang_kami['Foto_Tentang_Kami'] ?>" alt="thumb">
 				</div>
 			</div><!-- /.col -->
 
-			<div class="col-sm-7">
+			<div class="col-sm-8">
 				<div class="about-us-intro-content">
 					<div class="section-heading">
-						<h2 class="section-title">A few words about us</h2>
+						<h2 class="section-title"><?php echo $data_setting_website['Judul_Website'] ?></h2>
 					</div>
-					<span>Holisticly monetize empowered processes after leveraged resources. Phosfluorescently impact
-						enterprise-wide platforms after future-proof niche markets.</span>
+					<p style="font-size:larger"><?php echo $data_setting_website['Deskripsi_Singkat'] ?></p>
 					<br>
+					<p style="font-size:larger"><?php echo $data_setting_website['Deskripsi_Lengkap'] ?></p>
 					<br>
-					<p>Dynamically conceptualize seamless technology rather than wireless users. Phosfluorescently
-						visualize superior ideas before interdependent users. Synergistically re-engineer collaborative
-						vortals whereas seamless sources. Professionally whiteboard 24/365 manufactured products without
-						user friendly ideas.</p>
-					<br>
-					<p>Collaboratively enable multidisciplinary value through resource sucking meta-services. Globally
-						visualize standards compliant resources vis-a-vis team building initiatives. Energistically
-						aggregate leveraged vortals rather than competitive vortals. Distinctively engineer e-business
-						methods of empowerment without market-driven partnerships. Uniquely initiate clicks-and-mortar
-						processes after resource sucking data.Quickly re-engineer diverse ROI with state of the art
-						mindshare.</p>
-					<br>
-					<p>Distinctively foster functionalized e-commerce vis-a-vis intermandated expertise. Quickly
-						re-engineer diverse ROI with state of the art mindshare. Conveniently engineer granular ROI
-						after future-proof resources. </p>
 				</div><!--/.about-us-intro-content  -->
 
 			</div><!--/.col-->
@@ -55,40 +65,38 @@
 <!--/.about-us-intro-wrap  -->
 
 <!-- about-us-advantage-wrap -->
-<section class="about-us-advantage-wrap section-padding">
-	<div class="container">
+<section class="about-us-advantage-wrap">
+	<br><br>
+	<div style="padding: 0 45px 0 55px;">
 		<div class="row">
 			<div class="col-md-8 col-sm-7 col-xs-12">
 				<div class="advantage-left-content">
 					<div class="section-heading">
-						<h2 class="section-title">Our advantages</h2>
+						<h2 class="section-title">Bekerja Bersama Kami</h2>
 					</div>
-					<p>Appropriately foster professional initiatives rather than out-of-the-box growth strategies.
-						Dramatically repurpose fully researched schemas via bleeding-edge best practices. Uniquely
-						simplify diverse expertise with interactive communities. Quickly e-enable sticky process
-						improvements before multimedia based testing procedures. Dramatically productivate maintainable
-						platforms after standardized information.Distinctively engineer e-business methods of
-						empowerment without market-driven partnerships. </p>
+					<p><?php echo $data_tentang_kami['Deskripsi_Tambahan'] ?></p>
 					<br>
-					<p>Collaboratively enable multidisciplinary value through resource sucking meta-services. Globally
-						visualize standards compliant resources vis-a-vis team building initiatives. Energistically
-						aggregate leveraged vortals rather than competitive vortals. Distinctively engineer e-business
-						methods of empowerment without market-driven partnerships. Uniquely initiate clicks-and-mortar
-						processes after resource sucking data.Quickly re-engineer diverse ROI with state.</p>
+					<div>
+						<h3>Motto Kami</h3>
+						<blockquote><i>
+								<h2 class="text-muted"><?php echo $data_tentang_kami['Motto'] ?></h2>
+							</i></blockquote>
+					</div>
+					<br>
+					<br>
 				</div><!-- /.advantage-left-content -->
 			</div><!-- /.col -->
 			<div class="col-md-4 col-sm-5 col-xs-12">
 				<div class="advantage-right-content">
 					<div>
-						<h3>Globally visualize standards compliant resources</h3>
-						<p>Uniquely initiate clicks-and-mortar processes after resource sucking data.Quickly re-engineer
-							diverse.</p>
+						<h3>Visi Kami</h3>
+						<p style="font-size:larger"><?php echo $data_tentang_kami['Visi'] ?></p>
 					</div>
 					<div>
-						<h3>Collaboratively enable multidisciplinary value</h3>
-						<p>Uniquely initiate clicks-and-mortar processes after resource sucking data.Quickly re-engineer
-							diverse ROI.</p>
+						<h3>Misi Kami</h3>
+						<p style="font-size:larger"><?php echo $data_tentang_kami['Misi'] ?></p>
 					</div>
+
 				</div><!-- /.advantage-right-content -->
 			</div><!-- /.col -->
 		</div><!-- /.row -->
@@ -97,212 +105,77 @@
 <!-- /.about-us-advantage-wrap -->
 
 <!-- team-wrap-->
-<section class="team-wrap section-padding">
-	<div class="container">
-		<div class="section-heading">
-			<h2 class="section-title">Our crew</h2>
-		</div>
+<!-- <hr> -->
+<section class="team-wrap" style="background:white">
+	<div class="" style="padding: 0 45px 50px 45px;">
+		<br>
 		<div class="row">
-			<div class="col-md-4 col-sm-12">
-				<div class="team-member member-lead">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/team1.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>Alex Freeman</h3>
-						<span>Cofounder & chairman</span>
-						<p>Uniquely initiate clicks-and-mortar processes after resource sucking data.Quickly re-engineer
-							diverse.</p>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+			<div class="col-lg-4 text-center">
+				<div class="section-heading"> <br><br>
+				<h2 class="section-title">Frequently Asked Question (FAQ)?</h2>
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<div class="accordion">
 
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-			<div class="col-md-4 col-sm-12">
-				<div class="team-member member-lead">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/team2.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>Howard Ferrera</h3>
-						<span>Cofounder & Vice chairman</span>
-						<p>Uniquely initiate clicks-and-mortar processes after resource sucking data.Quickly re-engineer
-							diverse.</p>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+					<?php
+					$search_field_where = array("Status");
+					$search_criteria_where = array("=");
+					$search_value_where = array("Aktif");
+					$search_connector_where = array("ORDER BY Id_Faq ASC");
 
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-			<div class="col-md-4 col-sm-12">
-				<div class="team-member member-lead">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/team3.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>David Letterman</h3>
-						<span>Chief Executive Officer</span>
-						<p>Uniquely initiate clicks-and-mortar processes after resource sucking data.Quickly re-engineer
-							diverse.</p>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+					$result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_faq", $search_field_where, $search_criteria_where, $search_value_where, $search_connector_where);
+					if ($result['Status'] == "Sukses") {
 
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-		</div><!-- /.row -->
+						$data_hasil = $result['Hasil'];
+						foreach ($data_hasil as $data_faq) {
+					?>
 
-		<div class="row">
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="team-member">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/member1.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>James Smith</h3>
-						<span>Warehouse manager</span>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+							<div class="accordion-item">
+								<div class="accordion-title">
+									<div class="row">
+										<div class="col-lg-10">
+											<p class="text-dark"><?php echo $data_faq['Pertanyaan'] ?></p>
+										</div>
+										<div class="col-lg-2 text-right">
+											<span class="accordion-icon"><i class="fa fa-plus-circle"></i></span></div>
+										</div>
+									</div>
+								<div class="accordion-content">
+									<p class="text-muted">
+										<font style="font-size:larger">
+										<?php echo $data_faq['Jawaban'] ?>
+										</font>
+									</p>
+								</div>
+							</div>
 
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="team-member">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/member2.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>Robert Williams</h3>
-						<span>Warehouse manager</span>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="team-member">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/member3.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>Michael Davis</h3>
-						<span>Warehouse manager</span>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="team-member">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/member4.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>Daniel Lee</h3>
-						<span>Warehouse manager</span>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-		</div><!-- /.row -->
-
-		<div class="row">
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="team-member">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/member5.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>Mathew Moore</h3>
-						<span>Warehouse manager</span>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="team-member">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/member6.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>Timothy White</h3>
-						<span>Warehouse manager</span>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="team-member">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/member7.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>Stephen Clark</h3>
-						<span>Warehouse manager</span>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="team-member">
-					<div class="member-thumb">
-						<img class="img-responsive" src="assets/img/team/member8.jpg" alt="team">
-					</div>
-					<div class="member-info">
-						<h3>Scott Lewis</h3>
-						<span>Warehouse manager</span>
-						<ul class="list-inline social-links">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-
-						</ul>
-					</div><!-- /.member- -->
-				</div><!-- /.team-member -->
-			</div><!-- /.col -->
+					<?php
+						}
+					}
+					?>
+					<!-- Add more accordion items as needed -->
+				</div>
+			</div>
 		</div><!-- /.row -->
 	</div><!-- /.container -->
 </section>
 <!-- /.team-wrap -->
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		var accordionItems = document.querySelectorAll('.accordion-item');
+
+		accordionItems.forEach(function(item) {
+			item.addEventListener('click', function() {
+				// Toggle the display of accordion content
+				var content = this.querySelector('.accordion-content');
+				content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+
+				// Change the background color of the title when content is shown/hidden
+				var title = this.querySelector('.accordion-title');
+				title.classList.toggle('active');
+			});
+		});
+	});
+</script>

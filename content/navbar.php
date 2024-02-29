@@ -24,12 +24,12 @@
             <!-- <span class="search-button pull-right"><a href="#search"><i class="fa fa-search"></i></a></span> -->
 
             <ul class="nav navbar-nav hidden-sm">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="?menu=about">About</a></li>
-                <li><a href="?menu=services">Services</a></li>
-                <li><a href="?menu=blog">Blog</a></li>
-                <li><a href="?menu=gallery">Gallery</a></li>
-                <li><a href="?menu=contact">Contact</a></li>
+                <li><a href="index.php">Beranda</a></li>
+                <li><a href="?menu=about">Tentang Kami</a></li>
+                <li><a href="?menu=services">Pelayanan</a></li>
+                <li><a href="?menu=gallery">Galeri</a></li>
+                <li><a href="?menu=blog">Artikel</a></li>
+                <li><a href="?menu=contact">Kontak</a></li>
 
                 <!-- Services -->
                 <!-- <li class="dropdown"><a href="#">Services <b class="caret"></b></a> -->

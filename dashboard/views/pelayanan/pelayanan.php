@@ -18,11 +18,7 @@ if (isset($_GET['id'])) {
 if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
     $_POST['Judul_Pelayanan'] = trim($_POST['Judul_Pelayanan']);
 
-    if (
-        ($_POST['Judul_Pelayanan'] == "")
-    ) {
-
-
+    if (($_POST['Judul_Pelayanan'] == "")) {
         echo "<script>alert('Harap Isi Field Yang Di Butuhkan Dengan Benar')</script>";
 
         $cek_required = "Gagal";
@@ -497,8 +493,6 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                             $search_value_where = array("$filter_status");
                                             $search_connector_where = array("");
                                             $nomor = 0;
-
-
                                             $result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_pelayanan", $search_field_where, $search_criteria_where, $search_value_where, $search_connector_where);
 
                                             if ($result['Status'] == "Sukses") {

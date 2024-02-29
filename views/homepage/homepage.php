@@ -1,3 +1,11 @@
+<style>
+    @media (max-width: 800px) {
+        .div_foto_tentang_kami {
+            padding: 40px 0px;
+        }
+    }
+</style>
+
 <div id="main-carousel" class="carousel slide hero-slide" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
@@ -22,12 +30,6 @@
                     <!-- Overlay with opacity -->
                     <div class="container">
                         <div class="carousel-caption">
-                            <small class="animated fadeIn">
-                                <font style="color:white">Bergabung Bersama Kami</font>
-                            </small>
-                            <div class="phone animated lightSpeedIn">
-                                <font style="color:white"><?php echo $data_setting_website['Nomor_Telpon'] ?></font>
-                            </div>
                             <h1 class="animated lightSpeedIn">
                                 <font style="color:white"><?php echo $data_banner['Judul'] ?></font>
                                 <font style="color:white">Title of Your Product <br>Service or Event</font>
@@ -114,21 +116,25 @@
 </section>
 
 <!-- About-us-wrap -->
-<section class="about-us-wrap section-padding" style="padding-top: 55px; background: url(img/service-thumb.jpg) no-repeat;">
-    <div class="container">
+<section class="about-us-wrap" style="background: url(img/service-thumb.jpg) no-repeat;">
+    <div style="padding: 0 40px 0 50px;">
         <div class="row">
-            <div class="col-sm-7">
+            <div class="col-sm-6">
                 <div class="about-us-intro-content">
                     <div class="section-heading">
-                    <br><br><br>
+                        <br><br>
                         <h2 class="section-title"><?php echo $data_setting_website['Judul_Website'] ?></h2>
                     </div>
                     <p>
                         <font style="font-size:larger"><?php echo $data_tentang_kami['Deskripsi_Tambahan'] ?></font>
                     </p>
                 </div><!--/.about-us-intro-content  -->
-
             </div><!--/.col-->
+            <div class="col-sm-6 text-center">
+                <div class="div_foto_tentang_kami">
+                    <img src="dashboard/media/tentang_kami/<?php echo $data_tentang_kami['Foto_Tentang_Kami'] ?>" alt="" style="height:560px; width:uto; object-fit:cover">
+                </div>
+            </div>
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section>
@@ -144,7 +150,6 @@
     </div>
 
     <div class="container-fluid">
-
         <div class="no-padding">
             <div class="col-md-12">
                 <div class="owl-carousel fleet-carousel">

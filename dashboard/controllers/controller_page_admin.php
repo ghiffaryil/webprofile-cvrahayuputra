@@ -46,9 +46,13 @@ if (isset($_GET['menu'])) {
 		case 'pelayanan':
 			include "views/pelayanan/pelayanan.php";
 			break;
-		
+
 		case 'kontak':
 			include "views/kontak/kontak.php";
+			break;
+
+		case 'newsletter':
+			include "views/newsletter/newsletter.php";
 			break;
 
 		default:

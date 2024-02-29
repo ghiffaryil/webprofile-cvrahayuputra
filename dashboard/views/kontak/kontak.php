@@ -38,8 +38,8 @@ if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
 if (isset($_POST['submit_simpan'])) {
     if ($cek_required == "Sukses") {
 
-        $form_field = array("Nama", "Instansi", "Pesan", "Email", "Waktu_Simpan_Data", "Status");
-        $form_value = array("$_POST[Nama]", "$_POST[Instansi]", "$_POST[Pesan]", "$_POST[Email]", "$Waktu_Sekarang", "Aktif");
+        $form_field = array("Nama", "Instansi", "Pesan", "Nomor_Handphone", "Email", "Waktu_Simpan_Data", "Status");
+        $form_value = array("$_POST[Nama]", "$_POST[Instansi]", "$_POST[Pesan]", "$_POST[Nomor_Handphone]", "$_POST[Email]", "$Waktu_Sekarang", "Aktif");
 
         $result = $a_tambah_baca_update_hapus->tambah_data("tb_kontak", $form_field, $form_value);
 
@@ -74,8 +74,8 @@ if (isset($_GET['edit'])) {
 #FUNGSI UPDATE DATA (UPDATE)
 if (isset($_POST['submit_update'])) {
     if ($cek_required == "Sukses") {
-        $form_field = array("Nama", "Instansi", "Pesan", "Email");
-        $form_value = array("$_POST[Nama]", "$_POST[Instansi]", "$_POST[Pesan]", "$_POST[Email]");
+        $form_field = array("Nama", "Instansi", "Pesan", "Nomor_Handphone", "Email");
+        $form_value = array("$_POST[Nama]", "$_POST[Instansi]", "$_POST[Pesan]", "$_POST[Nomor_Handphone]", "$_POST[Email]");
 
         $form_field_where = array("Id_Kontak");
         $form_criteria_where = array("=");
@@ -145,32 +145,6 @@ if (isset($_GET['hapus_data_permanen'])) {
     $result_data = $a_tambah_baca_update_hapus->baca_data_id("tb_kontak", "Id_Kontak", $Get_Id_Primary);
 
     if ($result_data['Status'] == "Sukses") {
-        $data = $result_data['Hasil'];
-
-        $Foto = $data['Foto'];
-        $temp_file_location = "media/Pesan/" . $Foto;
-
-        //Menghapus File Temporari Diatas
-        if (file_exists($temp_file_location)) {
-
-            $form_field = array("Foto");
-            $form_value = array("");
-
-            $form_field_where = array("Id_Kontak");
-            $form_criteria_where = array("=");
-            $form_value_where = array("$Get_Id_Primary");
-            $form_connector_where = array("");
-
-            $result = $a_tambah_baca_update_hapus->update_data("tb_kontak", $form_field, $form_value, $form_field_where, $form_criteria_where, $form_value_where, $form_connector_where);
-
-            unlink($temp_file_location);
-        }
-        //Menghapus File Temporari Diatas
-    }
-    // READ DATA
-
-    $result = $a_tambah_baca_update_hapus->hapus_data_permanen("tb_kontak", "Id_Kontak", $Get_Id_Primary);
-    if ($result['Status'] == "Sukses") {
         echo "<script>alert('Data Berhasil Terhapus Permanen');document.location.href='$kehalaman'</script>";
     } else {
         echo "<script>alert('Terjadi Kesalahan Saat Menghapus Data');document.location.href='$kehalaman'</script>";
@@ -364,6 +338,19 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 
                                             <div class="col-md-12">
                                                 <div class="form-group row">
+                                                    <label class="col-lg-3 control-label">Nomor_Handphone</label>
+                                                    <div class="col-lg-9">
+                                                        <input type="text" class="form-control" name="Nomor_Handphone" value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+                                                                                                                            echo $_POST['Nomor_Handphone'];
+                                                                                                                        } elseif (isset($_GET['edit'])) {
+                                                                                                                            echo $edit['Nomor_Handphone'];
+                                                                                                                        } ?>">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
                                                     <label class="col-lg-3 control-label">Pesan</label>
                                                     <div class="col-lg-9">
                                                         <textarea class="form-control" name="Pesan"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
@@ -417,6 +404,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                                 <th style="width:4%;">No</th>
                                                 <th style="width:15%;">Nama</th>
                                                 <th style="width:16%;">Email</th>
+                                                <th style="width:16%;">Nomor Handphone</th>
                                                 <th style="width:15%;">Instansi</th>
                                                 <th style="width:30%;">Pesan</th>
                                             </tr>
@@ -450,6 +438,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                                             </a>
                                                         </td>
                                                         <td><?php echo $data['Email'] ?></td>
+                                                        <td><?php echo $data['Nomor_Handphone'] ?></td>
                                                         <td><?php echo $data['Instansi'] ?></td>
                                                         <td><?php echo $data['Pesan'] ?></td>
                                                     </tr>
