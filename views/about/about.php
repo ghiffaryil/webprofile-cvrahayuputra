@@ -1,19 +1,16 @@
 <!-- Page-title -->
-<section class="page-title-section" style="    background-image: url(assets/img/counterbg1.png); background-repeat: no-repeat; background-size: cover;">
+<section class="page-title-section" style="background-image: url(assets/img/slider/slide-3.jpg); background-repeat: no-repeat; background-size: cover; ">
 	<div class="container">
 		<div class="page-header">
-			<h1>About us</h1>
+			<h1 style="color:black">About Us</h1>
 		</div>
 
 		<ol class="breadcrumb">
-			<li><a href="#">Home</a></li>
-			<li class="active">About us</li>
+		<li ><a href="#" style="color:black">Home</a></li>
+			<li style="color:black" class="active">About Us</li>
 		</ol>
 	</div>
 </section><!--/.page-title-section -->
-
-</header>
-<!-- HEADER -->
 
 <!--about-us-intro-wrap  -->
 <section class="about-us-intro-wrap section-padding">

@@ -38,8 +38,8 @@ if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){
 if(isset($_POST['submit_simpan'])){
 	if($cek_required == "Sukses"){
 
-		$form_field = array("Id_Pengguna","Judul_Galeri","Keterangan","Waktu_Terakhir_Update","Waktu_Simpan_Data","Status");
-		$form_value = array("$u_Id_User","$_POST[Judul_Galeri]","$_POST[Keterangan]","$Waktu_Sekarang","$Waktu_Sekarang","Aktif");
+		$form_field = array("Judul_Galeri","Keterangan","Waktu_Terakhir_Update","Waktu_Simpan_Data","Status");
+		$form_value = array("$_POST[Judul_Galeri]","$_POST[Keterangan]","$Waktu_Sekarang","$Waktu_Sekarang","Aktif");
 
 		$result = $a_tambah_baca_update_hapus->tambah_data("tb_galeri",$form_field,$form_value,"Iya");
 

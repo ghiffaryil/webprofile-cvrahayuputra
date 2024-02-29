@@ -59,7 +59,7 @@ if (isset($_POST['submit_login'])) {
 
 </head>
 
-<body class="hold-transition theme-primary bg-img" style="background-image: url(../images/front-end-img/banners/bgadmin.jpg)">
+<body class="hold-transition theme-primary bg-img" style="background-image: url(../assets/img/slider/slider-4.jpg)">
 
 	<div class="container h-p100">
 		<div class="row align-items-center justify-content-md-center h-p100">
@@ -69,7 +69,7 @@ if (isset($_POST['submit_login'])) {
 					<div class="col-lg-4 col-md-4 col-12">
 						<div class="bg-white rounded10 shadow-lg">
 							<div class="content-top-agile p-20 pb-0">
-								<h2 class="text-primary">CV Rahayu Putra</h2>
+								<h2 class="text-danger">CV Rahayu Putra</h2>
 								<p class="mb-0">Silahkan Login Menggunakan Akun Yang Sudah Terdaftar</p>
 							</div>
 							<div class="p-40">
@@ -89,7 +89,7 @@ if (isset($_POST['submit_login'])) {
 									<div class="row">
 
 										<div class="col-12 text-center">
-											<button type="submit" name="submit_login" class="btn btn-primary mt-10">Login</button>
+											<button type="submit" name="submit_login" class="btn btn-danger mt-10">Login</button>
 										</div>
 									</div>
 								</form>

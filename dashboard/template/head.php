@@ -6,7 +6,7 @@
 	<meta name="author" content="">
 	<link rel="icon" href="../media/logo/TM.png">
 
-	<title>CV. RAHAYU PUTRA</title>
+	<title>ADMIN CV. RAHAYU PUTRA</title>
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="css/vendors_css.css">
 	<!-- Style-->  

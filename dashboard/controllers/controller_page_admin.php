@@ -43,6 +43,10 @@ if (isset($_GET['menu'])) {
 			include "views/galeri/galeri.php";
 			break;
 
+		case 'pelayanan':
+			include "views/pelayanan/pelayanan.php";
+			break;
+		
 		case 'kontak':
 			include "views/kontak/kontak.php";
 			break;

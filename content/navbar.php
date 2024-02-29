@@ -24,7 +24,7 @@
             <!-- <span class="search-button pull-right"><a href="#search"><i class="fa fa-search"></i></a></span> -->
 
             <ul class="nav navbar-nav hidden-sm">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="?menu=about">About</a></li>
                 <li><a href="?menu=services">Services</a></li>
                 <li><a href="?menu=blog">Blog</a></li>
@@ -33,8 +33,8 @@
 
                 <!-- Services -->
                 <!-- <li class="dropdown"><a href="#">Services <b class="caret"></b></a> -->
-                    <!-- submenu-wrapper -->
-                    <!-- <div class="submenu-wrapper submenu-wrapper-topbottom">
+                <!-- submenu-wrapper -->
+                <!-- <div class="submenu-wrapper submenu-wrapper-topbottom">
                         <div class="submenu-inner  submenu-inner-topbottom">
                             <ul class="dropdown-menu">
                                 <li><a href="?menu=services">Service</a></li>
@@ -42,7 +42,7 @@
                             </ul>
                         </div>
                     </div> -->
-                    <!-- /submenu-wrapper -->
+                <!-- /submenu-wrapper -->
                 <!-- </li> -->
                 <!-- /Services -->
             </ul>
