@@ -31,7 +31,7 @@ if (isset($_POST['submit_simpan'])) {
 			"Id_Pengaturan_Website",
 			"Judul_Website",
 			"Deskripsi_Singkat",
-			"Deksripsi_Lengkap",
+			"Deskripsi_Lengkap",
 			"Email_Admin",
 			"Email_Customer_Service",
 
@@ -67,7 +67,7 @@ if (isset($_POST['submit_simpan'])) {
 			"1",
 			"$_POST[Judul_Website]",
 			"$_POST[Deskripsi_Singkat]",
-			"$_POST[Deksripsi_Lengkap]",
+			"$_POST[Deskripsi_Lengkap]",
 			"$_POST[Email_Admin]",
 			"$_POST[Email_Customer_Service]",
 
@@ -99,7 +99,7 @@ if (isset($_POST['submit_simpan'])) {
 			"$_POST[Pesan_CS]"
 		);
 
-		$result = $a_tambah_baca_update_hapus->tambah_data("tb_pengaturan_website", $form_field, $form_value);
+		$result = $a_tambah_baca_update_hapus->tambah_data("tb_pengaturan_website", $form_field, $form_value, "Iya");
 
 		if ($result['Status'] == "Sukses") {
 			echo "<script>alert('Data Tersimpan');document.location.href='$kehalaman'</script>";
@@ -132,7 +132,7 @@ if (isset($_POST['submit_update'])) {
 		$form_field = array(
 			"Judul_Website",
 			"Deskripsi_Singkat",
-			"Deksripsi_Lengkap",
+			"Deskripsi_Lengkap",
 			"Email_Admin",
 			"Email_Customer_Service",
 
@@ -167,7 +167,7 @@ if (isset($_POST['submit_update'])) {
 		$form_value = array(
 			"$_POST[Judul_Website]",
 			"$_POST[Deskripsi_Singkat]",
-			"$_POST[Deksripsi_Lengkap]",
+			"$_POST[Deskripsi_Lengkap]",
 			"$_POST[Email_Admin]",
 			"$_POST[Email_Customer_Service]",
 
@@ -204,7 +204,7 @@ if (isset($_POST['submit_update'])) {
 		$form_value_where = array("1");
 		$form_connector_where = array("");
 
-		$result = $a_tambah_baca_update_hapus->update_data("tb_pengaturan_website",$form_field,$form_value,$form_field_where,$form_criteria_where,$form_value_where,$form_connector_where);
+		$result = $a_tambah_baca_update_hapus->update_data("tb_pengaturan_website",$form_field,$form_value,$form_field_where,$form_criteria_where,$form_value_where,$form_connector_where,"Iya");
 
 		if ($result['Status'] == "Sukses") {
 			echo "<script>alert('Data Terupdate');document.location.href='$kehalaman'</script>";
@@ -289,10 +289,10 @@ if (isset($_POST['submit_update'])) {
 													<div class="col-lg-10">
 														<textarea <?php if ($u_Sebagai <> "Super Administrator") {
 																		echo "readonly";
-																	} ?> rows="6" class="form-control" name="Deksripsi_Lengkap"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
-																																	echo $_POST['Deksripsi_Lengkap'];
+																	} ?> rows="6" class="form-control" name="Deskripsi_Lengkap"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+																																	echo $_POST['Deskripsi_Lengkap'];
 																																} else {
-																																	echo $edit['Deksripsi_Lengkap'];
+																																	echo $edit['Deskripsi_Lengkap'];
 																																} ?></textarea>
 													</div>
 												</div>

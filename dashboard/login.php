@@ -1,5 +1,5 @@
 <?php
-include "config/master.php";
+include "config/function/master.php";
 //FUNGSI LOGIN
 
 setcookie("Cookie_1_CVRahayuPutra", "", time() + (86400 * 365));

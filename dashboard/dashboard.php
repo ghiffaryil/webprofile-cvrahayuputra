@@ -1,6 +1,6 @@
 ﻿<?php
 session_start();
-include "config/master.php";
+include "config/function/master.php";
 
 //FUNGSI CEK LOGIN
 if (!((isset($_COOKIE['Cookie_1_CVRahayuPutra'])) and (isset($_COOKIE['Cookie_2_CVRahayuPutra'])) and (isset($_COOKIE['Cookie_3_CVRahayuPutra'])))) {

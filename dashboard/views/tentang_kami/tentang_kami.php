@@ -49,7 +49,7 @@ if(isset($_POST['submit_update'])){
 		$form_value_where = array("1");
 		$form_connector_where = array("");
 
-		$result = $a_tambah_baca_update_hapus->update_data("tb_tentang_kami",$form_field,$form_value,$form_field_where,$form_criteria_where,$form_value_where,$form_connector_where);
+		$result = $a_tambah_baca_update_hapus->update_data("tb_tentang_kami",$form_field,$form_value,$form_field_where,$form_criteria_where,$form_value_where,$form_connector_where,"Iya");
 
 		if($result['Status'] == "Sukses"){
 

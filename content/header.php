@@ -5,15 +5,15 @@
                 <div class="col-sm-4 col-xs-12">
                     <div class="call-to-action">
                         <ul class="list-inline">
-                            <li><a href="views/#"><strong>1-800-987-654</strong></a></li>
-                            <li><a href="views/#"><strong>email@domain.com</strong></a></li>
+                            <li><a href="views/#"><font><?php echo $data_setting_website['Nomor_Telpon']?></font></a></li>
+                            <li><a href="views/#"><font><?php echo $data_setting_website['Email_Customer_Service']?></font></a></li>
                         </ul>
                     </div><!-- /.call-to-action -->
                 </div><!-- /.col-sm-6 -->
 
                 <div class="col-sm-4 col-xs-12">
                     <div class="logo text-center">
-                        <h3>CV. Rahayu Putra</h3>
+                        <h3><?php echo $data_setting_website['Judul_Website']?></h3>
                     </div>
                 </div>
 
@@ -27,10 +27,11 @@
                         </div>
 
                         <ul class="social-links list-inline pull-right">
-                            <li><a href="views/#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="views/#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="views/#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="views/#"><i class="fa fa-tumblr"></i></a></li>
+                            <li><a href="<?php echo $data_setting_website['URL_Facebook']?>"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="<?php echo $data_setting_website['URL_Twitter']?>"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="<?php echo $data_setting_website['URL_Instagram']?>"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="<?php echo $data_setting_website['URL_Instagram']?>"><i class="fa fa-youtube"></i></a></li>
+                            
                         </ul>
                     </div><!-- /.social-links -->
                 </div><!-- /.col-sm-6 -->

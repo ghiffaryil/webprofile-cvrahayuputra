@@ -4,19 +4,17 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="footer-widget">
-                    <h3>About</h3>
-                    <p>
-                        Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries.
-                    </p>
+                    <h3>Tentang</h3>
+                    <p style="font-size:larger"><?php echo $data_setting_website['Deskripsi_Singkat']?></p>
                     <br>
 
                     <address>
-                        <strong>(554) 616 9926</strong>
+                        <strong><?php echo $data_setting_website['Nomor_Telpon']?></strong>
                         <br>
-                        <a href="#">example@yahoo.com</a>
+                        <a href=""><?php echo $data_setting_website['Email_Customer_Service']?></a>
                         <br>
                         <br>
-                        <span class="map-marker">384 Maple Circle<br>Simi Valley Nevada, 24757</span>
+                        <span class="map-marker" style="font-size:larger"><?php echo $data_setting_website['Alamat_Lengkap']?></span>
                     </address>
 
 
@@ -25,26 +23,15 @@
 
             <div class="col-sm-4">
                 <div class="footer-widget">
-                    <h3>Useful Links</h3>
+                    <h3>Menu</h3>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                             <ul class="quick-links">
-                                <li><a href="views/about.html">About us</a></li>
-                                <li><a href="views/blog.html">Blog</a></li>
-                                <li><a href="views/contact.html">Contact</a></li>
-                                <li><a href="views/#">Career</a></li>
-                                <li><a href="views/#">Staffs</a></li>
-                                <li><a href="views/#">News</a></li>
-                                <li><a href="views/#">Support</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="quick-links">
-                                <li><a href="views/#">Forum</a></li>
-                                <li><a href="views/#">Schedules</a></li>
-                                <li><a href="views/#">Projects</a></li>
-                                <li><a href="views/#">Partners</a></li>
-                                <li><a href="views/#">Cargo</a></li>
+                                <li><a href="?menu=about">About us</a></li>
+                                <li><a href="?menu=services">Services</a></li>
+                                <li><a href="?menu=gallery">Gallery</a></li>
+                                <li><a href="?menu=blog">Blog</a></li>
+                                <li><a href="?menu=contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -53,21 +40,20 @@
 
             <div class="col-sm-4">
                 <div class="footer-widget">
-                    <h3>Stay in Touch</h3>
-                    <p>Enter your email address to receive news &amp; offers from us</p>
+                    <h3>Hubungi Kami</h3>
+                    <p>Masukkan email anda untuk mendapatkan pembaharuan informasi dari kami</p>
 
                     <form class="newsletter-form">
                         <div class="form-group">
-                            <label class="sr-only" for="InputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="InputEmail1" placeholder="Your email address">
-                            <button type="submit" class="btn">Send &nbsp;<i class="fa fa-angle-right"></i></button>
+                            <label class="sr-only" for="InputEmail1">Alamat Email</label>
+                            <input type="email" class="form-control" id="InputEmail1" placeholder="Masukkan Email">
+                            <button type="submit" class="btn">Kirim &nbsp;<i class="fa fa-angle-right"></i></button>
                         </div>
                     </form>
                     <ul class="social-links list-inline">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a class="facebook" href="<?php echo $data_setting_website['URL_Facebook']?>"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="<?php echo $data_setting_website['URL_Twitter']?>"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="youtube" href="<?php echo $data_setting_website['URL_Youtube']?>"><i class="fa fa-youtube"></i></a></li>
                     </ul>
                 </div><!-- /.footer-widget -->
             </div><!-- /.col-md-4 -->
@@ -79,16 +65,16 @@
 <!-- copyright-section start -->
 <footer class="copyright-section">
     <div class="container">
-        <div class="footer-menu">
+        <!-- <div class="footer-menu">
             <ul>
                 <li><a href="views/#">Privacy &amp; Cookies</a></li>
                 <li><a href="views/#">Terms &amp; Conditions</a></li>
                 <li><a href="views/#">Accessibility</a></li>
             </ul>
-        </div>
-
+        </div> -->
         <div class="copyright-info">
-            <span>Copyright © 2015 Unship. All Rights Reserved. Designed by <a href="https://uiCookies.com">uiCookies</a><br> Proudly powered by <a href="http://www.w3schools.com/html/html5_intro.asp">HTML5</a> and <a href="getbootstrap.com">Bootstrap3</a></span>
+            <!-- <span>Copyright © 2015 Unship. All Rights Reserved. Designed by <a href="https://uiCookies.com">uiCookies</a><br> Proudly powered by <a href="http://www.w3schools.com/html/html5_intro.asp">HTML5</a> and <a href="getbootstrap.com">Bootstrap3</a></span> -->
+            <span>Copyright © 2024 CV. Rahayu Putra</span>
         </div>
     </div><!-- /.container -->
 </footer>
