@@ -9,6 +9,9 @@
 	    <!-- Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,400italic,700,700italic,900,900italic,500italic' rel='stylesheet' type='text/css'>
        	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+	   <link rel="icon" href="assets/img/logo/3.png">
+
 	    <!-- Flaticon CSS -->
 	    <link href="assets/fonts/flaticon/flaticon.css" rel="stylesheet">
 	    <!-- font-awesome CSS -->

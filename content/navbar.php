@@ -1,3 +1,16 @@
+<style>
+
+.div-toggle-navigation {
+            display: none;
+        }
+
+    @media only screen and (max-width: 920px) {
+        .div-toggle-navigation {
+            display: block;
+        }
+    }
+</style>
+
 <div class="mainnav">
 
     <div class="navbar-header">
@@ -10,11 +23,10 @@
         </div>
     </div>
     <nav class="navbar navbar-default" role="navigation">
-        <span class="search-button visible-xs"><a href="#search"><i class="fa fa-search"></i></a></span>
+        <!-- <span class="search-button visible-xs"><a href="#search"><i class="fa fa-search"></i></a></span> -->
 
         <!-- offcanvas-trigger -->
-        <button type="button" class="navbar-toggle collapsed">
-            <span class="sr-only">Toggle navigation</span>
+        <button type="button" class="navbar-toggle div-toggle-navigation">
             <i class="fa fa-bars"></i>
         </button>
 
@@ -26,27 +38,11 @@
             <ul class="nav navbar-nav hidden-sm">
                 <li><a href="index.php">Beranda</a></li>
                 <li><a href="?menu=about">Tentang Kami</a></li>
-                <li><a href="?menu=services">Pelayanan</a></li>
+                <li><a href="?menu=services">Layanan</a></li>
                 <li><a href="?menu=gallery">Galeri</a></li>
-                <li><a href="?menu=blog">Artikel</a></li>
+                <!-- <li><a href="?menu=blog">Artikel</a></li> -->
                 <li><a href="?menu=contact">Kontak</a></li>
-
-                <!-- Services -->
-                <!-- <li class="dropdown"><a href="#">Services <b class="caret"></b></a> -->
-                <!-- submenu-wrapper -->
-                <!-- <div class="submenu-wrapper submenu-wrapper-topbottom">
-                        <div class="submenu-inner  submenu-inner-topbottom">
-                            <ul class="dropdown-menu">
-                                <li><a href="?menu=services">Service</a></li>
-                                <li><a href="?menu=.html">Single Service</a></li>
-                            </ul>
-                        </div>
-                    </div> -->
-                <!-- /submenu-wrapper -->
-                <!-- </li> -->
-                <!-- /Services -->
             </ul>
         </div><!-- /.navbar-collapse -->
-
     </nav>
 </div>

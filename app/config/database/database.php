@@ -8,7 +8,7 @@ class a_database {
 
 	public function __construct() {
 		$this->db_connect();
-		$this->s_nama_database = "root";
+		$this->s_nama_database = "db_cvrahayuputra";
 	}
 
 	public function __destruct() {

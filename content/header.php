@@ -13,7 +13,7 @@
 
                 <div class="col-sm-4 col-xs-12">
                     <div class="logo text-center">
-                        <h3><?php echo $data_setting_website['Judul_Website']?></h3>
+                        <h3><img src="assets/img/logo/7.png" alt=""> </h3>
                     </div>
                 </div>
 

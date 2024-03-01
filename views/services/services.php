@@ -6,7 +6,7 @@
 		</div>
 		<ol class="breadcrumb">
 			<li><a href="#">Home</a></li>
-			<li class="active">Pelayanan Kami</li>
+			<li class="active">Layanan Kami</li>
 		</ol>
 	</div>
 </section><!--/.page-title-section -->
