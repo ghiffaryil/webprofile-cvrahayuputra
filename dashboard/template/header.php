@@ -19,7 +19,7 @@
 		<div class="navbar-custom-menu l-side">
 			<ul class="nav navbar-nav">
 
-				<li class="user user-menu">
+				<li class="user user-menu d-none">
 					<a href="?menu=artikel" class="waves-effect waves-light dropdown-toggle" title="User">
 						<i class="icon-File"><span class="path1"></span><span class="path2"></span></i>
 					</a>

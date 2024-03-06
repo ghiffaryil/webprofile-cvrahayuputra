@@ -38,8 +38,8 @@ if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
 if (isset($_POST['submit_simpan'])) {
     if ($cek_required == "Sukses") {
 
-        $form_field = array("Nama", "Instansi", "Pesan", "Nomor_Handphone", "Email", "Waktu_Simpan_Data", "Status");
-        $form_value = array("$_POST[Nama]", "$_POST[Instansi]", "$_POST[Pesan]", "$_POST[Nomor_Handphone]", "$_POST[Email]", "$Waktu_Sekarang", "Aktif");
+        $form_field = array("Nama", "Instansi", "Pesan", "Nomor_Handphone", "Email", "Follow_Up", "Waktu_Simpan_Data", "Status");
+        $form_value = array("$_POST[Nama]", "$_POST[Instansi]", "$_POST[Pesan]", "$_POST[Nomor_Handphone]", "$_POST[Email]", "$_POST[Follow_Up]", "$Waktu_Sekarang", "Aktif");
 
         $result = $a_tambah_baca_update_hapus->tambah_data("tb_kontak", $form_field, $form_value);
 
@@ -74,8 +74,8 @@ if (isset($_GET['edit'])) {
 #FUNGSI UPDATE DATA (UPDATE)
 if (isset($_POST['submit_update'])) {
     if ($cek_required == "Sukses") {
-        $form_field = array("Nama", "Instansi", "Pesan", "Nomor_Handphone", "Email");
-        $form_value = array("$_POST[Nama]", "$_POST[Instansi]", "$_POST[Pesan]", "$_POST[Nomor_Handphone]", "$_POST[Email]");
+        $form_field = array("Nama", "Instansi", "Pesan", "Nomor_Handphone", "Email", "Follow_Up");
+        $form_value = array("$_POST[Nama]", "$_POST[Instansi]", "$_POST[Pesan]", "$_POST[Nomor_Handphone]", "$_POST[Email]", "$_POST[Follow_Up]");
 
         $form_field_where = array("Id_Kontak");
         $form_criteria_where = array("=");
@@ -313,13 +313,19 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                             <div class="col-md-12">
                                                 <div class="form-group row">
                                                     <label class="col-lg-3 control-label">Email</label>
-                                                    <div class="col-lg-9">
+                                                    <div class="col-lg-7">
                                                         <input type="text" class="form-control" name="Email" value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
                                                                                                                         echo $_POST['Email'];
                                                                                                                     } elseif (isset($_GET['edit'])) {
                                                                                                                         echo $edit['Email'];
                                                                                                                     } ?>">
                                                     </div>
+                                                    <?php if(isset($_GET['edit'])){ ?>
+                                                        <div class="col-lg-2">
+                                                            <a href="mailto:<?php echo $edit['Email']; ?>" target="_blank" class="btn btn-sm btn-success"> Send Email </a>
+                                                        </div>
+                                                    <?php } ?>
+
                                                 </div>
                                             </div>
 
@@ -338,13 +344,13 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 
                                             <div class="col-md-12">
                                                 <div class="form-group row">
-                                                    <label class="col-lg-3 control-label">Nomor_Handphone</label>
+                                                    <label class="col-lg-3 control-label">Nomor Handphone</label>
                                                     <div class="col-lg-9">
                                                         <input type="text" class="form-control" name="Nomor_Handphone" value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
-                                                                                                                            echo $_POST['Nomor_Handphone'];
-                                                                                                                        } elseif (isset($_GET['edit'])) {
-                                                                                                                            echo $edit['Nomor_Handphone'];
-                                                                                                                        } ?>">
+                                                                                                                                    echo $_POST['Nomor_Handphone'];
+                                                                                                                                } elseif (isset($_GET['edit'])) {
+                                                                                                                                    echo $edit['Nomor_Handphone'];
+                                                                                                                                } ?>">
                                                     </div>
                                                 </div>
                                             </div>
@@ -361,6 +367,25 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-3 control-label">Follow Up</label>
+                                                    <div class="col-lg-9">
+
+                                                        <select class="form-select" name="Follow_Up">
+                                                            <option value="Belum" <?php if (isset($_GET['edit']) && $edit['Follow_Up'] == "Belum") {
+                                                                                        echo "selected";
+                                                                                    } ?>>Belum</option>
+                                                            <option value="Sudah" <?php if (isset($_GET['edit']) && $edit['Follow_Up'] == "Sudah") {
+                                                                                        echo "selected";
+                                                                                    } ?>>Sudah</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
 
                                         </div>
                                     </fieldset>
@@ -407,6 +432,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                                 <th style="width:16%;">Nomor Handphone</th>
                                                 <th style="width:15%;">Instansi</th>
                                                 <th style="width:30%;">Pesan</th>
+                                                <th style="width:20%;">Follow Up</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -437,10 +463,13 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                                                 <?php echo $data['Nama'] ?>
                                                             </a>
                                                         </td>
-                                                        <td><?php echo $data['Email'] ?></td>
+                                                        <td><a href="mailto:<?php echo $data['Email']; ?>" target="_blank" class="btn btn-sm btn-success"><?php echo $data['Email'] ?></a></td>
+                                                        
+                                                        
                                                         <td><?php echo $data['Nomor_Handphone'] ?></td>
                                                         <td><?php echo $data['Instansi'] ?></td>
                                                         <td><?php echo $data['Pesan'] ?></td>
+                                                        <td><?php echo $data['Follow_Up'] ?></td>
                                                     </tr>
                                                 <?php } ?>
                                             <?php } ?>

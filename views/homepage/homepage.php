@@ -32,7 +32,6 @@
                         <div class="carousel-caption">
                             <h1 class="animated lightSpeedIn">
                                 <font style="color:white"><?php echo $data_banner['Judul'] ?></font>
-                                <font style="color:white">Title of Your Product <br>Service or Event</font>
                             </h1>
 
                             <p class="lead animated lightSpeedIn" style="color:white">
@@ -145,7 +144,7 @@
 
     <div class="container">
         <div class="section-heading">
-            <h2 class="section-title">&nbsp;&nbsp;Galeri Kami</h2>
+            <h2 class="section-title">Galeri Kami</h2>
         </div> <!--section-heading-->
     </div>
 
@@ -194,7 +193,7 @@
 <!-- fleets-wrap end -->
 
 <!-- Testimonial-wrap start -->
-<section class="testimonial-wrap">
+<section class="testimonial-wrap" style="display: none;">
     <div class="container">
         <div class="section-heading">
             <h2 class="section-title">Testimoni Customer</h2>
@@ -203,7 +202,7 @@
 
     
     <!-- testimonial-carousel-slider -->
-<div id="Carousel" class="carousel slide carousel-fade">
+<div id="Carousel" class="carousel slide carousel-fade" style="display: none;">
     <div class="carousel-inner">
         <?php
         $search_field_where = array("Status");
@@ -244,6 +243,9 @@
         <?php }
         } ?>
     </div><!-- /carousel-inner -->
+
+    <br><br>
+
 </div><!-- /.carousel -->
 
 <script>
@@ -274,3 +276,4 @@
 
 </section>
 <!-- Testimonial-wrap end -->
+

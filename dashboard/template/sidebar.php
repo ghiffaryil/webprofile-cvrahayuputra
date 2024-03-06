@@ -129,7 +129,7 @@
 						</ul>
 					</li>
 					
-					<li class="treeview">
+					<li class="treeview" style="display:none">
 						<a href="#">
 							<i class="mdi mdi-newspaper"><span class="path1"></span><span class="path2"></span></i>
 							<span>Artikel</span>

@@ -1,8 +1,8 @@
-<section class="page-title-section" style="position: relative; background-image: url(assets/img/slider/construction-site-silhouettes.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
+<section class="page-title-section" style="position: relative; background-image: url(assets/img/background/pexels-jakub-tabisz-5599172.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
 	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
-			<h1>Pelayanan Kami</h1>
+			<h1>Layanan Kami</h1>
 		</div>
 		<ol class="breadcrumb">
 			<li><a href="#">Home</a></li>
@@ -15,7 +15,7 @@
 <section class="featured-service">
 	<div class="container" style="padding:40px 0">
 		<div class="section-heading">
-			<h2 class="section-title">Pelayanan Kami</h2>
+			<h2 class="section-title">Layanan Kami</h2>
 		</div>
 		<div class="row">
 

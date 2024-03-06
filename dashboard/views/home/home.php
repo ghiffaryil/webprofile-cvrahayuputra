@@ -2,7 +2,7 @@
   <div class="container-full">
     <section class="content">
       <div class="row align-items-end">
-        <div class="col-xl-8 col-12">
+        <div class="col-xl-12 col-12">
           <div class="box bg-primary-light pull-up">
             <div class="box-body p-xl-0">
               <div class="row align-items-center">
@@ -14,7 +14,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-12">
+        <div class="col-xl-4 col-12 d-none">
           <div class="box bg-transparent no-shadow">
             <div class="box-body p-xl-0 text-center">
               <h3 class="px-30 mb-20">Apakah ada Artikel baru?</h3>
@@ -26,7 +26,7 @@
       <div class="row">
 
 
-        <div class="col-xl-4 col-lg-4 col-12">
+        <div class="col-xl-4 col-lg-4 col-12 d-none">
           <div class="box" style="height:450px;">
             <div class="box-header">
               <h4 class="box-title">Summary</h4>
@@ -114,7 +114,7 @@
                         <tr>
                           <td><?php echo $nomor ?></td>
                           <td>
-                            <a href="<?php echo $kehalaman ?>&edit&id=<?php echo $a_hash->encode($data["Id_Testimoni"], $_GET['menu']); ?>">
+                            <a href="<?php echo $kehalaman ?>&edit&id=<?php echo $a_hash->encode($data["Id_Testimoni"], "?menu=testimoni"); ?>">
                               <?php echo $data['Nama'] ?>
                             </a>
                           </td>
@@ -171,7 +171,7 @@
                         <tr>
                           <td><?php echo $nomor ?></td>
                           <td>
-                            <a href="<?php echo $kehalaman ?>&edit&id=<?php echo $a_hash->encode($data["Id_Kontak"], $_GET['menu']); ?>">
+                            <a href="<?php echo $kehalaman ?>&edit&id=<?php echo $a_hash->encode($data["Id_Kontak"], "?menu=kontak"); ?>">
                               <?php echo $data['Nama'] ?>
                             </a>
                           </td>
@@ -187,6 +187,63 @@
           </div>
 
         </div>
+
+
+
+        <div class="col-xl-4 col-lg-4 col-12">
+          <div class="box" style="height:450px;">
+            <div class="box-header">
+              <h4 class="box-title">Last 10 Newsletter</h4>
+              <a class="box-controls pull-right d-md-flex d-none" style="cursor: pointer;" href="?menu=testimoni">
+                View All
+              </a>
+            </div>
+            <div class="box-body">
+              <div class="table-responsive">
+                <table class="table table-borderless table-hover">
+                  <thead>
+                    <tr>
+                      <th style="width: 5%;">No</th>
+                      <th style="width: 25%;">Email</th>
+                      <th style="width: 25%;">Waktu</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <?php
+                    $filter_status = "Aktif";
+                    $search_field_where = array("Status");
+                    $search_criteria_where = array("=");
+                    $search_value_where = array("$filter_status");
+                    $search_connector_where = array("ORDER BY Id_Newsletter DESC LIMIT 10");
+                    $nomor = 0;
+
+                    $result = $a_tambah_baca_update_hapus->baca_data_dengan_filter("tb_newsletter", $search_field_where, $search_criteria_where, $search_value_where, $search_connector_where);
+
+                    if ($result['Status'] == "Sukses") {
+                      $data_hasil = $result['Hasil'];
+
+                      foreach ($data_hasil as $data) {
+                        $nomor++; ?>
+                        <tr>
+                          <td><?php echo $nomor ?></td>
+                          <td>
+                            <a href="<?php echo $kehalaman ?>&edit&id=<?php echo $a_hash->encode($data["Id_Newsletter"], "?menu=newsletter"); ?>">
+                              <?php echo $data['Email'] ?>
+                            </a>
+                          </td>
+                          <td><?php echo tanggal_dan_waktu_24_jam_indonesia($data['Waktu_Simpan_Data']) ?></td>
+                        </tr>
+                      <?php } ?>
+                    <?php } ?>
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </div>
