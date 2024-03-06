@@ -11,7 +11,7 @@ if (isset($_GET["service_id"])) {
 }
 ?>
 
-<section class="page-title-section" style="position: relative; background-image: url(assets/img/background/pexels-jakub-tabisz-5599172.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
+<section class="page-title-section" style="position: relative; background-image: url(assets/img/background/bgbanner.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
 	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
@@ -28,19 +28,19 @@ if (isset($_GET["service_id"])) {
 <section class="single-service-wrap">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-10">
+			<div class="col-sm-4">
 				<div class="single-service-content">
 					<div class="single-service-thumb">
-						<img src="dashboard/media/pelayanan/cover/<?php echo $edit['Cover_Pelayanan'] ?>" alt="image" style="max-height: 500px; object-fit:cover" />
+						<img src="dashboard/media/pelayanan/cover/<?php echo $edit['Cover_Pelayanan'] ?>?time=<?php echo $Waktu_Sekarang ?>" alt="image" style="max-width: 500px; object-fit:cover" />
 					</div>
-					<h2><?php echo $edit['Judul_Pelayanan'] ?></h2>
-					<p><?php echo $edit['Deskripsi'] ?></p><br>
-					<br>
-					<br>
-
 				</div><!-- /.single-service-content -->
-
 			</div><!-- /.col -->
+			<div class="col-sm-6">
+				<h2><?php echo $edit['Judul_Pelayanan'] ?></h2>
+				<p><?php echo $edit['Deskripsi'] ?></p><br>
+				<br>
+				<br>
+			</div>
 			<div class="col-sm-2">
 				<div class="sidebar-wrapper">
 					<div class="widget">
@@ -60,7 +60,7 @@ if (isset($_GET["service_id"])) {
 								foreach ($data_hasil as $data) {
 									$nomor++;
 							?>
-									<li><a href="?menu=services-detail&service_id=<?php echo $a_hash->encode($data['Id_Pelayanan'], 'services')?>"><?php echo $data['Judul_Pelayanan']?></a></li>
+									<li><a href="?menu=services-detail&service_id=<?php echo $a_hash->encode($data['Id_Pelayanan'], 'services') ?>"><?php echo $data['Judul_Pelayanan'] ?></a></li>
 							<?php }
 							} ?>
 						</ul>

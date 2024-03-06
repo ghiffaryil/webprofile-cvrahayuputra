@@ -1,4 +1,4 @@
-<section class="page-title-section" style="position: relative; background-image: url(assets/img/background/pexels-jakub-tabisz-5599172.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
+<section class="page-title-section" style="position: relative; background-image: url(assets/img/background/bgbanner.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
 	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
@@ -35,7 +35,7 @@
 					<div class="col-sm-4">
 						<div class="featured-service">
 							<div class="featured-service-thumb">
-								<img class="img-responsive" src="dashboard/media/pelayanan/cover/<?php echo $data_pelayanan['Cover_Pelayanan']?>" alt="image" style="height:600px; object-fit:cover">
+								<img class="img-responsive" src="dashboard/media/pelayanan/cover/<?php echo $data_pelayanan['Cover_Pelayanan']?>?time=<?php echo $Waktu_Sekarang?>" alt="image" style="height:600px; object-fit:cover">
 							</div>
 							<div class="featured-service-content"><br>
 								<h3><?php echo $data_pelayanan['Judul_Pelayanan']?></h3>

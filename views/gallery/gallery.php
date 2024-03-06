@@ -1,4 +1,4 @@
-<section class="page-title-section" style="position: relative; background-image: url(assets/img/background/pexels-jakub-tabisz-5599172.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
+<section class="page-title-section" style="position: relative; background-image: url(assets/img/background/bgbanner.jpg); background-repeat: no-repeat; background-position:bottom-center; background-size:cover">
 	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
@@ -37,9 +37,9 @@
                     ?>
                             <div class="item">
                                 <div class="owl-item-thumb">
-                                    <img src="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>" alt="" style="height:300px; object-fit:cover">
+                                    <img src="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>?time=<?php echo $Waktu_Sekarang?>" alt="" style="height:300px; object-fit:cover">
                                     <div class="owl-item-overlay"></div>
-                                    <a class="img-link" href="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>"><img src="assets/img/zoomin.png" alt="+" style="margin-top: 120px;" /></a>
+                                    <a class="img-link" href="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>?time=<?php echo $Waktu_Sekarang?>"><img src="assets/img/zoomin.png" alt="+" style="margin-top: 120px;" /></a>
                                 </div><!-- owl-item-thumb -->
                                 <div class="owl-tem-content">
                                     <h3><a href="#"><?php echo $data_galeri['Judul_Galeri'] ?></a></h3>

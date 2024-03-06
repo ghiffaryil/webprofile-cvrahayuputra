@@ -411,8 +411,8 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 																													} ?>">
 													</div>
 												</div>
-												<div class="form-group row d-none">
-													<label class="col-lg-3 control-label">Kategori</label>
+												<div class="form-group row">
+													<label class="col-lg-3 control-label">Position</label>
 													<div class="col-lg-9">
 														<select class="form-select" name="Kategori">
 															<option value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
@@ -424,8 +424,9 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 																																																												} elseif (isset($_GET['edit'])) {
 																																																													echo $edit['Kategori'];
 																																																												} ?></option>
-															<option value="Mobile Banner Home 1">Mobile Banner Home 1</option>
-															<option value="Website Banner Home 1">Website Banner Home 1</option>
+															<option value="top-center">top-center</option>
+															<option value="bottom-center">bottom-center</option>
+															<option value="center">center</option>
 														</select>
 													</div>
 												</div>
@@ -458,7 +459,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 										<?php } elseif (isset($_GET["edit"])) { ?>
 											<input type="submit" class="btn btn-primary" name="submit_update" value="UPDATE">
 										<?php } ?>
-										<input type="button" onclick="document.location.href='?menu=dashboard_admin_banner'" class="btn btn-danger" value="BATAL">
+										<input type="button" onclick="document.location.href='<?php echo $kehalaman?>'" class="btn btn-danger" value="BATAL">
 									</div>
 									<div class="row"><br></div>
 

@@ -421,7 +421,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                                     if (isset($_GET['edit'])) {
                                                         if ($edit['Cover_Pelayanan'] <> "") {
                                                     ?>
-                                                            <img src="media/pelayanan/cover/<?php echo $edit['Cover_Pelayanan']  ?>" style="width: 150px; height: auto">
+                                                            <img src="media/pelayanan/cover/<?php echo $edit['Cover_Pelayanan']  ?>?time=<?php echo $Waktu_Sekarang?>" style="width: 150px; height: auto">
                                                             <br><br>
                                                             <i>Klik choose file jika ingin mengganti gambar</i>
                                                             <?php
@@ -512,7 +512,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                                             <?php
                                                             if ($data['Cover_Pelayanan'] <> "") {
                                                             ?>
-                                                                <img src="media/pelayanan/cover/<?php echo $data['Cover_Pelayanan'] ?>" style="width: 100px; height: auto">
+                                                                <img src="media/pelayanan/cover/<?php echo $data['Cover_Pelayanan'] ?>?time=<?php echo $Waktu_Sekarang?>" style="width: 100px; height: auto">
                                                             <?php
                                                             }
                                                             ?>

@@ -57,7 +57,7 @@ if(isset($_POST['submit_simpan'])){
 				$post_file_upload = $_FILES['Foto_Galeri'];
 				$path_file_upload = $_FILES['Foto_Galeri']['name'];
 				$ext_file_upload = pathinfo($path_file_upload, PATHINFO_EXTENSION);
-				$nama_file_upload = $a_hash->hash_nama_file($Id_Auto_Increment,"Foto_Galeri")."_".$Id_Auto_Increment."Foto_Galeri";
+				$nama_file_upload = $a_hash->hash_nama_file($Id_Auto_Increment,"Foto_Galeri")."_".$Id_Auto_Increment."_"."Foto_Galeri";
 				$folder_penyimpanan_file_upload = "media/galeri/";
 				$tipe_file_yang_diizikan_file_upload = array("png","gif","jpg","jpeg");
 				$maksimum_ukuran_file_upload = 3000000;

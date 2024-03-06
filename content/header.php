@@ -28,8 +28,6 @@
 
                         <ul class="social-links list-inline pull-right">
                             <li><a href="<?php echo $data_setting_website['URL_Facebook']?>"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="<?php echo $data_setting_website['URL_Twitter']?>"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="<?php echo $data_setting_website['URL_Instagram']?>"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="<?php echo $data_setting_website['URL_Instagram']?>"><i class="fa fa-youtube"></i></a></li>
                             
                         </ul>

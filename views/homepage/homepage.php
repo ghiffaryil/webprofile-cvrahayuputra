@@ -24,7 +24,7 @@
                 $activeClass = ($first) ? 'active' : ''; // Add 'active' class only to the first item
         ?>
                 <div class="item <?php echo $activeClass; ?>">
-                    <img src="dashboard/media/banner/<?php echo $data_banner['Foto_Banner'] ?>" alt="Hero Slide" style="width: 100%; height: 600px; object-fit: cover;">
+                    <img src="dashboard/media/banner/<?php echo $data_banner['Foto_Banner'] ?>?time=<?php echo $Waktu_Sekarang?>" alt="Hero Slide" style="width: 100%; height: 600px; object-fit: cover; background-position:<?php echo $data_banner['Kategori']?>;">
                     <!--Slide Image-->
                     <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85);"></div>
                     <!-- Overlay with opacity -->
@@ -131,7 +131,7 @@
             </div><!--/.col-->
             <div class="col-sm-6 text-center">
                 <div class="div_foto_tentang_kami">
-                    <img src="dashboard/media/tentang_kami/<?php echo $data_tentang_kami['Foto_Tentang_Kami'] ?>" alt="" style="height:560px; width:uto; object-fit:cover">
+                    <img src="dashboard/media/tentang_kami/<?php echo $data_tentang_kami['Foto_Tentang_Kami'] ?>?time=<?php echo $Waktu_Sekarang?>" alt="" style="height:560px; width:uto; object-fit:cover">
                 </div>
             </div>
         </div><!-- /.row -->
@@ -165,9 +165,9 @@
                     ?>
                             <div class="item">
                                 <div class="owl-item-thumb">
-                                    <img src="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>" alt="" style="height:300px; object-fit:cover">
+                                    <img src="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>?time=<?php echo $Waktu_Sekarang?>" alt="" style="height:300px; object-fit:cover">
                                     <div class="owl-item-overlay"></div>
-                                    <a class="img-link" href="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>"><img src="assets/img/zoomin.png" alt="+" /></a>
+                                    <a class="img-link" href="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>?time=<?php echo $Waktu_Sekarang?>"><img src="assets/img/zoomin.png" alt="+" /></a>
                                 </div><!-- owl-item-thumb -->
                                 <div class="owl-tem-content">
                                     <h3><a href="#"><?php echo $data_galeri['Judul_Galeri'] ?></a></h3>
@@ -222,7 +222,7 @@
                     <div class="media">
                         <div class="media-left">
                             <div class="item-left-thumb">
-                                <img class="img-responsive" src="dashboard/media/testimoni/<?php echo $data_testimoni['Foto']?>" alt="client">
+                                <img class="img-responsive" src="dashboard/media/testimoni/<?php echo $data_testimoni['Foto']?>?time=<?php echo $Waktu_Sekarang?>" alt="client">
                                 <div class="author-info row row-flex row-flex-wrap">
                                     <div class="col-xs-7">
                                         <div class="author-name">
