@@ -38,9 +38,8 @@ if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){
 if(isset($_POST['submit_simpan'])){
 	if($cek_required == "Sukses"){
 
-		$form_field = array("Id_Faq","Pertanyaan","Jawaban","Waktu_Simpan_Data","Status");
-
-		$form_value = array(NULL,"$_POST[Pertanyaan]","$_POST[Jawaban]","$Waktu_Sekarang","Aktif");
+		$form_field = array("Pertanyaan","Jawaban","Pertanyaan_Eng","Jawaban_Eng","Waktu_Simpan_Data","Status");
+		$form_value = array("$_POST[Pertanyaan]","$_POST[Jawaban]","$_POST[Pertanyaan_Eng]","$_POST[Jawaban_Eng]","$Waktu_Sekarang","Aktif");
 
 		$result = $a_tambah_baca_update_hapus->tambah_data("tb_faq",$form_field,$form_value);
 
@@ -74,13 +73,10 @@ if(isset($_GET['edit'])){
 
 #-----------------------------------------------------------------------------------
 #FUNGSI UPDATE DATA (UPDATE)
-if(isset($_POST['submit_update']))
-{
-	if($cek_required == "Sukses")
-	{
-		$form_field = array("Pertanyaan","Jawaban");
-
-		$form_value = array("$_POST[Pertanyaan]","$_POST[Jawaban]");
+if(isset($_POST['submit_update'])){
+	if($cek_required == "Sukses"){
+		$form_field = array("Pertanyaan","Jawaban","Pertanyaan_Eng","Jawaban_Eng");
+		$form_value = array("$_POST[Pertanyaan]","$_POST[Jawaban]","$_POST[Pertanyaan_Eng]","$_POST[Jawaban_Eng]");
 
 		$form_field_where = array("Id_Faq");
 		$form_criteria_where = array("=");
@@ -315,12 +311,32 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 													</div>
 												</div>
 											</div>
+											
+											<div class="col-md-12">
+												<div class="form-group row">
+													<label class="col-lg-3 control-label"><i>Question (en)</i></label>
+													<div class="col-lg-9">
+														<textarea class="form-control" name="Pertanyaan_Eng"><?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Pertanyaan_Eng']; }elseif(isset($_GET['edit'])){echo $edit['Pertanyaan_Eng'];} ?></textarea>
+													</div>
+												</div>
+											</div>
+
+											<hr>
 
 											<div class="col-md-12">
 												<div class="form-group row">
 													<label class="col-lg-3 control-label">Jawaban</label>
 													<div class="col-lg-9">
-														<textarea class="form-control" rows="7" name="Jawaban"><?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Jawaban']; }elseif(isset($_GET['edit'])){echo $edit['Jawaban'];} ?></textarea>
+														<textarea class="form-control" rows="3" name="Jawaban"><?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Jawaban']; }elseif(isset($_GET['edit'])){echo $edit['Jawaban'];} ?></textarea>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-12">
+												<div class="form-group row">
+													<label class="col-lg-3 control-label"><i>Answer (en)</i></label>
+													<div class="col-lg-9">
+														<textarea class="form-control" rows="3" name="Jawaban_Eng"><?php if((isset($_POST['submit_simpan'])) OR (isset($_POST['submit_update']))){ echo $_POST['Jawaban_Eng']; }elseif(isset($_GET['edit'])){echo $edit['Jawaban_Eng'];} ?></textarea>
 													</div>
 												</div>
 											</div>

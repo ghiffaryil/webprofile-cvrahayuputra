@@ -34,9 +34,9 @@ if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
 if (isset($_POST['submit_simpan'])) {
     if ($cek_required == "Sukses") {
 
-        $form_field = array("Judul_Pelayanan", "Kategori", "Deskripsi", "Waktu_Simpan_Data", "Status");
-        $form_value = array("$_POST[Judul_Pelayanan]", "$_POST[Kategori]", "$_POST[Deskripsi]", "$Waktu_Sekarang", "Aktif");
-        $result = $a_tambah_baca_update_hapus->tambah_data("tb_pelayanan", $form_field, $form_value);
+        $form_field = array("Judul_Pelayanan", "Kategori", "Deskripsi","Judul_Pelayanan_Eng","Deskripsi_Eng", "Waktu_Simpan_Data", "Status");
+        $form_value = array("$_POST[Judul_Pelayanan]", "$_POST[Kategori]", "$_POST[Deskripsi]", "$_POST[Judul_Pelayanan_Eng]", "$_POST[Deskripsi_Eng]", "$Waktu_Sekarang", "Aktif");
+        $result = $a_tambah_baca_update_hapus->tambah_data("tb_pelayanan", $form_field, $form_value, "Iya");
 
         if ($result['Status'] == "Sukses") {
 
@@ -100,15 +100,15 @@ if (isset($_GET['edit'])) {
 #FUNGSI UPDATE DATA (UPDATE)
 if (isset($_POST['submit_update'])) {
     if ($cek_required == "Sukses") {
-        $form_field = array("Judul_Pelayanan", "Kategori", "Deskripsi", "Cover_Pelayanan");
-        $form_value = array("$_POST[Judul_Pelayanan]", "$_POST[Kategori]", "$_POST[Deskripsi]", "$_POST[Cover_Pelayanan]");
+        $form_field = array("Judul_Pelayanan", "Kategori", "Deskripsi","Judul_Pelayanan_Eng","Deskripsi_Eng");
+        $form_value = array("$_POST[Judul_Pelayanan]", "$_POST[Kategori]", "$_POST[Deskripsi]", "$_POST[Judul_Pelayanan_Eng]", "$_POST[Deskripsi_Eng]");
 
         $form_field_where = array("Id_Pelayanan");
         $form_criteria_where = array("=");
         $form_value_where = array("$Get_Id_Primary");
         $form_connector_where = array("");
 
-        $result = $a_tambah_baca_update_hapus->update_data("tb_pelayanan", $form_field, $form_value, $form_field_where, $form_criteria_where, $form_value_where, $form_connector_where);
+        $result = $a_tambah_baca_update_hapus->update_data("tb_pelayanan", $form_field, $form_value, $form_field_where, $form_criteria_where, $form_value_where, $form_connector_where, "Iya");
 
         if ($result['Status'] == "Sukses") {
             //FUNGSI UPLOAD FILE Foto
@@ -390,6 +390,19 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 
                                             <div class="col-md-12">
                                                 <div class="form-group row">
+                                                    <label class="col-lg-3 control-label"><i>Title (en)</i></label>
+                                                    <div class="col-lg-9">
+                                                        <input type="text" class="form-control" name="Judul_Pelayanan_Eng" value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+                                                                                                                                    echo $_POST['Judul_Pelayanan_Eng'];
+                                                                                                                                } elseif (isset($_GET['edit'])) {
+                                                                                                                                    echo $edit['Judul_Pelayanan_Eng'];
+                                                                                                                                } ?>">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
                                                     <label class="col-lg-3 control-label">Kategori</label>
                                                     <div class="col-lg-9">
                                                         <input type="text" class="form-control" name="Kategori" value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
@@ -403,13 +416,26 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 
                                             <div class="col-md-12">
                                                 <div class="form-group row">
-                                                    <label class="col-lg-3 control-label">Pelayanan</label>
+                                                    <label class="col-lg-3 control-label">Deskripsi</label>
                                                     <div class="col-lg-9">
                                                         <textarea rows="12" class="form-control" name="Deskripsi"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
-                                                                                                            echo $_POST['Deskripsi'];
-                                                                                                        } elseif (isset($_GET['edit'])) {
-                                                                                                            echo $edit['Deskripsi'];
-                                                                                                        } ?></textarea>
+                                                                                                                        echo $_POST['Deskripsi'];
+                                                                                                                    } elseif (isset($_GET['edit'])) {
+                                                                                                                        echo $edit['Deskripsi'];
+                                                                                                                    } ?></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-3 control-label">Description</label>
+                                                    <div class="col-lg-9">
+                                                        <textarea rows="12" class="form-control" name="Deskripsi_Eng"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+                                                                                                                        echo $_POST['Deskripsi_Eng'];
+                                                                                                                    } elseif (isset($_GET['edit'])) {
+                                                                                                                        echo $edit['Deskripsi_Eng'];
+                                                                                                                    } ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -421,10 +447,10 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                                     if (isset($_GET['edit'])) {
                                                         if ($edit['Cover_Pelayanan'] <> "") {
                                                     ?>
-                                                            <img src="media/pelayanan/cover/<?php echo $edit['Cover_Pelayanan']  ?>?time=<?php echo $Waktu_Sekarang?>" style="width: 150px; height: auto">
+                                                            <img src="media/pelayanan/cover/<?php echo $edit['Cover_Pelayanan']  ?>?time=<?php echo $Waktu_Sekarang ?>" style="width: 150px; height: auto">
                                                             <br><br>
                                                             <i>Klik choose file jika ingin mengganti gambar</i>
-                                                            <?php
+                                                    <?php
                                                         }
                                                     }
 
@@ -476,7 +502,8 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                             <tr class="bg-light">
                                                 <th style="width:4%;">No</th>
                                                 <th style="width:25%;">Judul Pelayanan</th>
-                                                <th style="width:25%;">Kategori</th>
+                                                <th style="width:15%;">Kategori</th>
+                                                <th style="width:25%;">Deskripsi</th>
                                                 <th style="width:20%;">Cover</th>
                                             </tr>
                                         </thead>
@@ -508,11 +535,12 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
                                                             </a>
                                                         </td>
                                                         <td><?php echo $data['Kategori'] ?></td>
+                                                        <td><?php echo substr($data['Deskripsi'],0, 100); ?>...</td>
                                                         <td>
                                                             <?php
                                                             if ($data['Cover_Pelayanan'] <> "") {
                                                             ?>
-                                                                <img src="media/pelayanan/cover/<?php echo $data['Cover_Pelayanan'] ?>?time=<?php echo $Waktu_Sekarang?>" style="width: 100px; height: auto">
+                                                                <img src="media/pelayanan/cover/<?php echo $data['Cover_Pelayanan'] ?>?time=<?php echo $Waktu_Sekarang ?>" style="width: 100px; height: auto">
                                                             <?php
                                                             }
                                                             ?>

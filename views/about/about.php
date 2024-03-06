@@ -74,7 +74,7 @@
 					<div class="section-heading">
 						<h2 class="section-title">Bekerja Bersama Kami</h2>
 					</div>
-					<p><?php echo $data_tentang_kami['Deskripsi_Tambahan'] ?></p>
+					<p><?php echo $data_tentang_kami['Sejarah'] ?></p>
 					<br>
 					<div>
 						<h3>Motto Kami</h3>

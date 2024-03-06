@@ -40,8 +40,34 @@ if ($result['Status'] == "Sukses") {
 #FUNGSI UPDATE DATA (UPDATE)
 if (isset($_POST['submit_update'])) {
 	if ($cek_required == "Sukses") {
-		$form_field = array("Visi", "Misi", "Motto", "Deskripsi_Tambahan", "Waktu_Simpan_Data", "Status");
-		$form_value = array("$_POST[Visi]", "$_POST[Misi]", "$_POST[Motto]", "$_POST[Deskripsi_Tambahan]", "$Waktu_Sekarang", "Aktif");
+		$form_field = array(
+			"Visi",
+			"Misi",
+			"Motto",
+			"Sejarah",
+
+			"Visi_Eng",
+			"Misi_Eng",
+			"Motto_Eng",
+			"Sejarah_Eng",
+
+			"Waktu_Simpan_Data",
+			"Status"
+		);
+		$form_value = array(
+			"$_POST[Visi]",
+			"$_POST[Misi]",
+			"$_POST[Motto]",
+			"$_POST[Sejarah]",
+
+			"$_POST[Visi_Eng]",
+			"$_POST[Misi_Eng]",
+			"$_POST[Motto_Eng]",
+			"$_POST[Sejarah_Eng]",
+
+			"$Waktu_Sekarang",
+			"Aktif"
+		);
 
 		$form_field_where = array("Id_Tentang_Kami");
 		$form_criteria_where = array("=");
@@ -127,44 +153,83 @@ if (isset($_POST['submit_update'])) {
 											<fieldset>
 												<div class="form-group row">
 													<label class="col-lg-2 control-label">Visi</label>
-													<div class="col-lg-10">
+													<div class="col-lg-4">
 														<textarea class="form-control" rows="3" name="Visi"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
 																												echo $_POST['Visi'];
 																											} else {
 																												echo $edit['Visi'];
 																											} ?></textarea>
 													</div>
+													
+													<label class="col-lg-2 control-label"><i>Vision (en)</i></label>
+													<div class="col-lg-4">
+														<textarea class="form-control" rows="3" name="Visi_Eng"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+																												echo $_POST['Visi_Eng'];
+																											} else {
+																												echo $edit['Visi_Eng'];
+																											} ?></textarea>
+													</div>
 												</div>
 
 												<div class="form-group row">
 													<label class="col-lg-2 control-label">Misi</label>
-													<div class="col-lg-10">
-														<textarea class="form-control" rows="3" name="Misi"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+													<div class="col-lg-4">
+														<textarea class="form-control" rows="6" name="Misi"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
 																												echo $_POST['Misi'];
 																											} else {
 																												echo $edit['Misi'];
+																											} ?></textarea>
+													</div>
+
+													<label class="col-lg-2 control-label"><i>Mision (en)</i></label>
+													<div class="col-lg-4">
+														<textarea class="form-control" rows="6" name="Misi_Eng"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+																												echo $_POST['Misi_Eng'];
+																											} else {
+																												echo $edit['Misi_Eng'];
 																											} ?></textarea>
 													</div>
 												</div>
 
 												<div class="form-group row">
 													<label class="col-lg-2 control-label">Motto</label>
-													<div class="col-lg-10">
-														<textarea class="form-control" rows="3" name="Motto"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+													<div class="col-lg-4">
+														<textarea class="form-control" rows="1" name="Motto"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
 																													echo $_POST['Motto'];
 																												} else {
 																													echo $edit['Motto'];
 																												} ?></textarea>
 													</div>
+													
+													<label class="col-lg-2 control-label"><i>Motto (en)</i></label>
+													<div class="col-lg-4">
+														<textarea class="form-control" rows="1" name="Motto_Eng"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+																													echo $_POST['Motto_Eng'];
+																												} else {
+																													echo $edit['Motto_Eng'];
+																												} ?></textarea>
+													</div>
 												</div>
 
 												<div class="form-group row">
-													<label class="col-lg-2 control-label">Informasi Tambahan</label>
+													<hr>
+													<label class="col-lg-2 control-label">Sejarah</label>
 													<div class="col-lg-10">
-														<textarea class="form-control" rows="5" name="Deskripsi_Tambahan"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
-																																echo $_POST['Deskripsi_Tambahan'];
+														<textarea class="form-control" rows="5" name="Sejarah"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+																																echo $_POST['Sejarah'];
 																															} else {
-																																echo $edit['Deskripsi_Tambahan'];
+																																echo $edit['Sejarah'];
+																															} ?></textarea>
+													</div>
+												</div>
+
+												<div class="form-group row">
+													<label class="col-lg-2 control-label"><i>History (en)</i></label>
+													<div class="col-lg-10">
+														<textarea class="form-control" rows="5" name="Sejarah_Eng"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+																																echo $_POST['Sejarah_Eng'];
+																															} else {
+																																echo $edit['Sejarah_Eng'];
 																															} ?></textarea>
 													</div>
 												</div>

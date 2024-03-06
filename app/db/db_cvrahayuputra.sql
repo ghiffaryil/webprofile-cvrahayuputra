@@ -320,7 +320,7 @@ CREATE TABLE `tb_tentang_kami` (
   `Misi` text NOT NULL,
   `Motto` text NOT NULL,
   `Sejarah` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `Deskripsi_Tambahan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `Sejarah` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   `Waktu_Simpan_Data` datetime NOT NULL,
   `Status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -329,7 +329,7 @@ CREATE TABLE `tb_tentang_kami` (
 -- Dumping data for table `tb_tentang_kami`
 --
 
-INSERT INTO `tb_tentang_kami` (`Id_Tentang_Kami`, `Visi`, `Misi`, `Motto`, `Sejarah`, `Deskripsi_Tambahan`, `Waktu_Simpan_Data`, `Status`) VALUES
+INSERT INTO `tb_tentang_kami` (`Id_Tentang_Kami`, `Visi`, `Misi`, `Motto`, `Sejarah`, `Sejarah`, `Waktu_Simpan_Data`, `Status`) VALUES
 (1, 'Menjadi perusahaan yang profesional.', '1. Mewujudkan perusahaan yang handal dalam pembuatan Pallet/Glass Packing Box.\r\n2. ⁠Memberikan kualitas produk yang terbaik.\r\n3. Memberikan manfaat yang nyata bagi seluruh pemangku kepentingan (stakeholder) perusahaan baik pimpinan, karyawan, masyarakat dan lingkungan.', 'Terpercaya, Berkualitas & Berintegritas', 'Try Out Mandiri Adalah Sebuah Pelaksanaan Ujian Yang Dilakukan Sebagai Tahap Uji Coba Untuk Mengetahui Sejauh Mana Tingkat Pemahaman Peserta Didik Yang Didasarkan Atas Standar Kompetensi Lulusan (SKL) Sesuai Dengan Permendiknas Diatas.', 'CV Rahayu Putra berdiri 11 November 2016, di Leuwisadeng, Kabupaten Bogor.\r\nUsaha ini berawal dari tahun 1996, bergerak di bidang industri penggergajian kayu bistek/ckd. Saat tahun 2004 sampai saat ini, usaha ini berubah menjadi usaha pallet/packing box.\r\n\r\nPada bulan November tahun 2016 kami membentuk badan usaha Commanditaire Vennotschaap atau bisa disebut CV, dengan nama CV Rahayu Putra.\r\n\r\nUsaha yang di jalankan CV Rahayu Putra :\r\n1. Wooden Pallet (Pallet Kayu)\r\n2. ⁠Glass Packing Box (Kotak Kemasan Kaca)\r\n3. ⁠Siku/Bantalan Box', '2024-02-27 11:08:29', 'Aktif');
 
 -- --------------------------------------------------------

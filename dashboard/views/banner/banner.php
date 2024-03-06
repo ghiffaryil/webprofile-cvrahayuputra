@@ -32,8 +32,8 @@ if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
 if (isset($_POST['submit_simpan'])) {
 	if ($cek_required == "Sukses") {
 
-		$form_field = array("Judul", "Deskripsi", "Link", "Kategori", "Waktu_Simpan_Data", "Status");
-		$form_value = array("$_POST[Judul]", "$_POST[Deskripsi]", "$_POST[Link]", "$_POST[Kategori]", "$Waktu_Sekarang", "Aktif");
+		$form_field = array("Judul", "Deskripsi", "Judul_Eng", "Deskripsi_Eng", "Link", "Kategori", "Waktu_Simpan_Data", "Status");
+		$form_value = array("$_POST[Judul]", "$_POST[Deskripsi]", "$_POST[Judul_Eng]", "$_POST[Deskripsi_Eng]", "$_POST[Link]", "$_POST[Kategori]", "$Waktu_Sekarang", "Aktif");
 		$result = $a_tambah_baca_update_hapus->tambah_data("tb_banner", $form_field, $form_value);
 
 		if ($result['Status'] == "Sukses") {
@@ -99,9 +99,8 @@ if (isset($_GET['edit'])) {
 #FUNGSI UPDATE DATA (UPDATE)
 if (isset($_POST['submit_update'])) {
 	if ($cek_required == "Sukses") {
-		$form_field = array("Judul", "Deskripsi", "Link", "Kategori");
-
-		$form_value = array("$_POST[Judul]", "$_POST[Deskripsi]", "$_POST[Link]", "$_POST[Kategori]");
+		$form_field = array("Judul", "Deskripsi", "Judul_Eng", "Deskripsi_Eng", "Link", "Kategori");
+		$form_value = array("$_POST[Judul]", "$_POST[Deskripsi]", "$_POST[Judul_Eng]", "$_POST[Deskripsi_Eng]", "$_POST[Link]", "$_POST[Kategori]");
 
 		$form_field_where = array("Id_Banner");
 		$form_criteria_where = array("=");
@@ -391,6 +390,18 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 																																} ?>">
 													</div>
 												</div>
+
+												<div class="form-group row">
+													<label class="col-lg-3 control-label"><i>Title (en)</i></label>
+													<div class="col-lg-9">
+														<input type="text" required class="form-control" name="Judul_Eng" value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+																																	echo $_POST['Judul_Eng'];
+																																} elseif (isset($_GET['edit'])) {
+																																	echo $edit['Judul_Eng'];
+																																} ?>">
+													</div>
+												</div>
+
 												<div class="form-group row">
 													<label class="col-lg-3 control-label">Deskripsi</label>
 													<div class="col-lg-9">
@@ -401,18 +412,20 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 																														} ?>">
 													</div>
 												</div>
-												<div class="form-group row d-none">
-													<label class="col-lg-3 control-label">Link</label>
+
+												<div class="form-group row">
+													<label class="col-lg-3 control-label"><i>Description (en)</i></label>
 													<div class="col-lg-9">
-														<input type="text" class="form-control" name="Link" value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
-																														echo $_POST['Link'];
-																													} elseif (isset($_GET['edit'])) {
-																														echo $edit['Link'];
-																													} ?>">
+														<input type="text" class="form-control" name="Deskripsi_Eng" value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+																															echo $_POST['Deskripsi_Eng'];
+																														} elseif (isset($_GET['edit'])) {
+																															echo $edit['Deskripsi_Eng'];
+																														} ?>">
 													</div>
 												</div>
+												
 												<div class="form-group row">
-													<label class="col-lg-3 control-label">Position</label>
+													<label class="col-lg-3 control-label">Posisi</label>
 													<div class="col-lg-9">
 														<select class="form-select" name="Kategori">
 															<option value="<?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {

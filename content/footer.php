@@ -24,8 +24,8 @@ if (isset($_POST['submit_kirim_newsletter'])) {
         <div class="row">
             <div class="col-sm-4">
                 <div class="footer-widget" style="color:white">
-                    <h3>Tentang</h3>
-                    <p style="font-size:larger"><?php echo $data_setting_website['Deskripsi_Singkat'] ?></p>
+                    <h3><?php if ($_SESSION['lang'] == "id") { echo "Tentang";} else{ echo "About";}?></h3>
+                    <p style="font-size:larger"><?php if ($_SESSION['lang'] == "id") { echo $data_setting_website['Deskripsi_Singkat']; } else{ echo $data_setting_website['Deskripsi_Singkat_Eng']; } ?></p>
                     <br>
 
                     <address>
@@ -47,11 +47,10 @@ if (isset($_POST['submit_kirim_newsletter'])) {
                     <div class="row">
                         <div class="col-sm-12">
                             <ul class="quick-links">
-                                <li><a style="color:white" href="?menu=about">About us</a></li>
-                                <li><a style="color:white" href="?menu=services">Services</a></li>
-                                <li><a style="color:white" href="?menu=gallery">Gallery</a></li>
-                                <li><a style="color:white" href="?menu=blog">Blog</a></li>
-                                <li><a style="color:white" href="?menu=contact">Contact</a></li>
+                                <li><a style="color:white" href="?menu=about"><?php if ($_SESSION['lang'] == "id") { echo "Tentang Kami";} else{ echo "About us";}?> </a></li>
+                                <li><a style="color:white" href="?menu=services"><?php if ($_SESSION['lang'] == "id") { echo "Layanan";} else{ echo "Services";}?> </a></li>
+                                <li><a style="color:white" href="?menu=gallery"><?php if ($_SESSION['lang'] == "id") { echo "Galeri";} else{ echo "Gallery";}?> </a></li>
+                                <li><a style="color:white" href="?menu=contact"><?php if ($_SESSION['lang'] == "id") { echo "Kontak";} else{ echo "Contact";}?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -60,14 +59,14 @@ if (isset($_POST['submit_kirim_newsletter'])) {
 
             <div class="col-sm-4">
                 <div class="footer-widget" style="color:white">
-                    <h3>Hubungi Kami</h3>
-                    <p>Masukkan email anda untuk mendapatkan pembaharuan informasi dari kami</p>
+                    <h3><?php if ($_SESSION['lang'] == "id") { echo "Hubungi Kami";} else{ echo "Contact Us";}?></h3>
+                    <p><?php if ($_SESSION['lang'] == "id") { echo "Masukkan email anda untuk mendapatkan pembaharuan informasi dari kami";} else{ echo "Enter your email to get updated information from us";}?></p>
 
                     <form class="newsletter-form" method="POST" action="">
                         <div class="form-group">
-                            <label class="sr-only" for="InputEmail1">Alamat Email</label>
+                            <label class="sr-only" for="InputEmail1">Email</label>
                             <input type="email" name="Email" class="form-control" id="InputEmail1" placeholder="Masukkan Email">
-                            <button type="submit" name="submit_kirim_newsletter" class="btn">Kirim &nbsp;<i class="fa fa-angle-right"></i></button>
+                            <button type="submit" name="submit_kirim_newsletter" class="btn">Send &nbsp;<i class="fa fa-angle-right"></i></button>
                         </div>
                     </form>
                     <ul class="social-links list-inline" style="display:none">

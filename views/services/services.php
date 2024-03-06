@@ -39,7 +39,7 @@
 							</div>
 							<div class="featured-service-content"><br>
 								<h3><?php echo $data_pelayanan['Judul_Pelayanan']?></h3>
-								<p><?php echo substr($data_pelayanan['Deskripsi'], 0, 100)?></p>
+								<p><?php echo substr($data_pelayanan['Deskripsi'], 0, 100)?>...</p>
 								<br><a class="btn btn-primary readmore" href="?menu=services-detail&service_id=<?php echo $a_hash->encode($data_pelayanan['Id_Pelayanan'],$_GET['menu'])?>">Lanjutkan<i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
