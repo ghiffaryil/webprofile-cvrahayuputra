@@ -15,11 +15,11 @@ if (isset($_GET["service_id"])) {
 	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
-			<h1>Layanan Kami</h1>
+			<h1><?php echo get_selected_language("Layanan Kami", "Our Services")?></h1>
 		</div>
 		<ol class="breadcrumb">
 			<li><a href="#">Home</a></li>
-			<li class="active">Layanan Kami</li>
+			<li class="active"><?php echo get_selected_language("Layanan Kami", "Our Services")?></li>
 		</ol>
 	</div>
 </section><!--/.page-title-section -->
@@ -36,8 +36,8 @@ if (isset($_GET["service_id"])) {
 				</div><!-- /.single-service-content -->
 			</div><!-- /.col -->
 			<div class="col-sm-6">
-				<h2><?php echo $edit['Judul_Pelayanan'] ?></h2>
-				<p><?php echo $edit['Deskripsi'] ?></p><br>
+				<h2><?php echo get_selected_language($edit['Judul_Pelayanan'], $edit['Judul_Pelayanan_Eng']); ?></h2>
+				<p><?php echo get_selected_language($edit['Deskripsi'], $edit['Deskripsi_Eng']); ?></p><br>
 				<br>
 				<br>
 			</div>
@@ -60,7 +60,7 @@ if (isset($_GET["service_id"])) {
 								foreach ($data_hasil as $data) {
 									$nomor++;
 							?>
-									<li><a href="?menu=services-detail&service_id=<?php echo $a_hash->encode($data['Id_Pelayanan'], 'services') ?>"><?php echo $data['Judul_Pelayanan'] ?></a></li>
+									<li><a href="?menu=services-detail&service_id=<?php echo $a_hash->encode($data['Id_Pelayanan'], 'services') ?>"><?php echo get_selected_language($data['Judul_Pelayanan'], $data['Judul_Pelayanan_Eng']); ?></a></li>
 							<?php }
 							} ?>
 						</ul>

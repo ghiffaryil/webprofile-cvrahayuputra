@@ -9,9 +9,9 @@ if (isset($_POST['submit_simpan'])) {
 	// echo $result['Status'];
 	// exit();
 	if ($result['Status'] == "Sukses") {
-		echo "<script>alert('Pesan anda telah terkirim');</script>";
+		echo "<script>alert('Sukses');</script>";
 	} else {
-		echo "<script>alert('Terjadi Kesalahan Saat Menyimpan Data');document.location.reload</script>";
+		echo "<script>alert('Opps, Ada kesalahan!');document.location.reload</script>";
 	}
 }
 #-----------------------------------------------------------------------------------
@@ -21,11 +21,11 @@ if (isset($_POST['submit_simpan'])) {
 	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
-			<h1>Kontak Kami</h1>
+			<h1><?php echo get_selected_language("Kontak Kami", "Contact Us"); ?></h1>
 		</div>
 		<ol class="breadcrumb">
 			<li><a href="#">Home</a></li>
-			<li class="active">Kontak Kami</li>
+			<li class="active"><?php echo get_selected_language("Kontak Kami", "Contact Us"); ?></li>
 		</ol>
 	</div>
 </section><!--/.page-title-section -->
@@ -45,16 +45,16 @@ if (isset($_POST['submit_simpan'])) {
 					<div class="col-lg-6">
 						<div class="office-locations" style="margin-top:30px;">
 							<hr>
-							<h1>Kontak Kami</h1>
+							<h1><?php echo get_selected_language("Kontak Kami", "Contact Us"); ?></h1>
 							<div class="office-address">
 								<address>
-									<b>Kantor Utama</b>
+									<b><?php echo get_selected_language("Kantor Utama", "Office"); ?></b>
 									<span style="font-size:larger"><?php echo $data_setting_website['Alamat_Lengkap'] ?></span>
 									<br>
-									<b>Telepon</b>
+									<b><?php echo get_selected_language("Telepon", "Phone"); ?></b>
 									<span style="font-size:larger"><?php echo $data_setting_website['Nomor_Telpon'] ?> </span>
 									<br>
-									<b>Email</b>
+									<b><?php echo get_selected_language("Email", "Email"); ?></b>
 									<span style="font-size:larger"><a href="#" class="text-muted"><?php echo $data_setting_website['Email_Admin'] ?></a> </span>
 								</address>
 							</div><!-- /.row -->
@@ -64,49 +64,49 @@ if (isset($_POST['submit_simpan'])) {
 						<div class="office-locations" style="margin-top:30px;">
 							<hr>
 							<div class="send-feedback">
-								<h1>Hubungi Kami</h1>
+								<h1><?php echo get_selected_language("Kirim Pesan", "Send Feedback"); ?></h1>
 								<form id="" method="POST" action="">
 									<div class="row">
 										<div class="col-sm-6 col-xs-12">
 											<div class="">
-												<label for="name">Nama*</label>
-												<input id="name" name="Nama" type="text" class="form-control" required="" placeholder="Masukkan Nama">
+												<label for="name"><?php echo get_selected_language("Nama", "Name"); ?>*</label>
+												<input id="name" name="Nama" type="text" class="form-control" required="" placeholder="">
 											</div>
 										</div><!-- /.col -->
 
 										<div class="col-sm-6 col-xs-12">
 											<div class="">
-												<label for="name">Instansi*</label>
-												<input id="name" name="Instansi" type="text" class="form-control" required="" placeholder="Masukkan Instansi">
+												<label for="name"><?php echo get_selected_language("Instansi", "Organization"); ?>*</label>
+												<input id="name" name="Instansi" type="text" class="form-control" required="" placeholder="">
 											</div>
 										</div>
 
 
 										<div class="col-sm-6 col-xs-12">
 											<div class=""> <br>
-												<label for="name">Nomor Handphone*</label>
-												<input id="name" name="Nomor_Handphone" type="number" class="form-control" required="" placeholder="+62">
+												<label for="name"><?php echo get_selected_language("Nomor Handphone", "Mobile"); ?>*</label>
+												<input id="name" name="Nomor_Handphone" type="number" class="form-control" required="" placeholder="">
 											</div>
 										</div>
 
 										<div class="col-sm-6 col-xs-12">
 											<div class=""> <br>
 												<label for="email">Email*</label>
-												<input id="email" name="Email" type="email" class="form-control" required="" placeholder="Masukkan Email">
+												<input id="email" name="Email" type="email" class="form-control" required="" placeholder="">
 											</div>
 										</div>
 
 										<div class="col-sm-12 col-xs-12">
 											<div class=""><br>
-												<label>Pesan*</label>
-												<textarea id="message" name="Pesan" class="form-control" required="" placeholder="Masukkan Pesan anda" style="height: 100px;"></textarea>
+												<label><?php echo get_selected_language("Pesan", "Message"); ?>*</label>
+												<textarea id="message" name="Pesan" class="form-control" required="" placeholder="" style="height: 100px;"></textarea>
 											</div>
 										</div><!-- /.col -->
 									</div><!-- /.row -->
 
 									<br>
 									<div class="form-group">
-										<button type="submit" name="submit_simpan" class="btn btn-primary">Kirim</button>
+										<button type="submit" name="submit_simpan" class="btn btn-primary">Submit</button>
 									</div>
 								</form>
 							</div><!-- /.send-feedback -->

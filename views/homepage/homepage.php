@@ -31,19 +31,15 @@
                     <div class="container">
                         <div class="carousel-caption">
                             <h1 class="animated lightSpeedIn">
-                                <font style="color:white"><?php if ($_SESSION['lang'] == "id") {
-                                                                echo $data_banner['Judul'];
-                                                            } else {
-                                                                echo $data_banner['Judul_Eng'];
-                                                            } ?></font>
+                                <font style="color:white">
+                                    <?php echo get_selected_language($data_banner['Judul'], $data_banner['Judul_Eng']); ?>
+                                </font>
                             </h1>
 
                             <p class="lead animated lightSpeedIn" style="color:white">
-                                <font style="color:white"><?php if ($_SESSION['lang'] == "id") {
-                                                                echo $data_banner['Deskripsi'];
-                                                            } else {
-                                                                echo $data_banner['Deskripsi_Eng'];
-                                                            } ?></font>
+                                <font style="color:white">
+                                    <?php echo get_selected_language($data_banner['Deskripsi'], $data_banner['Deskripsi_Eng']); ?>
+                                </font>
                             </p>
 
                             <!-- <a class="btn btn-primary btn-lg animated lightSpeedIn" href="#">WORK WITH US TODAY</a> -->
@@ -77,11 +73,11 @@
             <div class="col-md-4 col-sm-12">
                 <div class="service-left-box">
                     <div class="section-heading">
-                        <h2><?php if ($_SESSION['lang'] == "id") { echo $data_setting_website['Judul_Website']; } else{ echo $data_setting_website['Judul_Website_Eng']; }?></h2>
+                        <h2><?php echo get_selected_language($data_setting_website['Judul_Website'],$data_setting_website['Judul_Website_Eng']); ?></h2>
                     </div> <!--section-header-->
 
                     <div class="service-intro">
-                        <p style="font-size:medium"><?php if ($_SESSION['lang'] == "id") { echo $data_setting_website['Deskripsi_Singkat']; } else{ echo $data_setting_website['Deskripsi_Singkat_Eng']; }?></p>
+                        <p style="font-size:medium"><?php echo get_selected_language($data_setting_website['Deskripsi_Singkat'],$data_setting_website['Deskripsi_Singkat_Eng']); ?></p>
                     </div><!--/.service-intro-->
                 </div><!-- /.service-left-box -->
             </div><!-- /.col -->
@@ -91,25 +87,26 @@
                         <div class="row">
                             <div class="col-sm-4 col-xs-12">
                                 <div class="about-us-content">
-                                    <h3>Visi Kami</h3>
+                                    <h3><?php echo get_selected_language("Visi Kami","Our Vision"); ?></h3>
                                     <div class="about-content-block">
-                                        <p style="font-size:larger"><?php  if ($_SESSION['lang'] == "id") { echo $data_tentang_kami['Visi']; } else{ echo $data_tentang_kami['Visi_Eng']; } ?></p>
+                                        <p style="font-size:larger">
+                                        <?php echo get_selected_language($data_tentang_kami['Visi'],$data_tentang_kami['Visi_Eng']); ?>
+                                        </p>
                                     </div>
 
                                     <br>
-                                    <h3>Motto Kami</h3>
+                                    <h3><?php echo get_selected_language("Motto Kami","Our Motto"); ?></h3>
                                     <div class="about-content-block">
-                                        <p style="font-size:larger"><?php  if ($_SESSION['lang'] == "id") { echo $data_tentang_kami['Motto']; } else{ echo $data_tentang_kami['Motto_Eng']; } ?></p>
+                                        <p style="font-size:larger"><?php echo get_selected_language($data_tentang_kami['Motto'],$data_tentang_kami['Motto_Eng']); ?></p>
                                     </div>
                                 </div><!-- /about-us-content -->
                             </div><!--/.col-->
 
                             <div class="col-sm-4 col-xs-12">
                                 <div class="about-us-content">
-                                    <h3>Misi Kami</h3>
+                                <h3><?php echo get_selected_language("Misi Kami","Our Mission"); ?></h3>
                                     <div class="about-content-block">
-
-                                        <p style="font-size:larger"><?php  if ($_SESSION['lang'] == "id") { echo $data_tentang_kami['Misi']; } else{ echo $data_tentang_kami['Misi_Eng']; } ?></p>
+                                        <p style="font-size:larger"><?php echo get_selected_language($data_tentang_kami['Misi'],$data_tentang_kami['Misi_Eng']); ?></p>
                                     </div>
                                     <br>
                                 </div><!-- /about-us-content -->
@@ -130,10 +127,12 @@
                 <div class="about-us-intro-content">
                     <div class="section-heading">
                         <br><br>
-                        <h2 class="section-title"><?php if ($_SESSION['lang'] == "id") { echo $data_setting_website['Judul_Website']; } else{ echo $data_setting_website['Judul_Website_Eng']; } ?></h2>
+                        <h2 class="section-title"><?php echo get_selected_language($data_setting_website['Judul_Website'],$data_setting_website['Judul_Website_Eng']); ?></h2>
                     </div>
                     <p>
-                        <font style="font-size:larger"><?php if ($_SESSION['lang'] == "id") { echo $data_tentang_kami['Sejarah']; } else{ echo $data_tentang_kami['Sejarah_Eng']; } ?></font>
+                        <font style="font-size:larger">
+                        <?php echo get_selected_language($data_tentang_kami['Sejarah'],$data_tentang_kami['Sejarah_Eng']); ?>
+                        </font>
                     </p>
                 </div><!--/.about-us-intro-content  -->
             </div><!--/.col-->
@@ -152,7 +151,7 @@
 
     <div class="container">
         <div class="section-heading">
-            <h2 class="section-title">Galeri Kami</h2>
+            <h2 class="section-title"><h3><?php echo get_selected_language("Galeri Kami","Our Gallery"); ?></h3></h2>
         </div> <!--section-heading-->
     </div>
 
@@ -178,8 +177,8 @@
                                     <a class="img-link" href="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>?time=<?php echo $Waktu_Sekarang ?>"><img src="assets/img/zoomin.png" alt="+" /></a>
                                 </div><!-- owl-item-thumb -->
                                 <div class="owl-tem-content">
-                                    <h3><a href="#"><?php if ($_SESSION['lang'] == "id") { echo $data_galeri['Judul_Galeri']; } else{ echo $data_galeri['Judul_Galeri_Eng']; } ?></a></h3>
-                                    <p><?php echo $data_galeri['Keterangan'] ?></p>
+                                    <h3><a href="#"><?php echo get_selected_language($data_galeri['Judul_Galeri'],$data_galeri['Judul_Galeri_Eng']); ?></a></h3>
+                                    <p><?php echo get_selected_language($data_galeri['Keterangan'],$data_galeri['Keterangan_Eng']); ?></p>
                                 </div><!-- owl-item-content -->
                             </div><!-- /item -->
                     <?php

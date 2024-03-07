@@ -21,7 +21,7 @@
             }
         };
         xhr.send('lang=' + lang);
-        window.location.href = window.location.pathname;
+        window.location.reload();
     }
 </script>
 
@@ -65,8 +65,8 @@
                     <div class="topbar-right">
                         <div class="lang-support pull-right">
                             <select class="selectlang" onchange="changeLanguage(this)">
-                                <option <?php if($selected_language=="id"){ echo "selected";}?> value="id">Indonesia</option>
-                                <option <?php if($selected_language=="en"){ echo "selected";}?> value="en">English</option>
+                                <option <?php if($_SESSION['lang']=="id"){ echo "selected";}?> value="id">Indonesia</option>
+                                <option <?php if($_SESSION['lang']=="en"){ echo "selected";}?> value="en">English</option>
                             </select>
 
                         </div>

@@ -2,11 +2,11 @@
 	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
-			<h1>Layanan Kami</h1>
+			<h1><?php echo get_selected_language("Layanan Kami","Our Service");?></h1>
 		</div>
 		<ol class="breadcrumb">
 			<li><a href="#">Home</a></li>
-			<li class="active">Layanan Kami</li>
+			<li class="active"><?php echo get_selected_language("Layanan Kami","Our Service");?></li>
 		</ol>
 	</div>
 </section><!--/.page-title-section -->
@@ -15,7 +15,7 @@
 <section class="featured-service">
 	<div class="container" style="padding:40px 0">
 		<div class="section-heading">
-			<h2 class="section-title">Layanan Kami</h2>
+			<h2 class="section-title"><?php echo get_selected_language("Layanan Kami","Our Service");?></h2>
 		</div>
 		<div class="row">
 
@@ -38,9 +38,9 @@
 								<img class="img-responsive" src="dashboard/media/pelayanan/cover/<?php echo $data_pelayanan['Cover_Pelayanan']?>?time=<?php echo $Waktu_Sekarang?>" alt="image" style="height:600px; object-fit:cover">
 							</div>
 							<div class="featured-service-content"><br>
-								<h3><?php echo $data_pelayanan['Judul_Pelayanan']?></h3>
-								<p><?php echo substr($data_pelayanan['Deskripsi'], 0, 100)?>...</p>
-								<br><a class="btn btn-primary readmore" href="?menu=services-detail&service_id=<?php echo $a_hash->encode($data_pelayanan['Id_Pelayanan'],$_GET['menu'])?>">Lanjutkan<i class="fa fa-long-arrow-right"></i></a>
+								<h3><?php echo get_selected_language($data_pelayanan['Judul_Pelayanan'], $data_pelayanan['Judul_Pelayanan_Eng']);?></h3>
+								<p><?php echo get_selected_language(substr($data_pelayanan['Deskripsi'], 0, 100), substr($data_pelayanan['Deskripsi_Eng'], 0, 100))?>...</p>
+								<br><a class="btn btn-primary readmore" href="?menu=services-detail&service_id=<?php echo $a_hash->encode($data_pelayanan['Id_Pelayanan'],$_GET['menu'])?>">Detail<i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 

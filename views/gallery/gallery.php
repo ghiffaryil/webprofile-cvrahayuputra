@@ -2,11 +2,11 @@
 	<div class="black-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 	<div class="container" style="position: relative; z-index: 2;">
 		<div class="page-header">
-			<h1>Galeri</h1>
+			<h1><?php echo get_selected_language("Galeri", "Gallery"); ?></h1>
 		</div>
 		<ol class="breadcrumb">
 			<li><a href="#">Home</a></li>
-			<li class="active">Galeri</li>
+			<li class="active"><?php echo get_selected_language("Galeri", "Gallery"); ?></li>
 		</ol>
 	</div>
 </section><!--/.page-title-section -->
@@ -16,7 +16,7 @@
 
     <div class="container">
         <div class="section-heading">
-            <h2 class="section-title">&nbsp;&nbsp;Galeri Kami</h2>
+            <h2 class="section-title"><?php echo get_selected_language("Galeri Kami", "Our Gallery"); ?></h2>
         </div> <!--section-heading-->
     </div>
 
@@ -42,8 +42,8 @@
                                     <a class="img-link" href="dashboard/media/galeri/<?php echo $data_galeri['Foto_Galeri'] ?>?time=<?php echo $Waktu_Sekarang?>"><img src="assets/img/zoomin.png" alt="+" style="margin-top: 120px;" /></a>
                                 </div><!-- owl-item-thumb -->
                                 <div class="owl-tem-content">
-                                    <h3><a href="#"><?php echo $data_galeri['Judul_Galeri'] ?></a></h3>
-                                    <p><?php echo $data_galeri['Keterangan'] ?></p>
+                                    <h3><a href="#"><?php echo get_selected_language($data_galeri['Judul_Galeri'], $data_galeri['Judul_Galeri_Eng']); ?></a></h3>
+                                    <p><?php echo get_selected_language($data_galeri['Keterangan'], $data_galeri['Keterangan_Eng']); ?></p>
                                 </div><!-- owl-item-content -->
                             </div><!-- /item -->
                     <?php

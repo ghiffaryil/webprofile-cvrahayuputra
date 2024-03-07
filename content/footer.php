@@ -24,8 +24,8 @@ if (isset($_POST['submit_kirim_newsletter'])) {
         <div class="row">
             <div class="col-sm-4">
                 <div class="footer-widget" style="color:white">
-                    <h3><?php if ($_SESSION['lang'] == "id") { echo "Tentang";} else{ echo "About";}?></h3>
-                    <p style="font-size:larger"><?php if ($_SESSION['lang'] == "id") { echo $data_setting_website['Deskripsi_Singkat']; } else{ echo $data_setting_website['Deskripsi_Singkat_Eng']; } ?></p>
+                    <h3><?php echo get_selected_language("Tentang Kami", "About Us"); ?></h3>
+                    <p style="font-size:larger"><?php echo get_selected_language($data_setting_website['Deskripsi_Singkat'], $data_setting_website['Deskripsi_Singkat_Eng']); ?></p>
                     <br>
 
                     <address>
@@ -47,10 +47,10 @@ if (isset($_POST['submit_kirim_newsletter'])) {
                     <div class="row">
                         <div class="col-sm-12">
                             <ul class="quick-links">
-                                <li><a style="color:white" href="?menu=about"><?php if ($_SESSION['lang'] == "id") { echo "Tentang Kami";} else{ echo "About us";}?> </a></li>
-                                <li><a style="color:white" href="?menu=services"><?php if ($_SESSION['lang'] == "id") { echo "Layanan";} else{ echo "Services";}?> </a></li>
-                                <li><a style="color:white" href="?menu=gallery"><?php if ($_SESSION['lang'] == "id") { echo "Galeri";} else{ echo "Gallery";}?> </a></li>
-                                <li><a style="color:white" href="?menu=contact"><?php if ($_SESSION['lang'] == "id") { echo "Kontak";} else{ echo "Contact";}?></a></li>
+                                <li><a style="color:white" href="?menu=about"><?php echo get_selected_language("Tentang Kami", "About Us"); ?></a></li>
+                                <li><a style="color:white" href="?menu=services"><?php echo get_selected_language("Layanan", "Services"); ?></a></li>
+                                <li><a style="color:white" href="?menu=gallery"><?php echo get_selected_language("Galeri", "Gallery"); ?></a></li>
+                                <li><a style="color:white" href="?menu=contact"><?php echo get_selected_language("Kontak", "Contact Us"); ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -59,8 +59,16 @@ if (isset($_POST['submit_kirim_newsletter'])) {
 
             <div class="col-sm-4">
                 <div class="footer-widget" style="color:white">
-                    <h3><?php if ($_SESSION['lang'] == "id") { echo "Hubungi Kami";} else{ echo "Contact Us";}?></h3>
-                    <p><?php if ($_SESSION['lang'] == "id") { echo "Masukkan email anda untuk mendapatkan pembaharuan informasi dari kami";} else{ echo "Enter your email to get updated information from us";}?></p>
+                    <h3><?php if ($_SESSION['lang'] == "id") {
+                            echo "Hubungi Kami";
+                        } else {
+                            echo "Contact Us";
+                        } ?></h3>
+                    <p><?php if ($_SESSION['lang'] == "id") {
+                            echo "Masukkan email anda untuk mendapatkan pembaharuan informasi dari kami";
+                        } else {
+                            echo "Enter your email to get updated information from us";
+                        } ?></p>
 
                     <form class="newsletter-form" method="POST" action="">
                         <div class="form-group">
@@ -86,7 +94,7 @@ if (isset($_POST['submit_kirim_newsletter'])) {
     <div class="container">
         <div class="copyright-info">
             <!-- <span>Copyright © 2015 Unship. All Rights Reserved. Designed by <a href="https://uiCookies.com">uiCookies</a><br> Proudly powered by <a href="http://www.w3schools.com/html/html5_intro.asp">HTML5</a> and <a href="getbootstrap.com">Bootstrap3</a></span> -->
-            <span style="color:white">Copyright © 2024 CV. Rahayu Putra</span>
+            <span style="color:white">Copyright © 2024 by Rahayu Putra. All Right Reserved</span>
         </div>
     </div><!-- /.container -->
 </footer>
