@@ -409,7 +409,7 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 												<div class="form-group row">
 													<label class="col-lg-3 control-label">Keterangan</label>
 													<div class="col-lg-9">
-														<textarea id="editor1" class="form-control" rows="10" name="Keterangan"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+														<textarea id="editor1" class="form-control" rows="2" name="Keterangan"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
 																																	echo $_POST['Keterangan'];
 																																} elseif (isset($_GET['edit'])) {
 																																	echo $edit['Keterangan'];
@@ -420,9 +420,9 @@ $hitung_Terhapus = $hitung_Terhapus['Hasil'];
 
 											<div class="col-md-12">
 												<div class="form-group row">
-													<label class="col-lg-3 control-label">Description</label>
+													<label class="col-lg-3 control-label">Description (en)</label>
 													<div class="col-lg-9">
-														<textarea id="editor1" class="form-control" rows="10" name="Keterangan_Eng"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
+														<textarea id="editor1" class="form-control" rows="2" name="Keterangan_Eng"><?php if ((isset($_POST['submit_simpan'])) or (isset($_POST['submit_update']))) {
 																																		echo $_POST['Keterangan_Eng'];
 																																	} elseif (isset($_GET['edit'])) {
 																																		echo $edit['Keterangan_Eng'];

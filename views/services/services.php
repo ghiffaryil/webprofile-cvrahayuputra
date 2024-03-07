@@ -12,7 +12,7 @@
 </section><!--/.page-title-section -->
 
 <!-- Featured-service-start -->
-<section class="featured-service">
+<section class="featured-service div-mobile-padding">
 	<div class="container" style="padding:40px 0">
 		<div class="section-heading">
 			<h2 class="section-title"><?php echo get_selected_language("Layanan Kami","Our Service");?></h2>
@@ -31,8 +31,7 @@
 				$data_hasil = $result['Hasil'];
 				foreach ($data_hasil as $data_pelayanan) {
 			?>
-
-					<div class="col-sm-4">
+					<div class="col-sm-4 div-mobile-padding">
 						<div class="featured-service">
 							<div class="featured-service-thumb">
 								<img class="img-responsive" src="dashboard/media/pelayanan/cover/<?php echo $data_pelayanan['Cover_Pelayanan']?>?time=<?php echo $Waktu_Sekarang?>" alt="image" style="height:600px; object-fit:cover">
@@ -43,9 +42,7 @@
 								<br><a class="btn btn-primary readmore" href="?menu=services-detail&service_id=<?php echo $a_hash->encode($data_pelayanan['Id_Pelayanan'],$_GET['menu'])?>">Detail<i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
-
-					</div><!-- /.col -->
-
+					</div>
 			<?php
 				}
 			}

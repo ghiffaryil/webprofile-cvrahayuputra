@@ -65,10 +65,13 @@
                     <div class="topbar-right">
                         <div class="lang-support pull-right">
                             <select class="selectlang" onchange="changeLanguage(this)">
-                                <option <?php if($_SESSION['lang']=="id"){ echo "selected";}?> value="id">Indonesia</option>
-                                <option <?php if($_SESSION['lang']=="en"){ echo "selected";}?> value="en">English</option>
+                                <option <?php if ($_SESSION['lang'] == "id") {
+                                            echo "selected";
+                                        } ?> value="id">Indonesia</option>
+                                <option <?php if ($_SESSION['lang'] == "en") {
+                                            echo "selected";
+                                        } ?> value="en">English</option>
                             </select>
-
                         </div>
 
                         <ul class="social-links list-inline pull-right">

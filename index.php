@@ -17,6 +17,19 @@ include "app/config/function/get_selected_language.php";
 
 ?>
 
+<style>
+	    .div-mobile-padding {
+        padding: 0px;
+    }
+
+    @media only screen and (max-width: 920px) {
+        .div-mobile-padding {
+            padding: 1em;
+        }
+
+    }
+</style>
+
 <body id="page-top">
 	<div id="st-container" class="st-container">
 		<div class="st-pusher">
